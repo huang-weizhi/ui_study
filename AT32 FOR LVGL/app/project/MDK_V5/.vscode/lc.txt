@@ -1,0 +1,10 @@
+static void dlg_close_light(void)
+{
+    /* one fast bulk fill => dialog vanishes instantly; the following
+       waveform repaint sweeps over an already-dark background */
+    lcd_fill_rectangle(DLG_X0, DLG_Y0, DLG_X1, DLG_Y1, BLACK);
+    /* Dialog lies fully inside the wave area; the next waveform update
+       repaints it completely in a single pass - nothing else to erase. */
+}
+
+/* Clo

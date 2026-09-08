@@ -1,0 +1,6 @@
+File_name,ram_percent,ram,flash,Code,RO_data,RW_data,ZI_data
+lto-llvm-3910e2.o,94.426323%,38220,39431,39092,320,19,38201
+startup_at32f403a_407.o,3.794841%,1536,452,64,388,0,1536
+c_w.l,0.889416%,360,10557,9994,551,12,348
+stdio_streams.o,0.652238%,264,12,0,0,12,252
+libspace.o,0.237178%,96,8,8,0,0,96

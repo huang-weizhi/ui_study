@@ -1,0 +1,7 @@
+    lcd_show_ascii_string                    0x0800e339   Thumb Code  2720  lto-llvm-fcf6fb.o(.text.lcd_show_ascii_string)
+    [Anonymous Symbol]                       0x0800e338   Section        0  lto-llvm-fcf6fb.o(.text.lcd_show_ascii_string)
+    lcd_show_flash_img                       0x0800edd9   Thumb Code   728  lto-llvm-fcf6fb.o(.text.lcd_show_flash_img)
+    [Anonymous Symbol]                       0x0800edd8   Section        0  lto-llvm-fcf6fb.o(.text.lcd_show_flash_img)
+    0x0800e336   0x0800e336   0x00000002   PAD
+    0x0800e338   0x0800e338   0x00000aa0   Code   RO          693    .text.lcd_show_ascii_string  lto-llvm-fcf6fb.o
+    0x0800edd8   0x0800edd8   0x000002d8   Code   RO          699    .text.lcd_show_flash_img  lto-llvm-fcf6fb.o

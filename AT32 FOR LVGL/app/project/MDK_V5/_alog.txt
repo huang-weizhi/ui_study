@@ -1,0 +1,23 @@
+[project_search_path]: ./
+[map_search_path]: ./
+[project_file_path]: .//AT32F403AVGT7_WorkBench.uvprojx
+[ map_file_path]: .//listings/AT32F403AVGT7_WorkBench.map
+[parse_keil_map start]: 
+[Found keyword]: ----------Execution Region----------
+[name]:  ER_IROM1 
+[Exec base]: 0x8004000
+[Size]: 0xa72c
+[Max]: 0x100000
+[Found keyword]: ----------Execution Region----------
+[name]:  RW_IRAM1 
+[Exec base]: 0x20000000
+[Size]: 0x6140
+[Max]: 0x18000
+[parse_keil_map over printf bar]: 
+  RW_IRAM1 :0x20000000
+   96.00 KB :|¡ö¡ö¡ö¡ö¡ö_______________|   25.33 % (   24.31 KB /    96.00 KB) [73408 B]
+  ER_IROM1 :0x8004000
+    1.00 MB :|____________________|    4.08 % (    0.04 MB /     1.00 MB) [1005780 B]
+[export csv]: ./AT32F403AVGT7_WorkBench_sort_by_flash.csv
+[export csv]: ./AT32F403AVGT7_WorkBench_sort_by_ram.csv
+[export xlsx]: AT32F403AVGT7_WorkBench_analysis.xlsx

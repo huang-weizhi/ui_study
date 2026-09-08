@@ -1,0 +1,15 @@
+﻿
+    lto-llvm-b5cd1b.o(.text.wave_add_point) refers to lto-llvm-b5cd1b.o(.bss.g_record_voltage) for g_record_voltage
+    lto-llvm-b5cd1b.o(.text.ui_handle) refers to lto-llvm-b5cd1b.o(.bss.g_record_voltage) for g_record_voltage
+    lto-llvm-b5cd1b.o(.text.ui_handle) refers to lto-llvm-b5cd1b.o(.bss.s_save_buf) for s_save_buf
+    lto-llvm-b5cd1b.o(.text.wave_store_begin_save) refers to lto-llvm-b5cd1b.o(.bss.s_save_buf) for s_save_buf
+    lto-llvm-b5cd1b.o(.text.wave_store_begin_save) refers to lto-llvm-b5cd1b.o(.bss.g_record_voltage) for g_record_voltage
+    lto-llvm-b5cd1b.o(.text.pvPortMalloc) refers to lto-llvm-b5cd1b.o(.bss.ucHeap) for ucHeap
+    lto-llvm-b5cd1b.o(.bss.g_record_voltage) refers (Special) to systick_wrapper_gnu.o(.text) for __ensure_systick_wrapper
+    lto-llvm-b5cd1b.o(.bss.g_record_voltage) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+
+
+
+C:\Users\Administrator\Desktop\FW_PA45\app\libraries\drivers\inc\at32f403a_407_flash.h:643:  __IO uint16_t eopb0;
+
+

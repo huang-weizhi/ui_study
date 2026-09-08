@@ -1,0 +1,9 @@
+﻿IH 390: this->input_hct6801_r = raw_to_vpin(s_sample);
+IH 392: // this->input_hct6801_dio = (float)s_sample;
+IH 397: this->input_hct6801_dc =
+IH 409: this->input_hct6801_ac =
+MM 205: v = this->input_hct6801_ac;
+MM 713: wave_update(&wave, this->input_hct6801_ac, force, resync);
+MM 731: wave_update(&wave, this->input_hct6801_dc, force, resync);
+MM 756: v = this->input_hct6801_dc;
+MM 847: // lcd_show_number(200, 100, this->input_hct6801_dc, RED, BLACK, FONT_32X16, 10);

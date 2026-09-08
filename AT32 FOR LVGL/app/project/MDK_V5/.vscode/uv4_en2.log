@@ -1,0 +1,57 @@
+*** Using Compiler 'V6.22', folder: 'D:\Work Program\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'AT32F403AVGT7_WorkBench'
+compiling ui_wave_dialog.c...
+../app/ui_wave_dialog.c(168): error: extraneous closing brace ('}')
+  168 | }
+      | ^
+../app/ui_wave_dialog.c(179): error: use of undeclared identifier 's_dlg_prev_pressed'
+  179 |     s_dlg_prev_pressed = 1; /* ignore the press that stopped recording */
+      |     ^
+../app/ui_wave_dialog.c(190): error: use of undeclared identifier 's_dlg_prev_pressed'
+  190 |     s_dlg_prev_pressed = 1; /* ignore the press that opened this dialog */
+      |     ^
+../app/ui_wave_dialog.c(225): error: use of undeclared identifier 'row'
+  225 |     uint8_t slot = (uint8_t)row;
+      |                             ^
+../app/ui_wave_dialog.c(226): error: expected identifier or '('
+  226 |     if (s_dlg_type == WAVE_DIALOG_SAVE)
+      |     ^
+../app/ui_wave_dialog.c(246): error: expected identifier or '('
+  246 |     else if (s_dlg_type == WAVE_DIALOG_REPLAY)
+      |     ^
+../app/ui_wave_dialog.c(259): error: extraneous closing brace ('}')
+  259 | }
+      | ^
+../app/ui_wave_dialog.c(302): error: expected identifier or '('
+  302 |     {
+      |     ^
+../app/ui_wave_dialog.c(312): error: expected identifier or '('
+  312 |     if (s_dlg_need_redraw)
+      |     ^
+../app/ui_wave_dialog.c(317): error: type specifier missing, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]
+  317 |     last_tick = now;
+      |     ^
+      |     int
+../app/ui_wave_dialog.c(317): error: use of undeclared identifier 'now'; did you mean 'pow'?
+  317 |     last_tick = now;
+      |                 ^~~
+      |                 pow
+D:\Work Program\Keil_v5\ARM\ARMCLANG\bin\..\include\math.h(383): note: 'pow' declared here
+  383 | extern _ARMABI double pow(double /*x*/, double /*y*/);
+      |                       ^
+../app/ui_wave_dialog.c(317): error: incompatible pointer to integer conversion initializing 'int' with an expression of type 'double (double, double)' [-Wint-conversion]
+  317 |     last_tick = now;
+      |     ^           ~~~
+../app/ui_wave_dialog.c(318): error: expected identifier or '('
+  318 |     return 1; /* dialog open */
+      |     ^
+../app/ui_wave_dialog.c(319): error: expected identifier or '('
+  319 |     return 1; 
+      |     ^
+../app/ui_wave_dialog.c(320): error: extraneous closing brace ('}')
+  320 | }
+      | ^
+15 errors generated.
+".\objects\AT32F403AVGT7_WorkBench.axf" - 15 Error(s), 0 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:01

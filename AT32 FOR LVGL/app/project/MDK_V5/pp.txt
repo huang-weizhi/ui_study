@@ -1,0 +1,29 @@
+﻿431: while (x != x_end)
+448: while (y != y_end)
+842: while (*str != '\0')
+903: while (num > 0 && digit_cnt < sizeof(digit_buf))
+1119: while (x <= y)
+1289: while (total_data_len > 0)
+1314: while (1)
+1321: while (lcd_dma_transfer_complete == 0)
+1327: lcd_wr_data_dma_async(dma_buf[cur], cur_len);
+1346: while (lcd_dma_transfer_complete == 0)
+1355: void lcd_wr_data_dma(uint8_t *data, uint32_t length)
+1357: void lcd_wr_data_dma(uint16_t *data, uint32_t length)
+1360: while (lcd_dma_transfer_complete == 0)
+1376: while (lcd_dma_transfer_complete == 0)
+1390: void lcd_wr_data_dma_async(uint8_t *data, uint32_t length)
+1392: void lcd_wr_data_dma_async(uint16_t *data, uint32_t length)
+1395: while (lcd_dma_transfer_complete == 0)
+1442: while (remaining > 0)
+1445: lcd_wr_data_dma(clear_buffer_8bit, current_size);
+1453: while (remaining > 0)
+1456: lcd_wr_data_dma(clear_buffer_16bit, current_size * 2); // convert to bytes
+1511: while (remaining > 0)
+1514: lcd_wr_data_dma(fill_buffer_8bit, current_size);
+1522: while (remaining > 0)
+1525: lcd_wr_data_dma(fill_buffer_16bit, current_size * 2);
+1587: while (offset_byte < total_bytes)
+1590: lcd_wr_data_dma((uint8_t *)img_data + offset_byte, chunk_bytes);
+1598: while (pixel_offset < total_pixels)
+1606: lcd_wr_data_dma(dma_16bit_buf, chunk_pixels * 2);

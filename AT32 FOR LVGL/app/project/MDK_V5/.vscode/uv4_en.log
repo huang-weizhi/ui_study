@@ -1,0 +1,78 @@
+*** Using Compiler 'V6.22', folder: 'D:\Work Program\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'AT32F403AVGT7_WorkBench'
+compiling main.c...
+compiling at32f403a_407_int.c...
+compiling freertos_app.c...
+compiling ui_wave.c...
+compiling ui_handle.c...
+compiling ui_wave_store.c...
+compiling ui_wave_dialog.c...
+../app/ui_wave_dialog.c(53): error: unknown type name 'mistaken'
+   53 |    mistaken for a slot selection. */
+      |    ^
+../app/ui_wave_dialog.c(53): error: expected identifier or '('
+   53 |    mistaken for a slot selection. */
+      |             ^
+../app/ui_wave_dialog.c(69): error: expected function body after function declarator
+   69 |     lcd_draw_rectangle(DLG_X0, DLG_Y0, DLG_X1, DLG_Y1, DLG_BORDER_COLOR);
+      |     ^
+../app/ui_wave_dialog.c(70): error: extraneous closing brace ('}')
+   70 | }
+      | ^
+../app/ui_wave_dialog.c(103): error: call to undeclared function 'dlg_draw_frame'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  103 |     dlg_draw_frame();
+      |     ^
+../app/ui_wave_dialog.c(126): error: call to undeclared function 'dlg_draw_row_bg'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  126 |             dlg_draw_row_bg(y, DLG_ROW_BG);
+      |             ^
+../app/ui_wave_dialog.c(165): error: call to undeclared function 'dlg_draw_row_bg'; ISO C99 and later do not support implicit function declarations [-Wimplicit-function-declaration]
+  165 |             dlg_draw_row_bg(y, DLG_CANCEL_BG);
+      |             ^
+../app/ui_wave_dialog.c(170): error: extraneous closing brace ('}')
+  170 | }
+      | ^
+../app/ui_wave_dialog.c(181): error: use of undeclared identifier 's_dlg_prev_pressed'
+  181 |     s_dlg_prev_pressed = 1; /* ignore the press that stopped recording */
+      |     ^
+../app/ui_wave_dialog.c(192): error: use of undeclared identifier 's_dlg_prev_pressed'
+  192 |     s_dlg_prev_pressed = 1; /* ignore the press that opened this dialog */
+      |     ^
+../app/ui_wave_dialog.c(227): error: use of undeclared identifier 'row'
+  227 |     uint8_t slot = (uint8_t)row;
+      |                             ^
+../app/ui_wave_dialog.c(228): error: expected identifier or '('
+  228 |     if (s_dlg_type == WAVE_DIALOG_SAVE)
+      |     ^
+../app/ui_wave_dialog.c(248): error: expected identifier or '('
+  248 |     else if (s_dlg_type == WAVE_DIALOG_REPLAY)
+      |     ^
+../app/ui_wave_dialog.c(261): error: extraneous closing brace ('}')
+  261 | }
+      | ^
+../app/ui_wave_dialog.c(304): error: expected identifier or '('
+  304 |     {
+      |     ^
+../app/ui_wave_dialog.c(314): error: expected identifier or '('
+  314 |     if (s_dlg_need_redraw)
+      |     ^
+../app/ui_wave_dialog.c(319): error: type specifier missing, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]
+  319 |     last_tick = now;
+      |     ^
+      |     int
+../app/ui_wave_dialog.c(319): error: use of undeclared identifier 'now'; did you mean 'pow'?
+  319 |     last_tick = now;
+      |                 ^~~
+      |                 pow
+D:\Work Program\Keil_v5\ARM\ARMCLANG\bin\..\include\math.h(383): note: 'pow' declared here
+  383 | extern _ARMABI double pow(double /*x*/, double /*y*/);
+      |                       ^
+../app/ui_wave_dialog.c(319): error: incompatible pointer to integer conversion initializing 'int' with an expression of type 'double (double, double)' [-Wint-conversion]
+  319 |     last_tick = now;
+      |     ^           ~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+compiling touch_handle.c...
+compiling ina226_handle.c...
+".\objects\AT32F403AVGT7_WorkBench.axf" - 19 Error(s), 0 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:02

@@ -1,0 +1,10 @@
+*** Using Compiler 'V6.22', folder: 'D:\Work Program\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'AT32F403AVGT7_WorkBench'
+compiling ui_wave_dialog.c...
+../app/ui_wave_dialog.c(68): error: use of undeclared identifier 'b'
+   68 |     lcd_draw_rectangle(DLG_X0, DLG_Y0, DLG_X1, DLG_Y1, b);
+      |                                                        ^
+1 error generated.
+".\objects\AT32F403AVGT7_WorkBench.axf" - 1 Error(s), 0 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:00

@@ -1,0 +1,1334 @@
+Dependencies for Project 'AT32F403AVGT7_WorkBench', Target 'AT32F403AVGT7_WorkBench': (DO NOT MODIFY !)
+CompilerVersion: 6220000::V6.22::ARMCLANG
+F (..\src\main.c)(0x6A9FD50C)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/main.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (..\inc\wk_crc.h)(0x6A9FA833)
+I (..\inc\wk_debug.h)(0x6A9FA833)
+I (..\inc\wk_exint.h)(0x6A9FA833)
+I (..\inc\wk_spi.h)(0x6A9FA833)
+I (..\inc\wk_tmr.h)(0x6A9FA833)
+I (..\inc\wk_usart.h)(0x6A9FA833)
+I (..\inc\wk_wdt.h)(0x6A9FA833)
+I (..\inc\wk_xmc.h)(0x6A9FA833)
+I (..\inc\wk_dma.h)(0x6A9FA833)
+I (..\inc\wk_gpio.h)(0x6A9FA833)
+I (..\inc\wk_system.h)(0x6A9FA833)
+I (..\inc\freertos_app.h)(0x6A9FA833)
+I (..\..\middlewares\freertos\source\include\FreeRTOS.h)(0x697B2423)
+I (..\inc\FreeRTOSConfig.h)(0x6A9FA861)
+I (..\..\middlewares\freertos\source\include\projdefs.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\portable.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\deprecated_definitions.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\mpu_wrappers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\task.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\list.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\semphr.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\queue.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\timers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\event_groups.h)(0x697B2423)
+I (D:\Work Program\Keil_v5\ARM\Packs\ARM\CMSIS-View\1.2.0\EventRecorder\Include\EventRecorder.h)(0x6645596A)
+I (..\app\pc_handle.h)(0x6A8E8E38)
+I (..\common\PA45.h)(0x6A9E81DC)
+I (..\interface\inf_beep.h)(0x6A9FC105)
+I (..\interface\Inf_lcd.h)(0x6A9FD4F8)
+I (..\interface\Inf_touch.h)(0x6A9FDD2D)
+I (..\common\soft_i2c.h)(0x6A1FBC88)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perf_counter.h)(0x6A70241B)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_port_default.h)(0x6A70241B)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x697B2421)
+I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
+I (..\common\iap.h)(0x6A29016F)
+I (..\app\beep_handle.h)(0x6A8E8E13)
+I (..\app\output_handle.h)(0x6A968897)
+I (..\app\input_handle.h)(0x6A9E82A2)
+F (..\src\at32f403a_407_wk_config.c)(0x6A9FA833)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_wk_config.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\src\at32f403a_407_int.c)(0x6A9FA834)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_int.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_int.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (..\inc\freertos_app.h)(0x6A9FA833)
+I (..\..\middlewares\freertos\source\include\FreeRTOS.h)(0x697B2423)
+I (..\inc\FreeRTOSConfig.h)(0x6A9FA861)
+I (..\..\middlewares\freertos\source\include\projdefs.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\portable.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\deprecated_definitions.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\mpu_wrappers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\task.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\list.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\semphr.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\queue.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\timers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\event_groups.h)(0x697B2423)
+I (..\inc\wk_system.h)(0x6A9FA833)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (D:\Work Program\Keil_v5\ARM\Packs\ARM\CMSIS-View\1.2.0\EventRecorder\Include\EventRecorder.h)(0x6645596A)
+I (..\app\pc_handle.h)(0x6A8E8E38)
+I (..\common\PA45.h)(0x6A9E81DC)
+I (..\interface\inf_beep.h)(0x6A9FC105)
+I (..\interface\Inf_lcd.h)(0x6A9FD4F8)
+I (..\interface\Inf_touch.h)(0x6A9FDD2D)
+I (..\common\soft_i2c.h)(0x6A1FBC88)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perf_counter.h)(0x6A70241B)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_port_default.h)(0x6A70241B)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x697B2421)
+I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
+I (..\common\iap.h)(0x6A29016F)
+I (..\app\beep_handle.h)(0x6A8E8E13)
+I (..\app\output_handle.h)(0x6A968897)
+I (..\app\input_handle.h)(0x6A9E82A2)
+F (..\src\wk_system.c)(0x6A9FA833)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/wk_system.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\wk_system.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (../src/freertos_app.c)(0x6A9FE02B)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/freertos_app.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\freertos_app.h)(0x6A9FA833)
+I (..\..\middlewares\freertos\source\include\FreeRTOS.h)(0x697B2423)
+I (..\inc\FreeRTOSConfig.h)(0x6A9FA861)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\middlewares\freertos\source\include\projdefs.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\portable.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\deprecated_definitions.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\mpu_wrappers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\task.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\list.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\semphr.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\queue.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\timers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\event_groups.h)(0x697B2423)
+I (..\inc\wk_system.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (D:\Work Program\Keil_v5\ARM\Packs\ARM\CMSIS-View\1.2.0\EventRecorder\Include\EventRecorder.h)(0x6645596A)
+I (..\app\pc_handle.h)(0x6A8E8E38)
+I (..\common\PA45.h)(0x6A9E81DC)
+I (..\interface\inf_beep.h)(0x6A9FC105)
+I (..\interface\Inf_lcd.h)(0x6A9FD4F8)
+I (..\interface\Inf_touch.h)(0x6A9FDD2D)
+I (..\common\soft_i2c.h)(0x6A1FBC88)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perf_counter.h)(0x6A70241B)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_port_default.h)(0x6A70241B)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x697B2421)
+I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
+I (..\common\iap.h)(0x6A29016F)
+I (..\app\beep_handle.h)(0x6A8E8E13)
+I (..\app\output_handle.h)(0x6A968897)
+I (..\app\input_handle.h)(0x6A9E82A2)
+I (..\interface\Inf_key.h)(0x6A9FC6A7)
+I (..\interface\Inf_encoder.h)(0x6A9FDFEF)
+F (../src/include_port.c)(0x6A9FA833)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/include_port.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\..\libraries\drivers\inc\..\..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\port.c)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\FreeRTOS.h)(0x697B2423)
+I (..\inc\FreeRTOSConfig.h)(0x6A9FA861)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\middlewares\freertos\source\include\projdefs.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\portable.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\deprecated_definitions.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\mpu_wrappers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\task.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\list.h)(0x697B2423)
+F (..\src\wk_crc.c)(0x6A9FA832)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/wk_crc.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\wk_crc.h)(0x6A9FA833)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\src\wk_debug.c)(0x6A9FA832)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/wk_debug.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\wk_debug.h)(0x6A9FA833)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\src\wk_spi.c)(0x6A9FA832)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/wk_spi.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\wk_spi.h)(0x6A9FA833)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\src\wk_tmr.c)(0x6A9FA833)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/wk_tmr.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\wk_tmr.h)(0x6A9FA833)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\src\wk_usart.c)(0x6A9FA833)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/wk_usart.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\wk_usart.h)(0x6A9FA833)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\src\wk_wdt.c)(0x6A9FA833)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/wk_wdt.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\wk_wdt.h)(0x6A9FA833)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\src\wk_xmc.c)(0x6A9FA833)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/wk_xmc.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\wk_xmc.h)(0x6A9FA833)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\src\wk_dma.c)(0x6A9FA833)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/wk_dma.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\wk_dma.h)(0x6A9FA833)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\src\wk_gpio.c)(0x6A9FA833)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/wk_gpio.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\wk_gpio.h)(0x6A9FA833)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\src\wk_exint.c)(0x6A9FA832)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/wk_exint.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\wk_exint.h)(0x6A9FA833)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_crm.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_crm.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_tmr.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_tmr.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_gpio.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_gpio.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_usart.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_usart.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_pwc.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_pwc.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_spi.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_spi.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_dma.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_dma.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_flash.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_flash.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_crc.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_crc.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_wdt.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_wdt.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_exint.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_exint.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_misc.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_misc.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_xmc.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_xmc.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\..\libraries\drivers\src\at32f403a_407_debug.c)(0x697B2421)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/at32f403a_407_debug.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (.\startup_at32f403a_407.s)(0x6A9FA832)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-Wa,armasm,--pd,"__UVISION_VERSION SETA 540" -Wa,armasm,--pd,"AT32F403AVGT7 SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/startup_at32f403a_407.o)
+F (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.c)(0x6A0150C6)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/system_at32f403a_407.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\app\pc_handle.c)(0x6A8E8E38)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/pc_handle.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\app\pc_handle.h)(0x6A8E8E38)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (..\common\PA45.h)(0x6A9E81DC)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\interface\inf_beep.h)(0x6A9FC105)
+I (..\interface\Inf_lcd.h)(0x6A9FD4F8)
+I (..\inc\wk_system.h)(0x6A9FA833)
+I (..\interface\Inf_touch.h)(0x6A9FDD2D)
+I (..\common\soft_i2c.h)(0x6A1FBC88)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perf_counter.h)(0x6A70241B)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_port_default.h)(0x6A70241B)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x697B2421)
+I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
+I (..\common\iap.h)(0x6A29016F)
+I (..\..\middlewares\freertos\source\include\FreeRTOS.h)(0x697B2423)
+I (..\inc\FreeRTOSConfig.h)(0x6A9FA861)
+I (..\..\middlewares\freertos\source\include\projdefs.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\portable.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\deprecated_definitions.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\mpu_wrappers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\queue.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\task.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\list.h)(0x697B2423)
+F (..\app\beep_handle.c)(0x6A8E8E13)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/beep_handle.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\app\beep_handle.h)(0x6A8E8E13)
+I (..\interface\Inf_beep.h)(0x6A9FC105)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\app\output_handle.c)(0x6A9689B6)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/output_handle.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\app\output_handle.h)(0x6A968897)
+I (..\common\PA45.h)(0x6A9E81DC)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\interface\inf_beep.h)(0x6A9FC105)
+I (..\interface\Inf_lcd.h)(0x6A9FD4F8)
+I (..\inc\wk_system.h)(0x6A9FA833)
+I (..\interface\Inf_touch.h)(0x6A9FDD2D)
+I (..\common\soft_i2c.h)(0x6A1FBC88)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perf_counter.h)(0x6A70241B)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_port_default.h)(0x6A70241B)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x697B2421)
+I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
+F (..\app\input_handle.c)(0x6A9E829B)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/input_handle.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\app\input_handle.h)(0x6A9E82A2)
+I (..\common\PA45.h)(0x6A9E81DC)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\interface\inf_beep.h)(0x6A9FC105)
+I (..\interface\Inf_lcd.h)(0x6A9FD4F8)
+I (..\inc\wk_system.h)(0x6A9FA833)
+I (..\interface\Inf_touch.h)(0x6A9FDD2D)
+I (..\common\soft_i2c.h)(0x6A1FBC88)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perf_counter.h)(0x6A70241B)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_port_default.h)(0x6A70241B)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x697B2421)
+I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
+F (..\common\iap.c)(0x69FD49CB)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/iap.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\common\iap.h)(0x6A29016F)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (..\common\soft_i2c.c)(0x6A8BEDAF)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/soft_i2c.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\common\soft_i2c.h)(0x6A1FBC88)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perf_counter.h)(0x6A70241B)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_port_default.h)(0x6A70241B)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x697B2421)
+F (..\common\PA45.c)(0x6A87ADF6)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/pa45.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\common\PA45.h)(0x6A9E81DC)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+I (..\interface\inf_beep.h)(0x6A9FC105)
+I (..\interface\Inf_lcd.h)(0x6A9FD4F8)
+I (..\inc\wk_system.h)(0x6A9FA833)
+I (..\interface\Inf_touch.h)(0x6A9FDD2D)
+I (..\common\soft_i2c.h)(0x6A1FBC88)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perf_counter.h)(0x6A70241B)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_port_default.h)(0x6A70241B)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x697B2421)
+I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
+F (..\interface\Inf_beep.c)(0x6A9FC101)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/inf_beep.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\interface\Inf_beep.h)(0x6A9FC105)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+F (..\interface\Inf_key.c)(0x6A9FCBC5)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/inf_key.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\interface\Inf_key.h)(0x6A9FC6A7)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+F (..\interface\Inf_encoder.c)(0x6A9FE014)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/inf_encoder.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\interface\Inf_encoder.h)(0x6A9FDFEF)
+I (..\interface\Inf_key.h)(0x6A9FC6A7)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (..\inc\at32f403a_407_wk_config.h)(0x6A9FA833)
+F (..\interface\Inf_lcd.c)(0x6A9FD39D)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/inf_lcd.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (..\interface\Inf_lcd.h)(0x6A9FD4F8)
+I (..\inc\wk_system.h)(0x6A9FA833)
+F (..\interface\Inf_touch.c)(0x6A9FDD29)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/inf_touch.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\interface\Inf_touch.h)(0x6A9FDD2D)
+I (..\common\soft_i2c.h)(0x6A1FBC88)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perf_counter.h)(0x6A70241B)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_port_default.h)(0x6A70241B)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x697B2421)
+F (..\interface\Inf_w25qxxx.c)(0x6A8E8F07)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/inf_w25qxxx.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\interface\Inf_w25qxxx.h)(0x6A9FA84E)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+F (../../middlewares/freertos/source/croutine.c)(0x697B2423)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/croutine.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\..\middlewares\freertos\source\include\FreeRTOS.h)(0x697B2423)
+I (..\inc\FreeRTOSConfig.h)(0x6A9FA861)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\middlewares\freertos\source\include\projdefs.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\portable.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\deprecated_definitions.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\mpu_wrappers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\task.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\list.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\croutine.h)(0x697B2423)
+F (../../middlewares/freertos/source/event_groups.c)(0x697B2423)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/event_groups.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\..\middlewares\freertos\source\include\FreeRTOS.h)(0x697B2423)
+I (..\inc\FreeRTOSConfig.h)(0x6A9FA861)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\middlewares\freertos\source\include\projdefs.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\portable.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\deprecated_definitions.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\mpu_wrappers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\task.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\list.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\timers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\event_groups.h)(0x697B2423)
+F (../../middlewares/freertos/source/list.c)(0x697B2423)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/list.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\..\middlewares\freertos\source\include\FreeRTOS.h)(0x697B2423)
+I (..\inc\FreeRTOSConfig.h)(0x6A9FA861)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\middlewares\freertos\source\include\projdefs.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\portable.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\deprecated_definitions.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\mpu_wrappers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\list.h)(0x697B2423)
+F (../../middlewares/freertos/source/queue.c)(0x697B2423)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/queue.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\..\middlewares\freertos\source\include\FreeRTOS.h)(0x697B2423)
+I (..\inc\FreeRTOSConfig.h)(0x6A9FA861)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\middlewares\freertos\source\include\projdefs.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\portable.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\deprecated_definitions.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\mpu_wrappers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\task.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\list.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\queue.h)(0x697B2423)
+F (../../middlewares/freertos/source/tasks.c)(0x697B2423)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/tasks.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\..\middlewares\freertos\source\include\FreeRTOS.h)(0x697B2423)
+I (..\inc\FreeRTOSConfig.h)(0x6A9FA861)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\middlewares\freertos\source\include\projdefs.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\portable.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\deprecated_definitions.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\mpu_wrappers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\task.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\list.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\timers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\stack_macros.h)(0x697B2423)
+F (../../middlewares/freertos/source/timers.c)(0x697B2423)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/timers.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\..\middlewares\freertos\source\include\FreeRTOS.h)(0x697B2423)
+I (..\inc\FreeRTOSConfig.h)(0x6A9FA861)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\middlewares\freertos\source\include\projdefs.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\portable.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\deprecated_definitions.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\mpu_wrappers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\task.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\list.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\queue.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\timers.h)(0x697B2423)
+F (../../middlewares/freertos/source/portable/memmang/heap_4.c)(0x697B2423)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/heap_4.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\..\middlewares\freertos\source\include\FreeRTOS.h)(0x697B2423)
+I (..\inc\FreeRTOSConfig.h)(0x6A9FA861)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\middlewares\freertos\source\include\projdefs.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\portable.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\deprecated_definitions.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\mpu_wrappers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\task.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\list.h)(0x697B2423)
+F (../../middlewares/freertos/source/stream_buffer.c)(0x697B2423)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/stream_buffer.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\..\middlewares\freertos\source\include\FreeRTOS.h)(0x697B2423)
+I (..\inc\FreeRTOSConfig.h)(0x6A9FA861)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\middlewares\freertos\source\include\projdefs.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\portable.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\deprecated_definitions.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\mpu_wrappers.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\task.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\list.h)(0x697B2423)
+I (..\..\middlewares\freertos\source\include\stream_buffer.h)(0x697B2423)
+F (D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/source/armcc/retarget_io.c)(0x6645612C)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/retarget_io.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (RTE\_AT32F403AVGT7_WorkBench\RTE_Components.h)(0x6A7EACD9)
+I (D:\Work Program\Keil_v5\ARM\Packs\ARM\CMSIS-Compiler\2.1.0\include\retarget_stdout.h)(0x6645612C)
+F (D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/source/stdout_evr.c)(0x6645612C)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/stdout_evr.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (D:\Work Program\Keil_v5\ARM\Packs\ARM\CMSIS-Compiler\2.1.0\include\retarget_stdout.h)(0x6645612C)
+I (D:\Work Program\Keil_v5\ARM\Packs\ARM\CMSIS-View\1.2.0\EventRecorder\Include\EventRecorder.h)(0x6645596A)
+F (D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Source/EventRecorder.c)(0x6645596A)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/eventrecorder.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (RTE\_AT32F403AVGT7_WorkBench\RTE_Components.h)(0x6A7EACD9)
+I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\core_cm4.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h)(0x6A0150C6)
+I (..\..\libraries\drivers\inc\at32f403a_407_def.h)(0x697B2421)
+I (..\inc\at32f403a_407_conf.h)(0x6A9FA833)
+I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_crm.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_debug.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_dma.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_exint.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_flash.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_gpio.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_misc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_pwc.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_spi.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_tmr.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_usart.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
+I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
+I (D:\Work Program\Keil_v5\ARM\Packs\ARM\CMSIS-View\1.2.0\EventRecorder\Include\EventRecorder.h)(0x6645596A)
+I (RTE\CMSIS-View\EventRecorderConf.h)(0x6A179BFB)
+F (RTE/CMSIS-View/EventRecorderConf.h)(0x6A179BFB)()
+F (D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perf_counter.c)(0x6A70241B)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/perf_counter.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_armclang.h)(0x697B2421)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perf_counter.h)(0x6A70241B)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_port_default.h)(0x6A70241B)
+F (D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_port_default.c)(0x6A70241B)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/perfc_port_default.o -MMD)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6A70241B)
+I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6A7EACD9)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h)(0x697B2421)
+I (..\..\libraries\cmsis\cm4\core_support\cmsis_armclang.h)(0x697B2421)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perf_counter.h)(0x6A70241B)
+I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_port_default.h)(0x6A70241B)
+F (D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/systick_wrapper_gnu.s)(0x6A70241B)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4-I./RTE/CMSIS-View-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-Wa,armasm,--pd,"__UVISION_VERSION SETA 540" -Wa,armasm,--pd,"AT32F403AVGT7 SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/systick_wrapper_gnu.o)

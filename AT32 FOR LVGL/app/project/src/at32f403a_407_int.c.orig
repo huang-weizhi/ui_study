@@ -1,0 +1,489 @@
+/* add user code begin Header */
+/**
+ **************************************************************************
+ * @file     at32f403a_407_int.c
+ * @brief    main interrupt service routines.
+ **************************************************************************
+ * Copyright (c) 2025, Artery Technology, All rights reserved.
+ *
+ * The software Board Support Package (BSP) that is made available to
+ * download from Artery official website is the copyrighted work of Artery.
+ * Artery authorizes customers to use, copy, and distribute the BSP
+ * software and its related documentation for the purpose of design and
+ * development in conjunction with Artery microcontrollers. Use of the
+ * software is governed by this copyright notice and the following disclaimer.
+ *
+ * THIS SOFTWARE IS PROVIDED ON "AS IS" BASIS WITHOUT WARRANTIES,
+ * GUARANTEES OR REPRESENTATIONS OF ANY KIND. ARTERY EXPRESSLY DISCLAIMS,
+ * TO THE FULLEST EXTENT PERMITTED BY LAW, ALL EXPRESS, IMPLIED OR
+ * STATUTORY OR OTHER WARRANTIES, GUARANTEES OR REPRESENTATIONS,
+ * INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+ *
+ **************************************************************************
+ */
+/* add user code end Header */
+
+/* includes ------------------------------------------------------------------*/
+#include "at32f403a_407_int.h"
+#include "wk_system.h"
+#include "freertos_app.h"
+
+/* private includes ----------------------------------------------------------*/
+/* add user code begin private includes */
+
+/* add user code end private includes */
+
+/* private typedef -----------------------------------------------------------*/
+/* add user code begin private typedef */
+
+/* add user code end private typedef */
+
+/* private define ------------------------------------------------------------*/
+/* add user code begin private define */
+#define FILTER_TIMES 10
+#define ADC_CH_NUM 13
+/* add user code end private define */
+
+/* private macro -------------------------------------------------------------*/
+/* add user code begin private macro */
+
+/* add user code end private macro */
+
+/* private variables ---------------------------------------------------------*/
+/* add user code begin private variables */
+static uint16_t sample_buffer[FILTER_TIMES][ADC_CH_NUM];
+static uint8_t sample_cnt = 0;
+/* add user code end private variables */
+
+/* private function prototypes --------------------------------------------*/
+/* add user code begin function prototypes */
+
+/* add user code end function prototypes */
+
+/* private user code ---------------------------------------------------------*/
+/* add user code begin 0 */
+
+/* add user code end 0 */
+
+/* external variables ---------------------------------------------------------*/
+/* add user code begin external variables */
+
+/* add user code end external variables */
+
+/**
+  * @brief  this function handles nmi exception.
+  * @param  none
+  * @retval none
+  */
+void NMI_Handler(void)
+{
+  /* add user code begin NonMaskableInt_IRQ 0 */
+
+  /* add user code end NonMaskableInt_IRQ 0 */
+
+  /* add user code begin NonMaskableInt_IRQ 1 */
+
+  /* add user code end NonMaskableInt_IRQ 1 */
+}
+
+/**
+  * @brief  this function handles hard fault exception.
+  * @param  none
+  * @retval none
+  */
+void HardFault_Handler(void)
+{
+  /* add user code begin HardFault_IRQ 0 */
+
+  /* add user code end HardFault_IRQ 0 */
+  /* go to infinite loop when hard fault exception occurs */
+  while (1)
+  {
+    /* add user code begin W1_HardFault_IRQ 0 */
+
+    /* add user code end W1_HardFault_IRQ 0 */
+  }
+}
+
+
+/**
+  * @brief  this function handles memory manage exception.
+  * @param  none
+  * @retval none
+  */
+void MemManage_Handler(void)
+{
+  /* add user code begin MemoryManagement_IRQ 0 */
+
+  /* add user code end MemoryManagement_IRQ 0 */
+  /* go to infinite loop when memory manage exception occurs */
+  while (1)
+  {
+    /* add user code begin W1_MemoryManagement_IRQ 0 */
+
+    /* add user code end W1_MemoryManagement_IRQ 0 */
+  }
+}
+
+/**
+  * @brief  this function handles bus fault exception.
+  * @param  none
+  * @retval none
+  */
+void BusFault_Handler(void)
+{
+  /* add user code begin BusFault_IRQ 0 */
+
+  /* add user code end BusFault_IRQ 0 */
+  /* go to infinite loop when bus fault exception occurs */
+  while (1)
+  {
+    /* add user code begin W1_BusFault_IRQ 0 */
+
+    /* add user code end W1_BusFault_IRQ 0 */
+  }
+}
+
+/**
+  * @brief  this function handles usage fault exception.
+  * @param  none
+  * @retval none
+  */
+void UsageFault_Handler(void)
+{
+  /* add user code begin UsageFault_IRQ 0 */
+
+  /* add user code end UsageFault_IRQ 0 */
+  /* go to infinite loop when usage fault exception occurs */
+  while (1)
+  {
+    /* add user code begin W1_UsageFault_IRQ 0 */
+
+    /* add user code end W1_UsageFault_IRQ 0 */
+  }
+}
+
+/**
+  * @brief  this function handles debug monitor exception.
+  * @param  none
+  * @retval none
+  */
+void DebugMon_Handler(void)
+{
+  /* add user code begin DebugMonitor_IRQ 0 */
+
+  /* add user code end DebugMonitor_IRQ 0 */
+  /* add user code begin DebugMonitor_IRQ 1 */
+
+  /* add user code end DebugMonitor_IRQ 1 */
+}
+
+extern void xPortSysTickHandler(void);
+
+/**
+  * @brief  this function handles systick handler.
+  * @param  none
+  * @retval none
+  */
+void SysTick_Handler(void)
+{
+  /* add user code begin SysTick_IRQ 0 */
+  EC11_TickInc();
+  EC11_KeyScan(&g_ec11_1);
+  EC11_KeyScan(&g_ec11_2);
+  /* add user code end SysTick_IRQ 0 */
+
+#if (INCLUDE_xTaskGetSchedulerState == 1 )
+  if (xTaskGetSchedulerState() != taskSCHEDULER_NOT_STARTED)
+  {
+#endif /* INCLUDE_xTaskGetSchedulerState */
+  xPortSysTickHandler();
+#if (INCLUDE_xTaskGetSchedulerState == 1 )
+  }
+#endif /* INCLUDE_xTaskGetSchedulerState */
+
+  /* add user code begin SysTick_IRQ 1 */
+
+  /* add user code end SysTick_IRQ 1 */
+}
+
+/**
+  * @brief  this function handles DMA1 Channel 3 handler.
+  * @param  none
+  * @retval none
+  */
+void DMA1_Channel3_IRQHandler(void)
+{
+  /* add user code begin DMA1_Channel3_IRQ 0 */
+
+  /* add user code end DMA1_Channel3_IRQ 0 */
+
+  if(dma_interrupt_flag_get(DMA1_FDT3_FLAG) != RESET)
+  {   
+    /* add user code begin DMA1_FDT3_FLAG */
+    /* handle full data transfer and clear flag */
+    dma_flag_clear(DMA1_FDT3_FLAG);
+    dma_channel_enable(LCD_DMA_CHANNEL, FALSE);
+    lcd_dma_transfer_complete = 1;
+    /* add user code end DMA1_FDT3_FLAG */ 
+  }
+
+  /* add user code begin DMA1_Channel3_IRQ 1 */
+
+  /* add user code end DMA1_Channel3_IRQ 1 */
+}
+
+/**
+  * @brief  this function handles DMA1 Channel 4 handler.
+  * @param  none
+  * @retval none
+  */
+void DMA1_Channel4_IRQHandler(void)
+{
+  /* add user code begin DMA1_Channel4_IRQ 0 */
+  BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+  /* add user code end DMA1_Channel4_IRQ 0 */
+
+  if(dma_interrupt_flag_get(DMA1_FDT4_FLAG) != RESET)
+  {   
+    /* add user code begin DMA1_FDT4_FLAG */
+	  
+	  if (!sps3006.flash_updata)
+	  {
+	          UBaseType_t uxStateA = taskENTER_CRITICAL_FROM_ISR();
+    for (uint8_t ch = 0; ch < ADC_CH_NUM; ch++)
+    {
+      sample_buffer[sample_cnt][ch] = sps3006.adc_raw_buff[ch];
+    }
+    sample_cnt++;
+
+    if (sample_cnt >= FILTER_TIMES)
+    {
+
+      for (uint8_t ch = 0; ch < ADC_CH_NUM; ch++)
+      {
+
+        uint16_t max_val = sample_buffer[0][ch];
+        uint16_t min_val = sample_buffer[0][ch];
+        uint32_t sum = 0;
+
+        for (uint8_t i = 0; i < FILTER_TIMES; i++)
+        {
+          uint16_t val = sample_buffer[i][ch];
+          if (val > max_val)
+            max_val = val;
+          if (val < min_val)
+            min_val = val;
+          sum += val;
+        }
+
+        uint16_t filtered = (sum - max_val - min_val) / (FILTER_TIMES - 2);
+        sps3006.adc_raw_buff[ch] = filtered;
+      }
+
+      sps3006.usb.vbus = (float)sps3006.adc_raw_buff[0] / 100.0f;
+      sps3006.usb.dp = (float)sps3006.adc_raw_buff[1] / 100.0f;
+      sps3006.usb.dm = (float)sps3006.adc_raw_buff[2] / 100.0f;
+      sps3006.usb.ibus = (float)sps3006.adc_raw_buff[3] / 1000.0f;
+      sps3006.typec.vbus = (float)sps3006.adc_raw_buff[4] / 100.0f;
+      sps3006.typec.dm = (float)sps3006.adc_raw_buff[5] / 100.0f;
+      sps3006.typec.cc2 = (float)sps3006.adc_raw_buff[6] / 100.0f;
+      sps3006.typec.ibus = (float)sps3006.adc_raw_buff[7] / 1000.0f;
+      
+      sps3006.output_current_from_mcu = (float)sps3006.adc_raw_buff[8] / 0.68267f;
+      if (sps3006.output_current_from_mcu < 0)
+        sps3006.output_current_from_mcu = 0;
+	  
+	  sps3006.output_voltage = (float)sps3006.adc_raw_buff[9] / 100.0f;
+	  
+      sps3006.ntc_temperature = (float)sps3006.adc_raw_buff[10];
+      sps3006.typec.dp = (float)sps3006.adc_raw_buff[11] / 100.0f;
+      sps3006.typec.cc1 = (float)sps3006.adc_raw_buff[12] / 100.0f;
+
+      sample_cnt = 0;
+    }
+    taskEXIT_CRITICAL_FROM_ISR(uxStateA);
+	  }
+    /* handle full data transfer and clear flag */
+
+    dma_flag_clear(DMA1_FDT4_FLAG);
+
+    /* add user code end DMA1_FDT4_FLAG */ 
+  }
+
+  /* add user code begin DMA1_Channel4_IRQ 1 */
+
+  /* add user code end DMA1_Channel4_IRQ 1 */
+}
+
+/**
+  * @brief  this function handles EXINT Line [9:5] handler.
+  * @param  none
+  * @retval none
+  */
+void EXINT9_5_IRQHandler(void)
+{
+  /* add user code begin EXINT9_5_IRQ 0 */
+
+  /* add user code end EXINT9_5_IRQ 0 */
+
+  if(exint_interrupt_flag_get(EXINT_LINE_5) != RESET)
+  {
+    /* add user code begin EXINT_LINE_5 */
+    EC11_ISR_B(&g_ec11_1);
+    /* clear flag */
+    exint_flag_clear(EXINT_LINE_5);
+    /* add user code end EXINT_LINE_5 */ 
+  }
+
+  if(exint_interrupt_flag_get(EXINT_LINE_6) != RESET)
+  {
+    /* add user code begin EXINT_LINE_6 */
+	
+    EC11_ISR_A(&g_ec11_1);
+    /* clear flag */
+    exint_flag_clear(EXINT_LINE_6);
+    /* add user code end EXINT_LINE_6 */ 
+  }
+
+  /* add user code begin EXINT9_5_IRQ 1 */
+
+  /* add user code end EXINT9_5_IRQ 1 */
+}
+
+/**
+  * @brief  this function handles TMR1 Overflow and TMR10 handler.
+  * @param  none
+  * @retval none
+  */
+void TMR1_OVF_TMR10_IRQHandler(void)
+{
+  /* add user code begin TMR1_OVF_TMR10_IRQ 0 */
+  static uint16_t time = 0;
+
+  static volatile uint8_t FPS_Count = 0;
+  static volatile uint8_t FPS = 0;
+  static volatile uint8_t PAGE = 0;
+  time++;
+
+  if (time > 1000)
+  {
+    FPS = FPS_Count;
+    FPS_Count = 0;
+    time = 0;
+    wave_update_fps(); /* 每秒更新 FPS 并刷新显示 */
+  }
+  /* add user code end TMR1_OVF_TMR10_IRQ 0 */
+
+  wk_timebase_handler();
+
+  /* add user code begin TMR1_OVF_TMR10_IRQ 1 */
+
+  /* add user code end TMR1_OVF_TMR10_IRQ 1 */
+}
+
+/**
+  * @brief  this function handles USART1 handler.
+  * @param  none
+  * @retval none
+  */
+void USART1_IRQHandler(void)
+{
+  /* add user code begin USART1_IRQ 0 */
+  BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+  uint8_t rx_data;
+  /* add user code end USART1_IRQ 0 */
+
+  __IO uint16_t val_rx;
+
+  if(usart_interrupt_flag_get(USART1, USART_TDC_FLAG) != RESET)
+  {
+    /* add user code begin USART1_USART_TDC_FLAG */
+    /* clear flag */
+    usart_flag_clear(USART1, USART_TDC_FLAG);
+
+    if (tx_remain > 0)
+    {
+      usart_data_transmit(USART1, *tx_buffer);
+      tx_buffer++;
+      tx_remain--;
+    }
+    else
+    {
+      usart_interrupt_enable(USART1, USART_TDC_INT, FALSE);
+    }
+
+    /* add user code end USART1_USART_TDC_FLAG */
+  }
+
+  if(usart_interrupt_flag_get(USART1, USART_PERR_FLAG) != RESET)
+  {
+    /* add user code begin USART1_USART_PERR_FLAG */
+    /* clear flag */
+    usart_flag_clear(USART1, USART_PERR_FLAG);
+    /* add user code end USART1_USART_PERR_FLAG */ 
+  }
+
+  if((usart_interrupt_flag_get(USART1, USART_NERR_FLAG) != RESET) || \
+    (usart_interrupt_flag_get(USART1, USART_ROERR_FLAG) != RESET) || \
+    (usart_interrupt_flag_get(USART1, USART_FERR_FLAG) != RESET))
+  {
+    /* add user code begin USART1_USART_NERR_FLAG, USART_ROERR_FLAG or USART_FERR_FLAG */
+    /* clear flag */
+    usart_flag_clear(USART1, USART_NERR_FLAG | USART_ROERR_FLAG | USART_FERR_FLAG);
+    /* add user code end  USART1_USART_NERR_FLAG, USART_ROERR_FLAG or USART_FERR_FLAG */ 
+  }
+
+  if(usart_interrupt_flag_get(USART1, USART_RDBF_FLAG) != RESET)
+  {
+    /* add user code begin USART1_USART_RDBF_FLAG */
+    /* handle data received and clear flag */
+    rx_data = usart_data_receive(USART1);
+	if(sps3006.init_flag)  
+    xQueueSendFromISR(usart_1_rx_handle, &rx_data, &xHigherPriorityTaskWoken);
+    /* add user code end USART1_USART_RDBF_FLAG */ 
+  }
+
+  /* add user code begin USART1_IRQ 1 */
+
+  /* add user code end USART1_IRQ 1 */
+}
+
+/**
+  * @brief  this function handles EXINT Line [15:10] handler.
+  * @param  none
+  * @retval none
+  */
+void EXINT15_10_IRQHandler(void)
+{
+  /* add user code begin EXINT15_10_IRQ 0 */
+
+  /* add user code end EXINT15_10_IRQ 0 */
+
+  if(exint_interrupt_flag_get(EXINT_LINE_14) != RESET)
+  {
+    /* add user code begin EXINT_LINE_14 */
+    EC11_ISR_B(&g_ec11_2);
+    /* clear flag */
+    exint_flag_clear(EXINT_LINE_14);
+    /* add user code end EXINT_LINE_14 */ 
+  }
+
+  if(exint_interrupt_flag_get(EXINT_LINE_15) != RESET)
+  {
+    /* add user code begin EXINT_LINE_15 */
+    EC11_ISR_A(&g_ec11_2);
+    /* clear flag */
+    exint_flag_clear(EXINT_LINE_15);
+    /* add user code end EXINT_LINE_15 */ 
+  }
+
+  /* add user code begin EXINT15_10_IRQ 1 */
+
+  /* add user code end EXINT15_10_IRQ 1 */
+}
+
+/* add user code begin 1 */
+
+/* add user code end 1 */

@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+    <WorkBenchVersion>
+        <Version>V1.2.05</Version>
+    </WorkBenchVersion>
+    <MCUInfo>
+        <MCUSerials>AT32F403A</MCUSerials>
+        <MCUName>AT32F403AVGT7</MCUName>
+        <MCUPackage>LQFP100</MCUPackage>
+    </MCUInfo>
+    <CRC>
+        <Mode>
+            <ModeSub name="CRC_State" value="TRUE"/>
+        </Mode>
+    </CRC>
+    <CRM>
+        <Mode>
+            <ModeSub name="HEXT" value="HEXT-External-Oscillator"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="HEXT" value="HEXT_CRYSTAL"/>
+        </Parameters>
+    </CRM>
+    <DEBUG>
+        <Mode>
+            <ModeSub name="Debug interface" value="SWD"/>
+        </Mode>
+    </DEBUG>
+    <EXINT>
+        <Mode>
+            <ModeSub name="EXINT5" value="TRUE"/>
+            <ModeSub name="EXINT7" value="TRUE"/>
+        </Mode>
+    </EXINT>
+    <SPI4>
+        <Mode>
+            <ModeSub name="Mode" value="Full_Duplex_Master"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="TransmissionMode" value="SPI_TRANSMIT_FULL_DUPLEX"/>
+            <ParametersSub name="Mode" value="SPI_MODE_MASTER"/>
+            <ParametersSub name="FirstBit" value="SPI_FIRST_BIT_MSB"/>
+            <ParametersSub name="ClockFrequency" value="30000000"/>
+            <ParametersSub name="CLKPolarity" value="SPI_CLOCK_POLARITY_HIGH"/>
+            <ParametersSub name="CLKPhase" value="SPI_CLOCK_PHASE_2EDGE"/>
+        </Parameters>
+    </SPI4>
+    <SYSTEM>
+        <Mode>
+            <ModeSub name="Time_Base" value="TMR1"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="Delay_Mode" value="Interrupt"/>
+        </Parameters>
+    </SYSTEM>
+    <TMR3>
+        <Mode>
+            <ModeSub name="Channel1 mode" value="Output_CH1"/>
+            <ModeSub name="Activated" value="TRUE"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="Period" value="7999"/>
+            <ParametersSub name="OCMode_1" value="TMR_OUTPUT_CONTROL_PWM_MODE_A"/>
+            <ParametersSub name="ChannelData_1" value="7999"/>
+        </Parameters>
+    </TMR3>
+    <USART1>
+        <Mode>
+            <ModeSub name="Mode" value="Asynchronous"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="RealBaudRate" value="115163"/>
+        </Parameters>
+        <Interrupts>
+            <InterruptsSub name="Interrupt_RDBF" value="TRUE"/>
+            <InterruptsSub name="Interrupt_TDC" value="TRUE"/>
+            <InterruptsSub name="Interrupt_ERR" value="TRUE"/>
+            <InterruptsSub name="Interrupt_PERR" value="TRUE"/>
+        </Interrupts>
+    </USART1>
+    <WDT>
+        <Mode>
+            <ModeSub name="WDT_State" value="TRUE"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="Prescaler" value="WDT_CLK_DIV_16"/>
+        </Parameters>
+    </WDT>
+    <XMC_NORFlash-PSRAM-LCD_1>
+        <Mode>
+            <ModeSub name="Memory_device_type" value="LCD"/>
+            <ModeSub name="Data_Bus_Width" value="16_Bits"/>
+            <ModeSub name="LCD_RS line" value="A16"/>
+            <ModeSub name="Chip_Select" value="TRUE"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="Address_setup_time" value="1"/>
+            <ParametersSub name="Data_setup_time" value="1"/>
+            <ParametersSub name="Bus_latency" value="1"/>
+            <ParametersSub name="Write_duration" value="1"/>
+            <ParametersSub name="Read_duration" value="1"/>
+        </Parameters>
+    </XMC_NORFlash-PSRAM-LCD_1>
+    <FREERTOS>
+        <Mode>
+            <ModeSub name="Activated" value="TRUE"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="MCU_SRAM_SIZE" value="98304"/>
+            <ParametersSub name="configCPU_CLOCK_HZ" value="240000000"/>
+            <ParametersSub name="configMAX_PRIORITIES" value="0x10"/>
+            <ParametersSub name="configUSE_RECURSIVE_MUTEXES" value="1"/>
+            <ParametersSub name="TOTAL_HEAP_SIZE" value="20480"/>
+        </Parameters>
+        <Tasks>
+            <ParametersGroup>
+                <ParametersSub name="TaskName" value="ui_task"/>
+                <ParametersSub name="TaskPriority" value="0"/>
+                <ParametersSub name="TaskStackSize" value="1024"/>
+                <ParametersSub name="TaskEntryFunction" value="ui_function"/>
+                <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
+                <ParametersSub name="TaskParameters" value="NULL"/>
+                <ParametersSub name="TaskAllocation" value="Dynamic"/>
+                <ParametersSub name="TaskStackBuffer" value="NULL"/>
+                <ParametersSub name="TaskBuffer" value="NULL"/>
+            </ParametersGroup>
+            <ParametersGroup>
+                <ParametersSub name="TaskName" value="input_task"/>
+                <ParametersSub name="TaskPriority" value="0"/>
+                <ParametersSub name="TaskStackSize" value="256"/>
+                <ParametersSub name="TaskEntryFunction" value="input_function"/>
+                <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
+                <ParametersSub name="TaskParameters" value="NULL"/>
+                <ParametersSub name="TaskAllocation" value="Dynamic"/>
+                <ParametersSub name="TaskStackBuffer" value="NULL"/>
+                <ParametersSub name="TaskBuffer" value="NULL"/>
+            </ParametersGroup>
+            <ParametersGroup>
+                <ParametersSub name="TaskName" value="output_task"/>
+                <ParametersSub name="TaskPriority" value="0"/>
+                <ParametersSub name="TaskStackSize" value="256"/>
+                <ParametersSub name="TaskEntryFunction" value="output_function"/>
+                <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
+                <ParametersSub name="TaskParameters" value="NULL"/>
+                <ParametersSub name="TaskAllocation" value="Dynamic"/>
+                <ParametersSub name="TaskStackBuffer" value="NULL"/>
+                <ParametersSub name="TaskBuffer" value="NULL"/>
+            </ParametersGroup>
+            <ParametersGroup>
+                <ParametersSub name="TaskName" value="common_task"/>
+                <ParametersSub name="TaskPriority" value="0"/>
+                <ParametersSub name="TaskStackSize" value="128"/>
+                <ParametersSub name="TaskEntryFunction" value="common_function"/>
+                <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
+                <ParametersSub name="TaskParameters" value="NULL"/>
+                <ParametersSub name="TaskAllocation" value="Dynamic"/>
+                <ParametersSub name="TaskStackBuffer" value="NULL"/>
+                <ParametersSub name="TaskBuffer" value="NULL"/>
+            </ParametersGroup>
+            <ParametersGroup>
+                <ParametersSub name="TaskName" value="wdt_task"/>
+                <ParametersSub name="TaskPriority" value="1"/>
+                <ParametersSub name="TaskStackSize" value="128"/>
+                <ParametersSub name="TaskEntryFunction" value="wdt_function"/>
+                <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
+                <ParametersSub name="TaskParameters" value="NULL"/>
+                <ParametersSub name="TaskAllocation" value="Dynamic"/>
+                <ParametersSub name="TaskStackBuffer" value="NULL"/>
+                <ParametersSub name="TaskBuffer" value="NULL"/>
+            </ParametersGroup>
+        </Tasks>
+        <Queues>
+            <ParametersGroup>
+                <ParametersSub name="QueueName" value="usart_1_tx"/>
+                <ParametersSub name="QueueSize" value="256"/>
+                <ParametersSub name="QueueItemSize" value="uint8_t"/>
+                <ParametersSub name="QueueAllocation" value="Dynamic"/>
+                <ParametersSub name="QueueBufferName" value="NULL"/>
+                <ParametersSub name="QueueBufferSize" value="n/a"/>
+                <ParametersSub name="QueueBuffer" value="NULL"/>
+            </ParametersGroup>
+            <ParametersGroup>
+                <ParametersSub name="QueueName" value="usart_1_rx"/>
+                <ParametersSub name="QueueSize" value="2048"/>
+                <ParametersSub name="QueueItemSize" value="uint8_t"/>
+                <ParametersSub name="QueueAllocation" value="Dynamic"/>
+                <ParametersSub name="QueueBufferName" value="NULL"/>
+                <ParametersSub name="QueueBufferSize" value="n/a"/>
+                <ParametersSub name="QueueBuffer" value="NULL"/>
+            </ParametersGroup>
+        </Queues>
+    </FREERTOS>
+    <DMA>
+        <MEMTOMEM0>
+            <ParametersSub name="Instance" value="DMA1_Channel3"/>
+            <ParametersSub name="PeriphDataAlignment" value="DMA_PERIPHERAL_DATA_WIDTH_HALFWORD"/>
+            <ParametersSub name="MemDataAlignment" value="DMA_MEMORY_DATA_WIDTH_HALFWORD"/>
+            <ParametersSub name="Interrupt_FDT" value="ENABLE"/>
+        </MEMTOMEM0>
+        <SPI4_RX>
+            <ParametersSub name="Instance" value="DMA1_Channel1"/>
+        </SPI4_RX>
+        <SPI4_TX>
+            <ParametersSub name="Instance" value="DMA1_Channel2"/>
+        </SPI4_TX>
+    </DMA>
+    <NVIC>
+        <SVC_Handler>1;0;0;0;0;0</SVC_Handler>
+        <PendSV_Handler>1;15;0;1;0;0</PendSV_Handler>
+        <SysTick_Handler>1;15;0;1;0;1</SysTick_Handler>
+        <FLASH_IRQHandler>0;5;0;1;0;0</FLASH_IRQHandler>
+        <CRM_IRQHandler>0;5;0;1;0;0</CRM_IRQHandler>
+        <DMA1_Channel1_IRQHandler>1;5;0;1;0;1</DMA1_Channel1_IRQHandler>
+        <DMA1_Channel2_IRQHandler>0;5;0;1;0;0</DMA1_Channel2_IRQHandler>
+        <DMA1_Channel3_IRQHandler>1;5;0;1;0;1</DMA1_Channel3_IRQHandler>
+        <EXINT9_5_IRQHandler>0;5;0;1;0;0</EXINT9_5_IRQHandler>
+        <TMR3_GLOBAL_IRQHandler>0;5;0;1;0;0</TMR3_GLOBAL_IRQHandler>
+        <USART1_IRQHandler>1;5;0;1;0;1</USART1_IRQHandler>
+        <SPI4_IRQHandler>0;5;0;1;0;0</SPI4_IRQHandler>
+    </NVIC>
+    <GPIO>
+        <ShowType>1</ShowType>
+        <Signal SignalName="SPI4_SCK" PinName="PE2">
+            <Parameters name="Label" value="W25Q128_SCL"/>
+        </Signal>
+        <Signal SignalName="GPIO_Input" PinName="PE3">
+            <Parameters name="GPIO_PullType_Set" value="GPIO_PULL_DOWN"/>
+            <Parameters name="Label" value="IN_W25Q128_RE_H"/>
+        </Signal>
+        <Signal SignalName="GPIO_Output" PinName="PE4">
+            <Parameters name="GPIO_Outputlevel" value="GPIO_OUTPUTLEVEL_HIGH"/>
+            <Parameters name="Label" value="OUT_W25Q128_CS_L"/>
+        </Signal>
+        <Signal SignalName="SPI4_MISO" PinName="PE5">
+            <Parameters name="Label" value="W25Q128_MISO"/>
+        </Signal>
+        <Signal SignalName="SPI4_MOSI" PinName="PE6">
+            <Parameters name="Label" value="W25Q128_MOSI"/>
+        </Signal>
+        <Signal SignalName="GPIO_Output" PinName="PC3">
+            <Parameters name="Label" value="OUT_BEEP_H"/>
+        </Signal>
+        <Signal SignalName="TMR3_CH1" PinName="PA6">
+            <Parameters name="Label" value="OUT_LCD_BL_PWM"/>
+        </Signal>
+        <Signal SignalName="GPIO_Input" PinName="PB12">
+            <Parameters name="GPIO_PullType_Set" value="GPIO_PULL_UP"/>
+            <Parameters name="Label" value="IN_KEY1_L"/>
+        </Signal>
+        <Signal SignalName="GPIO_Input" PinName="PB13">
+            <Parameters name="GPIO_PullType_Set" value="GPIO_PULL_UP"/>
+            <Parameters name="Label" value="IN_KEY2_L"/>
+        </Signal>
+        <Signal SignalName="GPIO_Input" PinName="PB14">
+            <Parameters name="GPIO_PullType_Set" value="GPIO_PULL_UP"/>
+            <Parameters name="Label" value="IN_KEY3_L"/>
+        </Signal>
+        <Signal SignalName="GPIO_Input" PinName="PB15">
+            <Parameters name="GPIO_PullType_Set" value="GPIO_PULL_UP"/>
+            <Parameters name="Label" value="IN_KEY4_L"/>
+        </Signal>
+        <Signal SignalName="GPIO_Output" PinName="PC6">
+            <Parameters name="Label" value="OUT_LCD_RST_L"/>
+        </Signal>
+        <Signal SignalName="GPIO_Output" PinName="PC7">
+            <Parameters name="Label" value="IN_TOUCH_INT_L"/>
+        </Signal>
+        <Signal SignalName="GPIO_Output" PinName="PC8">
+            <Parameters name="GPIO_Outputlevel" value="GPIO_OUTPUTLEVEL_HIGH"/>
+            <Parameters name="Label" value="OUT_TOUCH_RST_L"/>
+        </Signal>
+        <Signal SignalName="GPIO_Output" PinName="PC9">
+            <Parameters name="Label" value="OUT_TOUCH_SDA"/>
+        </Signal>
+        <Signal SignalName="GPIO_Output" PinName="PA8">
+            <Parameters name="GPIO_Type" value="GPIO_OUTPUT_OPEN_DRAIN"/>
+            <Parameters name="GPIO_DriverCapability" value="GPIO_DRIVE_STRENGTH_STRONGER"/>
+            <Parameters name="Label" value="OUT_TOUCH_SCL"/>
+        </Signal>
+        <Signal SignalName="EXINT5" PinName="PB5">
+            <Parameters name="Label" value="IN_ENCODER_B_HL"/>
+        </Signal>
+        <Signal SignalName="GPIO_Input" PinName="PB6">
+            <Parameters name="GPIO_PullType_Set" value="GPIO_PULL_UP"/>
+            <Parameters name="Label" value="IN_ENCODER_KEY_L"/>
+        </Signal>
+        <Signal SignalName="EXINT7" PinName="PB7">
+            <Parameters name="Label" value="IN_ENCODER_A_HL"/>
+        </Signal>
+        <Signal SignalName="GPIO_Output" PinName="PE1">
+            <Parameters name="Label" value="OUT_LED_H"/>
+        </Signal>
+    </GPIO>
+    <ClockConfiguration>
+        <rtcsel>0</rtcsel>
+        <hext>8.000000</hext>
+        <hextdiv>2</hextdiv>
+        <pllhextdiv>0</pllhextdiv>
+        <pllrcs>0</pllrcs>
+        <pllmult>30</pllmult>
+        <sclkselect>1</sclkselect>
+        <ahbdiv>1</ahbdiv>
+        <apb1div>2</apb1div>
+        <apb2div>2</apb2div>
+        <usbdiv>4.0</usbdiv>
+        <hicktousb>1</hicktousb>
+        <hicktosclk>0</hicktosclk>
+        <clkout>0</clkout>
+        <clkoutdiv>1</clkoutdiv>
+        <adcdiv>6</adcdiv>
+        <systicsel>1</systicsel>
+    </ClockConfiguration>
+    <PINInfo>
+        <PinSub pinname="PE2" signalname="SPI4_SCK" signaltype="3"/>
+        <PinSub pinname="PE3" signalname="GPIO_Input" signaltype="3"/>
+        <PinSub pinname="PE4" signalname="GPIO_Output" signaltype="3"/>
+        <PinSub pinname="PE5" signalname="SPI4_MISO" signaltype="2"/>
+        <PinSub pinname="PE6" signalname="SPI4_MOSI" signaltype="2"/>
+        <PinSub pinname="HEXT_IN" signalname="CRM_HEXT_IN" signaltype="2"/>
+        <PinSub pinname="HEXT_OUT" signalname="CRM_HEXT_OUT" signaltype="2"/>
+        <PinSub pinname="PC3" signalname="GPIO_Output" signaltype="3"/>
+        <PinSub pinname="PA6" signalname="TMR3_CH1" signaltype="3"/>
+        <PinSub pinname="PE7" signalname="XMC_D4" signaltype="2"/>
+        <PinSub pinname="PE8" signalname="XMC_D5" signaltype="2"/>
+        <PinSub pinname="PE9" signalname="XMC_D6" signaltype="2"/>
+        <PinSub pinname="PE10" signalname="XMC_D7" signaltype="2"/>
+        <PinSub pinname="PE11" signalname="XMC_D8" signaltype="2"/>
+        <PinSub pinname="PE12" signalname="XMC_D9" signaltype="2"/>
+        <PinSub pinname="PE13" signalname="XMC_D10" signaltype="2"/>
+        <PinSub pinname="PE14" signalname="XMC_D11" signaltype="2"/>
+        <PinSub pinname="PE15" signalname="XMC_D12" signaltype="2"/>
+        <PinSub pinname="PB12" signalname="GPIO_Input" signaltype="3"/>
+        <PinSub pinname="PB13" signalname="GPIO_Input" signaltype="3"/>
+        <PinSub pinname="PB14" signalname="GPIO_Input" signaltype="3"/>
+        <PinSub pinname="PB15" signalname="GPIO_Input" signaltype="3"/>
+        <PinSub pinname="PD8" signalname="XMC_D13" signaltype="2"/>
+        <PinSub pinname="PD9" signalname="XMC_D14" signaltype="2"/>
+        <PinSub pinname="PD10" signalname="XMC_D15" signaltype="2"/>
+        <PinSub pinname="PD11" signalname="XMC_A16" signaltype="2"/>
+        <PinSub pinname="PD14" signalname="XMC_D0" signaltype="2"/>
+        <PinSub pinname="PD15" signalname="XMC_D1" signaltype="2"/>
+        <PinSub pinname="PC6" signalname="GPIO_Output" signaltype="3"/>
+        <PinSub pinname="PC7" signalname="GPIO_Output" signaltype="3"/>
+        <PinSub pinname="PC8" signalname="GPIO_Output" signaltype="3"/>
+        <PinSub pinname="PC9" signalname="GPIO_Output" signaltype="3"/>
+        <PinSub pinname="PA8" signalname="GPIO_Output" signaltype="3"/>
+        <PinSub pinname="PA9" signalname="USART1_TX" signaltype="3"/>
+        <PinSub pinname="PA10" signalname="USART1_RX" signaltype="3"/>
+        <PinSub pinname="PA13" signalname="DEBUG_JTMS_SWDIO" signaltype="2"/>
+        <PinSub pinname="PA14" signalname="DEBUG_JTCK_SWCLK" signaltype="2"/>
+        <PinSub pinname="PD0" signalname="XMC_D2" signaltype="2"/>
+        <PinSub pinname="PD1" signalname="XMC_D3" signaltype="2"/>
+        <PinSub pinname="PD4" signalname="XMC_NOE" signaltype="2"/>
+        <PinSub pinname="PD5" signalname="XMC_NWE" signaltype="2"/>
+        <PinSub pinname="PD7" signalname="XMC_NE1" signaltype="2"/>
+        <PinSub pinname="PB5" signalname="EXINT5" signaltype="3"/>
+        <PinSub pinname="PB6" signalname="GPIO_Input" signaltype="3"/>
+        <PinSub pinname="PB7" signalname="EXINT7" signaltype="3"/>
+        <PinSub pinname="PE1" signalname="GPIO_Output" signaltype="3"/>
+    </PINInfo>
+    <ProjectInfomation>
+        <ProjectName>AT32F403AVGT7_WorkBench</ProjectName>
+        <ProjectLocation>C:/Users/Administrator/Desktop/ui demo/AT32 FOR LVGL/app</ProjectLocation>
+        <ToolchainIDE>MDK_V5</ToolchainIDE>
+        <ARMCompiler>1</ARMCompiler>
+        <BackupCode>true</BackupCode>
+        <KeepUserCode>true</KeepUserCode>
+        <NotUsedPinAnalog>true</NotUsedPinAnalog>
+        <CodeSplitIP>true</CodeSplitIP>
+        <AddNecessaryFileFlag>true</AddNecessaryFileFlag>
+        <DeletePriviousFiles>true</DeletePriviousFiles>
+        <MinHeapSize>0x200</MinHeapSize>
+        <MinStackSize>0x400</MinStackSize>
+        <UseFirmware>true</UseFirmware>
+        <PackageVersion>V2.2.2</PackageVersion>
+    </ProjectInfomation>
+    <FunctionRankInfo>
+        <RankSub RankNum="1" FixPosFlag="TRUE" FuncName="wk_system_clock_config" InstanceName="CRM" CodeSection="config_system_clock_rtthread" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="2" FixPosFlag="TRUE" FuncName="wk_periph_clock_config" InstanceName="CRM" CodeSection="config periph clock" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="4" FixPosFlag="TRUE" FuncName="wk_debug_config" InstanceName="DEBUG" CodeSection="debug function" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="7" FixPosFlag="TRUE" FuncName="wk_nvic_config" InstanceName="NVIC" CodeSection="config nvic" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="8" FixPosFlag="TRUE" FuncName="wk_timebase_init" InstanceName="SYSTEM" CodeSection="config timebase" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="9" FixPosFlag="TRUE" FuncName="wk_gpio_config" InstanceName="GPIO" CodeSection="gpio function" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="28" FixPosFlag="FALSE" FuncName="wk_xmc_gpio_init" InstanceName="XMC" CodeSection="xmc_gpio function" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="29" FixPosFlag="FALSE" FuncName="wk_xmc_bank1_nor_sram1_init" InstanceName="XMC_NORFlash-PSRAM-LCD_1" CodeSection="xmc_bank1_nor_sram1 function" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="75" FixPosFlag="FALSE" FuncName="wk_crc_init" InstanceName="CRC" CodeSection="crc function" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="76" FixPosFlag="FALSE" FuncName="wk_wdt_init" InstanceName="WDT" CodeSection="wdt function" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="52" FixPosFlag="FALSE" FuncName="wk_exint_config" InstanceName="EXINT" CodeSection="exint function" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="16" FixPosFlag="FALSE" FuncName="wk_dma1_channel3_init" InstanceName="DMA1_Channel3" CodeSection="dma1_channel3_init" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="43" FixPosFlag="FALSE" FuncName="wk_spi4_init" InstanceName="SPI4" CodeSection="spi4 function" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="32" FixPosFlag="FALSE" FuncName="wk_usart1_init" InstanceName="USART1" CodeSection="usart1 function" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="58" FixPosFlag="FALSE" FuncName="wk_tmr3_init" InstanceName="TMR3" CodeSection="tmr3 function" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="14" FixPosFlag="FALSE" FuncName="wk_dma1_channel1_init" InstanceName="DMA1_Channel1" CodeSection="dma1_channel1_init" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="15" FixPosFlag="FALSE" FuncName="wk_dma1_channel2_init" InstanceName="DMA1_Channel2" CodeSection="dma1_channel2_init" MainDoNotCallFlag="FALSE"/>
+    </FunctionRankInfo>
+</Root>

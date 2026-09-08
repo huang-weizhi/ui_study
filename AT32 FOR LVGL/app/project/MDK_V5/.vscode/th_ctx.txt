@@ -1,0 +1,13 @@
+void touch_handle(void)
+{
+    
+    get_touch_event(&spa45);
+    /* handle event */
+    touch_event_handle(&spa45);
+
+    
+    // if (spa45.page == PAGE_MULTIMETER)
+    // {
+    //     text_box_drag_process();
+    // }
+}

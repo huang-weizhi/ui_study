@@ -1,0 +1,6 @@
+﻿
+    wave_store_begin_save                    0x0801a849   Thumb Code   772  lto-llvm-b5cd1b.o(.text.wave_store_begin_save)
+    [Anonymous Symbol]                       0x0801a848   Section        0  lto-llvm-b5cd1b.o(.text.wave_store_begin_save)
+    0x0801a848   0x0801a848   0x00000304   Code   RO          679    .text.wave_store_begin_save  lto-llvm-b5cd1b.o
+
+

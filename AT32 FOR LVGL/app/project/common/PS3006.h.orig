@@ -1,0 +1,293 @@
+#ifndef __PS3006_H
+#define __PS3006_H
+
+#include <stdbool.h>
+#include <string.h>
+#include <stdbool.h>
+
+#include "at32f403a_407.h"
+#include "at32f403a_407_wk_config.h"
+
+#include "inf_beep.h"
+#include "Inf_key.h"
+#include "Inf_lcd.h"
+#include "Inf_touch.h"
+#include "Inf_ec11.h"
+#include "inf_w25qxxx.h"
+#include "inf_ina226.h"
+#include "inf_dac8551.h"
+
+#define SOFTWARE_VERSTION "V1.0.0"
+#define HARDWARE_VERSTION "V1.0.0"
+
+#define DEFAULT_OUTPUT_VOLTAGE 5.0f
+#define MAX_OUTPUT_VOLTAGE 30.0f
+#define MIN_OUTPUT_VOLTAGE 0.0f
+
+#define DEFAULT_OUTPUT_CURRENT 1.0f
+#define MAX_OUTPUT_CURRENT 5.0f
+#define MIN_OUTPUT_CURRENT 0.0f
+
+#define ADC_CHANNEL 13
+
+
+#define MAX_FAN_OUTPUT 6856
+#define HALF_FAN_OUTPUT 4200
+#define MIN_FAN_OUTPUT 2000
+typedef enum
+{
+    PAGE_LOGO,
+    PAGE_CURVE,
+    PAGE_VALUE,
+    PAGE_CHARGE,
+    PAGE_SETTING,
+
+    PAGE_SETTING_WORK_MODE,
+    PAGE_SETTING_SPEAKER_MODE,
+    PAGE_SETTING_LANGUAGE_CN,
+    PAGE_SETTING_LANGUAGE_EN,
+//    PAGE_SETTING_WAVE_REPLAY_LIST,
+//    PAGE_SETTING_WAVE_REPLAY,
+    PAGE_SETTING_OUTPUT_KEY,
+    PAGE_SET_SETTING_RESET_NOT_CONFIRN,
+    PAGE_SET_SETTING_RESET_CONFIRN,
+    PAGE_SET_SETTING_RESET_DONE,
+
+    PAGE_SETTING_SUPPORT,
+
+} Page_e;
+
+typedef enum
+{
+    STATE_CLOSE,
+    STATE_OPEN,
+} State_e;
+
+typedef enum
+{
+    STATE_WAVE_PLAY,
+    STATE_WAVE_PAUSE,
+} WavePlayState_e;
+
+typedef enum
+{
+    STATE_WAVE_REPLAY_STOP,
+    STATE_WAVE_REPLAY_PAUSE,
+    STATE_WAVE_REPLAY_PLAY,
+} WaveRePlayState_e;
+
+typedef enum
+{
+    STATE_WAVE_RECORD_FINISH,
+    STATE_WAVE_RECORD_START,
+
+} WaveRecordState_e;
+
+// Language setting
+typedef enum
+{
+    LANG_CN, // Chinese
+    LANG_EN, // English
+} Language_t;
+
+typedef struct
+{
+    State_e speaker;     // Sound enable (on/off)
+    Language_t language; // Language setting
+    State_e output_key;  // Key output enable (on/off)
+} Function_t;
+
+/*================== State Enum Definitions ==================*/
+
+// Power working state
+typedef enum
+{
+    OUTPUT_STATE_OFF,
+    OUTPUT_STATE_ON,
+} OutputState_e;
+
+// Output mode (user setting)
+typedef enum
+{
+    OUTPUT_MODE_CC_FAULT_ONCE, // Single overcurrent protection (trip on OC)
+    OUTPUT_MODE_CC_FAULT_CONT, // Continuous overcurrent protection (limit current, keep output)
+    OUTPUT_MODE_CC_CONST,      // Constant current mode (force CC regulation)
+} OutputMode_e;
+
+// Current sensing range
+typedef enum
+{
+    CURRENT_RANGE_LOW,    // Low range 0~1A
+    CURRENT_RANGE_MEDIUM, // Medium range 0~10A
+    CURRENT_RANGE_HIGH,   // High range 0~50A
+} CurrentRange_e;
+
+// Current sensing range
+typedef enum
+{
+     LOW_SPEED,     
+     MEDIUM_SPEED,  
+     HIGH_SPEED,    
+} FanOutputLevel_e;
+
+
+
+typedef enum
+{
+	SETTING_1000_VOLTAGE, 
+	SETTING_0100_VOLTAGE,
+	SETTING_0010_VOLTAGE, 	
+	SETTING_0001_VOLTAGE, 
+
+} SetVoltageState_e;
+
+
+typedef enum
+{
+     SETTING_1000_CURRENT, 	
+     SETTING_0100_CURRENT,
+     SETTING_0010_CURRENT, 	
+     SETTING_0001_CURRENT,    	
+       
+} SetCurrentState_e;
+
+
+// Error/Fault code (for logging or host communication)
+typedef enum
+{
+    ERR_NONE = 0,
+    ERR_OVP_MAIN,       // Main output overvoltage
+    ERR_OCP_MAIN,       // Main output overcurrent
+    ERR_OTP,            // Over temperature
+    ERR_SHORT_MAIN,     // Main output short circuit
+    ERR_USB_OCP,        // USB port overcurrent
+    ERR_USB_SHORT,      // USB port short circuit
+    ERR_TYPEC_OCP,      // Type-C port overcurrent
+    ERR_TYPEC_SHORT,    // Type-C port short circuit
+    ERR_TYPEC_CC_FAULT, // CC pin fault
+    ERR_EXT_FAULT,      // External fault input
+    ERR_COMM_TIMEOUT,   // Communication timeout
+} ErrorCode_e;
+
+/*================== Port Sub-structures ==================*/
+
+// USB-A port measurement values
+typedef struct
+{
+    float vbus; // VBUS voltage (V)
+    float ibus; // Output current (A)
+    float dp;   // D+ voltage (V)
+    float dm;   // D- voltage (V)
+} USB_Port_t;
+
+// Type-C port measurement values
+typedef struct
+{
+    float vbus; // VBUS voltage (V)
+    float ibus; // Output current (A)
+    float dp;   // DP (D+) voltage (V) (note: if used as USB2.0)
+    float dm;   // DM (D-) voltage (V)
+    float cc1;  // CC1 voltage (V)
+    float cc2;  // CC2 voltage (V)
+} TypeC_Port_t;
+
+/*================== Global Variable Structure ==================*/
+
+typedef struct
+{
+    Function_t function;
+
+    Page_e page;
+    Page_e last_page;
+
+    // ======== Main Output (or internal bus) ========
+    float output_voltage;          // Main output voltage (V)
+    float output_current;          // Main output current (A)
+    float output_current_from_mcu; // Main output current (A)
+    float ntc_temperature;         // NTC temperature (°C)
+
+    // ======== User Settings ========
+    float set_voltage;        // Target voltage (V)
+    float set_current;        // Current limit (A)
+    OutputMode_e output_mode; // Overcurrent protection / CC mode
+
+    // ======== Current Range ========
+    CurrentRange_e current_range;
+
+    // ======== Port Measurement Data ========
+    USB_Port_t usb;
+    TypeC_Port_t typec;
+
+    // ======== Working Status ========
+    OutputState_e output_state;
+
+    WavePlayState_e wave_play_state;
+
+    WaveRePlayState_e wave_replay_state;
+
+    WaveRecordState_e wave_record_state;
+
+    FanOutputLevel_e  fan_output_level;
+
+    SetVoltageState_e set_voltage_state;
+	
+	SetCurrentState_e set_current_state;
+
+    bool output_enabled; // Overall output enable
+    bool cv_mode_actual; // Actual working mode (true = CV, false = CC)
+    bool init_flag;
+
+    bool show_set_current_flag;
+	uint16_t show_set_current_time;
+	
+	bool show_set_voltage_flag;
+	uint16_t show_set_voltage_time;
+	
+    bool key_setting_flag;
+    bool ec11_setting_flag;
+    bool touch_setting_flag;
+    // ======== Fault Flags (latched) ========
+    bool fault_ovp_main;    // Main output overvoltage
+    bool fault_ocp_main;    // Main output overcurrent
+    bool fault_otp;         // Over temperature
+    bool fault_short_main;  // Main output short
+    bool fault_usb_ocp;     // USB overcurrent
+    bool fault_usb_short;   // USB short
+    bool fault_typec_ocp;   // Type-C overcurrent
+    bool fault_typec_short; // Type-C short
+    bool fault_typec_cc;    // CC pin abnormality (e.g., voltage out of range)
+    bool fault_external;    // External fault signal
+
+    // ======== Reset Flags (latched) ========
+    bool reset_flag;
+    // ======== Last Error Code ========
+    ErrorCode_e last_error;
+
+    /* ADC raw buffer mapping:
+       adc_raw_buff[0]: USB_VOLTAGE_ADC
+       adc_raw_buff[1]: USB_DP_ADC
+       adc_raw_buff[2]: USB_DM_ADC
+       adc_raw_buff[3]: USB_CURRENT_ADC
+       adc_raw_buff[4]: TYPEC_VOLTAGE_ADC
+       adc_raw_buff[5]: TYPEC_DM_ADC
+       adc_raw_buff[6]: TYPEC_CC2_ADC
+       adc_raw_buff[7]: TYPEC_CURRENT_ADC
+       adc_raw_buff[8]: VOLTAGE_OUT_ADC
+       adc_raw_buff[9]: CURRENT_OUT_ADC
+       adc_raw_buff[10]: NEC_ADC
+       adc_raw_buff[11]: TYPEC_DM_DP_ADC
+       adc_raw_buff[12]: TYPEC_CC1_ADC
+    */
+    uint16_t adc_raw_buff[ADC_CHANNEL];
+    
+	int16_t ntc_temp; 
+
+} PS3006_Global_t;
+
+/*================== Global Instance Declaration ==================*/
+extern PS3006_Global_t sps3006;
+
+// Initialize the global power data structure
+void Power_Global_Init(void);
+
+#endif // __PS3006_H

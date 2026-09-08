@@ -1,0 +1,143 @@
+void show_wave(PA45_Global_t *this)
+{
+    static uint8_t wave_inited = 0;
+    static uint32_t last_sample_tick = 0;
+    static Page_e last_page = PAGE_LOGO;
+
+    if (!wave_inited)
+    {
+        wave_display_init();
+        wave_inited = 1;
+    }
+
+    if (this->page == PAGE_CURVE && last_page != PAGE_CURVE)
+    {
+        wave_force_refresh();
+    }
+
+    last_page = this->page;
+
+#if FPS_DISP_ENABLE
+    /* FPS / CPU load auto-refresh (self-throttled, no external call needed) */
+    wave_stats_update();
+#endif
+
+    if (this->page != PAGE_CURVE)
+    {
+        return;
+    }
+
+    
+    if (wave_dialog_is_open())
+    {
+        return;
+    }
+
+    
+    if (this->wave_record_state == STATE_WAVE_RECORD_START && !g_recording_active)
+    {
+        if (g_replay_mode_active)
+        {
+            this->wave_replay_state = STATE_WAVE_REPLAY_STOP;
+            g_replay_mode_active = 0;
+            wave_clear();
+            draw_voltage_scale();
+            draw_current_scale();
+        }
+        g_recording_active = 1;
+        g_record_point_cnt = 0;
+        g_replay_loaded = 0; /* recording overrides any loaded slot */
+        g_record_start_tick = xTaskGetTickCount();
+        g_last_record_sample_tick = g_record_start_tick;
+        g_blink_show = 0;
+        g_last_blink_tick = 0;
+    }
+    
+    else if (this->wave_record_state == STATE_WAVE_RECORD_FINISH && g_recording_active)
+    {
+        g_recording_active = 0;
+        memcpy(g_replay_voltage, g_record_voltage, sizeof(int16_t) * g_record_point_cnt);
+        memcpy(g_replay_current, g_record_current, sizeof(int16_t) * g_record_point_cnt);
+        g_replay_point_cnt = g_record_point_cnt;
+        
+        if (g_replay_point_cnt > 0)
+            wave_dialog_open_save(this);
+    }
+
+    
+    if (this->wave_replay_state == STATE_WAVE_REPLAY_STOP)
+    {
+        g_replay_loaded = 0;
+        if (g_replay_mode_active)
+        {
+            g_replay_mode_active = 0;
+            wave_clear();
+            draw_voltage_scale();
+            draw_current_scale();
+        }
+    }
+    
+    else if (this->wave_replay_state == STATE_WAVE_REPLAY_PLAY)
+    {
+        if (!g_replay_mode_active && g_replay_point_cnt > 0)
+        {
+            g_replay_mode_active = 1;
+            g_replay_loaded = 0;
+            g_replay_pos = 0;
+            g_replay_last_tick = 0;
+            g_replay_display_voltage = (float)g_replay_voltage[0] / RECORD_VOLT_SCALE;
+            g_replay_display_current = ((float)g_replay_current[0] / RECORD_CURR_SCALE) / 1000.0f;
+            wave_clear();
+        }
+    }
+
+    
+    draw_recording_indicator();
+
+    
+    wave_scrub_process(this);
+
+    if (g_replay_mode_active)
+    {
+        if (this->wave_replay_state == STATE_WAVE_REPLAY_PLAY)
+        {
+            if (g_replay_pos < g_replay_point_cnt)
+            {
+                uint32_t now = xTaskGetTickCount();
+                if ((now - g_replay_last_tick) >= pdMS_TO_TICKS(SAMPLE_INTERVAL_MS))
+                {
+                    g_replay_last_tick = now;
+                    /* convert fixed-point back to volts / mA */
+                    float v = (float)g_replay_voltage[g_replay_pos] / RECORD_VOLT_SCALE;
+                    float c = (float)g_replay_current[g_replay_pos] / RECORD_CURR_SCALE;
+                    g_replay_pos++;
+                    wave_add_point(v, c);
+                }
+            }
+            else
+            {
+                this->wave_replay_state = STATE_WAVE_REPLAY_STOP;
+                g_replay_mode_active = 0;
+                wave_clear();
+                draw_voltage_scale();
+                draw_current_scale();
+            }
+        }
+    }
+    else
+    {
+        
+        if (this->wave_play_state == STATE_WAVE_PAUSE)
+        {
+            return;
+        }
+        if (g_replay_loaded)
+        {
+            return;
+        }
+
+        uint32_t now = xTaskGetTickCount();
+        if ((now - last_sample_tick) >= pdMS_TO_TICKS(LIVE_SAMPLE_INTERVAL_MS))
+        {
+            last_sample_tick = now;
+            wave_add_point(spa45.input_ina226_voltage, spa45.input_ina226_cur

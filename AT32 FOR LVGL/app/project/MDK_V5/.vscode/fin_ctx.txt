@@ -1,0 +1,97 @@
+ >= HISTORY_SIZE)
+        history_full = 1;
+    check_voltage_range_change(voltage);
+    check_current_range_change(current_ma);
+    if (g_recording_active && g_record_point_cnt < MAX_RECORD_POINTS)
+    {
+        /* Schedule-driven sampling with catch-up:
+           sample slot n is due at (start + n * SAMPLE_INTERVAL_MS). If a UI
+           cycle overshoots, write the CURRENT reading for every missed slot
+           so point count always matches elapsed time exactly.
+           => 180 s wall clock == 3600 points, display and replay agree. */
+        uint32_t now = xTaskGetTickCount();
+        uint32_t elapsed_ms = (uint32_t)((now - g_record_start_tick) * portTICK_PERIOD_MS);
+        uint32_t due_points = elapsed_ms / SAMPLE_INTERVAL_MS;
+        if (due_points > MAX_RECORD_POINTS)
+            due_points = MAX_RECORD_POINTS;
+
+        while (g_record_point_cnt < due_points)
+        {
+            g_record_voltage[g_record_point_cnt] = (int16_t)(voltage * RECORD_VOLT_SCALE + 0.5f);
+            g_record_current[g_record_point_cnt] = (uint16_t)(current_ma * RECORD_CURR_SCALE + 0.5f);
+            g_record_point_cnt++;
+        }
+
+        if (g_record_point_cnt >= MAX_RECORD_POINTS)
+        {
+            /* Only raise FINISH here. Keep g_recording_active=1 so that
+               show_wave's finish branch runs once: it copies record->replay
+               AND opens the save-slot dialog (this was previously skipped). */
+            spa45.wave_record_state = STATE_WAVE_RECORD_FINISH;
+        }
+    }
+    if (g_replay_mode_active)
+    {
+        g_replay_display_voltage = voltage;
+        g_replay_display_current = current_ma / 1000.0f;
+    }
+    if (g_voltage_range_change_pending)
+        apply_voltage_range_change();
+    if (g_current_range_change_pending)
+        apply_current_range_change();
+    if (!g_voltage_range_change_pending && !g_current_range_change_pending)
+        refresh_all_blocks();
+#if FPS_DISP_ENABLE
+    g_stat_frames++;
+#endif
+}
+
+void wave_clear(void)
+{
+    history_count = 0;
+    history_full = 0;
+    for (uint16_t blk = 0; blk < g_block_count; blk++)
+    {
+        uint16_t actual_width = (blk == g_block_count - 1) ? g_last_block_width : BLOCK_WIDTH_FIXED;
+        draw_grid_for_block(blk, actual_width, block_buffer);
+        send_block_to_lcd(blk, actual_width, block_buffer);
+    }
+    draw_voltage_scale();
+    draw_current_scale();
+#if FPS_DISP_ENABLE
+    g_stat_frames = 0;
+#endif
+}
+
+#if FPS_DISP_ENABLE
+/**
+ * @brief  Periodically compute and draw FPS + CPU load.
+ * @note   Self-throttled to STATS_UPDATE_MS; call text_box-style from the main
+ *         loop every cycle (it returns immediately between windows).
+ *         CPU load = 100% - idle task share of total run time (DWT based).
+ */
+static void wave_stats_update(void)
+{
+    TaskStatus_t tasks[24];
+    UBaseType_t task_cnt;
+    uint32_t total_rt = 0;
+    uint32_t now = xTaskGetTickCount();
+
+    /* Self-throttle to the stats window */
+    if ((now - g_stat_last_tick) < pdMS_TO_TICKS(STATS_UPDATE_MS))
+    {
+        return;
+    }
+
+    /* ---- FPS over the elapsed window ---- */
+    {
+        uint32_t dt_ticks = now - g_stat_last_tick;
+        if (dt_ticks == 0)
+        {
+            dt_ticks = 1;
+        }
+        /* tick rate is 1kHz -> 1 tick = 1ms */
+        sprintf(g_fps_str, "FPS:%3u",
+                (unsigned int)((uint64_t)g_stat_frames * 1000u / dt_ticks));
+    }
+    g_stat_f

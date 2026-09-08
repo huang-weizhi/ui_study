@@ -1,0 +1,119 @@
+*** Using Compiler 'V6.22', folder: 'D:\Work Program\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'AT32F403AVGT7_WorkBench'
+compiling ui_wave_dialog.c...
+../app/ui_wave_dialog.c(68): error: use of undeclared identifier 'b'
+   68 |     lcd_draw_rectangle(DLG_X0, DLG_Y0, DLG_X1, DLG_Y1, b);
+      |                                                        ^
+../app/ui_wave_dialog.c(107): error: use of undeclared identifier 'DLG_TITLE_BG'
+  107 |     lcd_fill_rectangle(DLG_X0 + 2, DLG_Y0 + 2, DLG_X1 - 2, DLG_Y0 + DLG_TITLE_H - 1, DLG_TITLE_BG);
+      |                                                                                      ^
+../app/ui_wave_dialog.c(28): note: expanded from macro 'DLG_TITLE_BG'
+   28 | #define DLG_TITLE_BG       DLG_TITLE_BG     /* 标题栏背景 */
+      |                            ^
+../app/ui_wave_dialog.c(111): error: use of undeclared identifier 'DLG_TITLE_BG'
+  111 |         lcd_show_ascii_string(tx, DLG_Y0 + 5, (char *)title, DLG_TITLE_FG, DLG_TITLE_BG, DLG_FONT);
+      |                                                                            ^
+../app/ui_wave_dialog.c(28): note: expanded from macro 'DLG_TITLE_BG'
+   28 | #define DLG_TITLE_BG       DLG_TITLE_BG     /* 标题栏背景 */
+      |                            ^
+../app/ui_wave_dialog.c(111): error: use of undeclared identifier 'DLG_FONT'
+  111 |         lcd_show_ascii_string(tx, DLG_Y0 + 5, (char *)title, DLG_TITLE_FG, DLG_TITLE_BG, DLG_FONT);
+      |                                                                                          ^
+../app/ui_wave_dialog.c(25): note: expanded from macro 'DLG_FONT'
+   25 | #define DLG_FONT           DLG_FONT  /* 全弹窗字体（改字体请同步核对字符宽 8px 的居中计算） */
+      |                            ^
+../app/ui_wave_dialog.c(125): error: use of undeclared identifier 'DLG_ROW_BG'
+  125 |             dlg_draw_row_bg(y, DLG_ROW_BG);
+      |                                ^
+../app/ui_wave_dialog.c(30): note: expanded from macro 'DLG_ROW_BG'
+   30 | #define DLG_ROW_BG         DLG_ROW_BG     /* 槽位行背景（深灰蓝） */
+      |                            ^
+../app/ui_wave_dialog.c(130): error: use of undeclared identifier 'DLG_ACTIVE_FG'
+  130 |                                   thisSlotSaving ? DLG_ACTIVE_FG : DLG_TEXT_FG, DLG_ROW_BG, DLG_FONT);
+      |                                                    ^
+../app/ui_wave_dialog.c(32): note: expanded from macro 'DLG_ACTIVE_FG'
+   32 | #define DLG_ACTIVE_FG      DLG_ACTIVE_FG     /* 活动/进行中文字（Saving...、保存中的行）橙 */
+      |                            ^
+../app/ui_wave_dialog.c(130): error: use of undeclared identifier 'DLG_ROW_BG'
+  130 |                                   thisSlotSaving ? DLG_ACTIVE_FG : DLG_TEXT_FG, DLG_ROW_BG, DLG_FONT);
+      |                                                                                 ^
+../app/ui_wave_dialog.c(30): note: expanded from macro 'DLG_ROW_BG'
+   30 | #define DLG_ROW_BG         DLG_ROW_BG     /* 槽位行背景（深灰蓝） */
+      |                            ^
+../app/ui_wave_dialog.c(130): error: use of undeclared identifier 'DLG_FONT'
+  130 |                                   thisSlotSaving ? DLG_ACTIVE_FG : DLG_TEXT_FG, DLG_ROW_BG, DLG_FONT);
+      |                                                                                             ^
+../app/ui_wave_dialog.c(25): note: expanded from macro 'DLG_FONT'
+   25 | #define DLG_FONT           DLG_FONT  /* 全弹窗字体（改字体请同步核对字符宽 8px 的居中计算） */
+      |                            ^
+../app/ui_wave_dialog.c(139): error: use of undeclared identifier 'DLG_ACTIVE_FG'
+  139 |                 uint16_t fc = s_dlg_saving ? DLG_ACTIVE_FG :
+      |                                              ^
+../app/ui_wave_dialog.c(32): note: expanded from macro 'DLG_ACTIVE_FG'
+   32 | #define DLG_ACTIVE_FG      DLG_ACTIVE_FG     /* 活动/进行中文字（Saving...、保存中的行）橙 */
+      |                            ^
+../app/ui_wave_dialog.c(140): error: use of undeclared identifier 'DLG_OK_FG'
+  140 |                               s_dlg_done_ok  ? DLG_OK_FG : DLG_FAIL_FG;
+      |                                                ^
+../app/ui_wave_dialog.c(33): note: expanded from macro 'DLG_OK_FG'
+   33 | #define DLG_OK_FG          DLG_OK_FG     /* 完成成功（DONE）绿 */
+      |                            ^
+../app/ui_wave_dialog.c(140): error: use of undeclared identifier 'DLG_FAIL_FG'
+  140 |                               s_dlg_done_ok  ? DLG_OK_FG : DLG_FAIL_FG;
+      |                                                            ^
+../app/ui_wave_dialog.c(34): note: expanded from macro 'DLG_FAIL_FG'
+   34 | #define DLG_FAIL_FG        DLG_FAIL_FG     /* 失败（FAIL）红 */
+      |                            ^
+../app/ui_wave_dialog.c(141): error: use of undeclared identifier 'DLG_ROW_BG'
+  141 |                 lcd_show_ascii_string(DLG_ROW_X1 - 80, y + 4, (char *)st, fc, DLG_ROW_BG, DLG_FONT);
+      |                                                                               ^
+../app/ui_wave_dialog.c(30): note: expanded from macro 'DLG_ROW_BG'
+   30 | #define DLG_ROW_BG         DLG_ROW_BG     /* 槽位行背景（深灰蓝） */
+      |                            ^
+../app/ui_wave_dialog.c(141): error: use of undeclared identifier 'DLG_FONT'
+  141 |                 lcd_show_ascii_string(DLG_ROW_X1 - 80, y + 4, (char *)st, fc, DLG_ROW_BG, DLG_FONT);
+      |                                                                                           ^
+../app/ui_wave_dialog.c(25): note: expanded from macro 'DLG_FONT'
+   25 | #define DLG_FONT           DLG_FONT  /* 全弹窗字体（改字体请同步核对字符宽 8px 的居中计算） */
+      |                            ^
+../app/ui_wave_dialog.c(146): error: use of undeclared identifier 'DLG_INFO_FG'
+  146 |                 lcd_show_ascii_string(DLG_ROW_X1 - 90, y + 4, buf, DLG_INFO_FG, DLG_ROW_BG, DLG_FONT);
+      |                                                                    ^
+../app/ui_wave_dialog.c(35): note: expanded from macro 'DLG_INFO_FG'
+   35 | #define DLG_INFO_FG        DLG_INFO_FG     /* 信息文字（OVR xxx s、时长）浅蓝 */
+      |                            ^
+../app/ui_wave_dialog.c(146): error: use of undeclared identifier 'DLG_ROW_BG'
+  146 |                 lcd_show_ascii_string(DLG_ROW_X1 - 90, y + 4, buf, DLG_INFO_FG, DLG_ROW_BG, DLG_FONT);
+      |                                                                                 ^
+../app/ui_wave_dialog.c(30): note: expanded from macro 'DLG_ROW_BG'
+   30 | #define DLG_ROW_BG         DLG_ROW_BG     /* 槽位行背景（深灰蓝） */
+      |                            ^
+../app/ui_wave_dialog.c(146): error: use of undeclared identifier 'DLG_FONT'
+  146 |                 lcd_show_ascii_string(DLG_ROW_X1 - 90, y + 4, buf, DLG_INFO_FG, DLG_ROW_BG, DLG_FONT);
+      |                                                                                             ^
+../app/ui_wave_dialog.c(25): note: expanded from macro 'DLG_FONT'
+   25 | #define DLG_FONT           DLG_FONT  /* 全弹窗字体（改字体请同步核对字符宽 8px 的居中计算） */
+      |                            ^
+../app/ui_wave_dialog.c(153): error: use of undeclared identifier 'DLG_INFO_FG'
+  153 |                     lcd_show_ascii_string(DLG_ROW_X1 - 60, y + 4, buf, DLG_INFO_FG, DLG_ROW_BG, DLG_FONT);
+      |                                                                        ^
+../app/ui_wave_dialog.c(35): note: expanded from macro 'DLG_INFO_FG'
+   35 | #define DLG_INFO_FG        DLG_INFO_FG     /* 信息文字（OVR xxx s、时长）浅蓝 */
+      |                            ^
+../app/ui_wave_dialog.c(153): error: use of undeclared identifier 'DLG_ROW_BG'
+  153 |                     lcd_show_ascii_string(DLG_ROW_X1 - 60, y + 4, buf, DLG_INFO_FG, DLG_ROW_BG, DLG_FONT);
+      |                                                                                     ^
+../app/ui_wave_dialog.c(30): note: expanded from macro 'DLG_ROW_BG'
+   30 | #define DLG_ROW_BG         DLG_ROW_BG     /* 槽位行背景（深灰蓝） */
+      |                            ^
+../app/ui_wave_dialog.c(153): error: use of undeclared identifier 'DLG_FONT'
+  153 |                     lcd_show_ascii_string(DLG_ROW_X1 - 60, y + 4, buf, DLG_INFO_FG, DLG_ROW_BG, DLG_FONT);
+      |                                                                                                 ^
+../app/ui_wave_dialog.c(25): note: expanded from macro 'DLG_FONT'
+   25 | #define DLG_FONT           DLG_FONT  /* 全弹窗字体（改字体请同步核对字符宽 8px 的居中计算） */
+      |                            ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+".\objects\AT32F403AVGT7_WorkBench.axf" - 19 Error(s), 0 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:01

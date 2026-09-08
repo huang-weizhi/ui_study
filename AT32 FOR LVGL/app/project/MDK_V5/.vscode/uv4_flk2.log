@@ -1,0 +1,13 @@
+*** Using Compiler 'V6.22', folder: 'D:\Work Program\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'AT32F403AVGT7_WorkBench'
+compiling ui_wave_dialog.c...
+../app/ui_wave_dialog.c(215): error: use of undeclared identifier 'WAVE_AREA_Y1'
+  215 |     if (DLG_Y1 > WAVE_AREA_Y1)
+      |                  ^
+../app/ui_wave_dialog.c(216): error: use of undeclared identifier 'WAVE_AREA_Y1'
+  216 |         lcd_fill_rectangle(DLG_X0, WAVE_AREA_Y1 + 1, DLG_X1, DLG_Y1, BLACK);
+      |                                    ^
+2 errors generated.
+".\objects\AT32F403AVGT7_WorkBench.axf" - 2 Error(s), 0 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:01

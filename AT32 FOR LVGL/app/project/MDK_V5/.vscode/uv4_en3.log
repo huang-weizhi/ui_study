@@ -1,0 +1,36 @@
+*** Using Compiler 'V6.22', folder: 'D:\Work Program\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'AT32F403AVGT7_WorkBench'
+compiling ui_wave_dialog.c...
+../app/ui_wave_dialog.c(299): warning: non-void function does not return a value in all control paths [-Wreturn-type]
+  299 |     }
+      |     ^
+../app/ui_wave_dialog.c(302): error: expected identifier or '('
+  302 |     {
+      |     ^
+../app/ui_wave_dialog.c(312): error: expected identifier or '('
+  312 |     if (s_dlg_need_redraw)
+      |     ^
+../app/ui_wave_dialog.c(317): error: type specifier missing, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]
+  317 |     last_tick = now;
+      |     ^
+      |     int
+../app/ui_wave_dialog.c(317): error: use of undeclared identifier 'now'; did you mean 'pow'?
+  317 |     last_tick = now;
+      |                 ^~~
+      |                 pow
+D:\Work Program\Keil_v5\ARM\ARMCLANG\bin\..\include\math.h(383): note: 'pow' declared here
+  383 | extern _ARMABI double pow(double /*x*/, double /*y*/);
+      |                       ^
+../app/ui_wave_dialog.c(317): error: incompatible pointer to integer conversion initializing 'int' with an expression of type 'double (double, double)' [-Wint-conversion]
+  317 |     last_tick = now;
+      |     ^           ~~~
+../app/ui_wave_dialog.c(318): error: expected identifier or '('
+  318 |     return 1; /* dialog open */
+      |     ^
+../app/ui_wave_dialog.c(319): error: extraneous closing brace ('}')
+  319 | }
+      | ^
+1 warning and 7 errors generated.
+".\objects\AT32F403AVGT7_WorkBench.axf" - 7 Error(s), 1 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:00

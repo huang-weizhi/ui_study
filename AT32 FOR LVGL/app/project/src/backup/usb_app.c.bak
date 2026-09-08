@@ -1,0 +1,239 @@
+/* add user code begin Header */
+/**
+  **************************************************************************
+  * @file     usbd_app.c
+  * @brief    usb device app
+  **************************************************************************
+  * Copyright (c) 2025, Artery Technology, All rights reserved.
+  *
+  * The software Board Support Package (BSP) that is made available to
+  * download from Artery official website is the copyrighted work of Artery.
+  * Artery authorizes customers to use, copy, and distribute the BSP
+  * software and its related documentation for the purpose of design and
+  * development in conjunction with Artery microcontrollers. Use of the
+  * software is governed by this copyright notice and the following disclaimer.
+  *
+  * THIS SOFTWARE IS PROVIDED ON "AS IS" BASIS WITHOUT WARRANTIES,
+  * GUARANTEES OR REPRESENTATIONS OF ANY KIND. ARTERY EXPRESSLY DISCLAIMS,
+  * TO THE FULLEST EXTENT PERMITTED BY LAW, ALL EXPRESS, IMPLIED OR
+  * STATUTORY OR OTHER WARRANTIES, GUARANTEES OR REPRESENTATIONS,
+  * INCLUDING BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY,
+  * FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
+  *
+  **************************************************************************
+  */
+/* add user code end Header */
+
+#include "usb_conf.h"
+#include "wk_system.h"
+
+#include "usbd_int.h"
+#include "cdc_class.h"
+#include "cdc_desc.h"
+
+/* private includes ----------------------------------------------------------*/
+/* add user code begin private includes */
+
+/* add user code end private includes */
+
+/* private typedef -----------------------------------------------------------*/
+/* add user code begin private typedef */
+
+/* add user code end private typedef */
+
+/* private define ------------------------------------------------------------*/
+/* add user code begin private define */
+
+#define USB_REALTIME_FRAME_SIZE       13U
+#define USB_REALTIME_FRAME_TYPE       0x10U
+#define USB_REALTIME_SAMPLE_PERIOD_MS 10U
+
+/* 帧格式：CC A5+类型+长度+序号+采样周期+电流值+校验和 */
+
+/* add user code end private define */
+
+/* private macro -------------------------------------------------------------*/
+/* add user code begin private macro */
+
+/* add user code end private macro */
+
+/* private variables ---------------------------------------------------------*/
+/* add user code begin private variables */
+
+static uint8_t realtime_tx_buffer[2][USB_REALTIME_FRAME_SIZE];
+static uint8_t realtime_active_buffer = 1U;
+static uint16_t realtime_sequence = 0U;
+
+/* 两块缓冲交替轮流使用，避免USB正在发送时下一次组包把数据覆盖。 */
+
+/* add user code end private variables */
+
+/* private function prototypes --------------------------------------------*/
+/* add user code begin function prototypes */
+
+static void usb_write_le16(uint8_t *buffer, uint16_t value);
+static uint16_t usb_checksum16(const uint8_t *buffer, uint16_t length);
+
+/* add user code end function prototypes */
+
+usbd_core_type usb_core_dev;
+
+uint32_t usbd_app_buffer_fs1[128];
+
+/* private user code ---------------------------------------------------------*/
+/* add user code begin 0 */
+
+static void usb_write_le16(uint8_t *buffer, uint16_t value)
+{
+  buffer[0] = (uint8_t)(value & 0xFFU);
+  buffer[1] = (uint8_t)(value >> 8);
+}
+
+static uint16_t usb_checksum16(const uint8_t *buffer, uint16_t length)
+{
+  uint16_t checksum = 0U;
+
+  while(length > 0U)
+  {
+    checksum = (uint16_t)(checksum + *buffer);
+    buffer++;
+    length--;
+  }
+
+  return checksum;
+}
+
+/* add user code end 0 */
+
+/**
+  * @brief  usb application initialization
+  * @param  none
+  * @retval none
+  */
+void wk_usb_app_init(void)
+{
+  /* add user code begin usb_app_init 0 */
+
+  /* add user code end usb_app_init 0 */
+
+  /*fs1 device cdc*/
+  usbd_core_init(&usb_core_dev, USB, &cdc_class_handler, &cdc_desc_handler, 0);
+
+  /* enable usb pull-up */
+  usbd_connect(&usb_core_dev);
+
+  /* add user code begin usb_app_init 1 */
+
+  /* add user code end usb_app_init 1 */
+}
+
+/**
+  * @brief  usb application task
+  * @param  none
+  * @retval none
+  */
+void wk_usb_app_task(void)
+{
+  /* add user code begin usb_app_task 0 */
+
+  /* add user code end usb_app_task 0 */
+
+  uint32_t length = 0;
+
+  uint32_t timeout = 5000000;
+  static uint8_t send_zero_packet = 0;
+
+  /* add user code begin usb_app_task 1 */
+
+  /* add user code end usb_app_task 1 */
+
+  /* fs1 device cdc */
+  length = usb_vcp_get_rxdata(&usb_core_dev, (uint8_t *)usbd_app_buffer_fs1);
+  if(length > 0 || send_zero_packet == 1)
+  {
+    if(length > 0)
+      send_zero_packet = 1;
+
+    if(length == 0)
+      send_zero_packet = 0;
+    
+    do
+    {
+      /* send data to host */
+      if(usb_vcp_send_data(&usb_core_dev, (uint8_t *)usbd_app_buffer_fs1, length) == SUCCESS)
+      {
+        break;
+      }
+    }while(timeout --);
+  }
+
+  /* add user code begin usb_app_task 2 */
+
+  /* add user code end usb_app_task 2 */
+}
+
+/**
+  * @brief  usb interrupt handler
+  * @param  none
+  * @retval none
+  */
+void wk_usbfs_irq_handler(void)
+{
+  /* add user code begin otgfs1_irq_handler 0 */
+
+  /* add user code end otgfs1_irq_handler 0 */
+
+  usbd_irq_handler(&usb_core_dev);
+
+  /* add user code begin otgfs1_irq_handler 1 */
+
+  /* add user code end otgfs1_irq_handler 1 */
+}
+
+/**
+  * @brief  usb delay function
+  * @param  ms: delay number of milliseconds.
+  * @retval none
+  */
+void usb_delay_ms(uint32_t ms)
+{
+  /* add user code begin delay_ms 0 */
+
+  /* add user code end delay_ms 0 */
+
+  wk_delay_ms(ms);
+
+  /* add user code begin delay_ms 1 */
+
+  /* add user code end delay_ms 1*/
+}
+
+/* add user code begin 1 */
+error_status wk_usb_send_realtime_current(uint16_t current_ma)
+{
+  /* freertos_app.c 每10ms进来一次，这里只负责按照格式打包并发送。 */
+  uint8_t candidate = (uint8_t)(realtime_active_buffer ^ 1U);
+  uint8_t *frame = realtime_tx_buffer[candidate];
+  uint16_t checksum;
+
+  frame[0] = 0xCCU; /* 帧头，和上位机解析保持一致。 */
+  frame[1] = 0xA5U;
+  frame[2] = USB_REALTIME_FRAME_TYPE; /* 0x10 表示实时电流。 */
+  usb_write_le16(&frame[3], 4U);
+  usb_write_le16(&frame[5], realtime_sequence);
+  usb_write_le16(&frame[7], USB_REALTIME_SAMPLE_PERIOD_MS); /* 固定10ms。 */
+  usb_write_le16(&frame[9], current_ma);
+  checksum = usb_checksum16(frame, USB_REALTIME_FRAME_SIZE - 2U);
+  usb_write_le16(&frame[11], checksum);
+
+  if(usb_vcp_send_data(&usb_core_dev, frame, USB_REALTIME_FRAME_SIZE) != SUCCESS)
+  {
+    /* USB 忙时本次数据丢掉，下一次10ms任务会继续发最新值。 */
+    return ERROR;
+  }
+
+  realtime_active_buffer = candidate;
+  realtime_sequence++;
+  return SUCCESS;
+}
+/* add user code end 1 */

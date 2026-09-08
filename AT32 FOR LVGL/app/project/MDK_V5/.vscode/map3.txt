@@ -1,0 +1,8 @@
+﻿
+    g_record_voltage                         0x20004394   Data        7200  lto-llvm-b5cd1b.o(.bss.g_record_voltage)
+    s_save_buf                               0x20011481   Data       14420  lto-llvm-b5cd1b.o(.bss.s_save_buf)
+    ucHeap                                   0x20016286   Data       20480  lto-llvm-b5cd1b.o(.bss.ucHeap)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08031fc0, Size: 0x0001c108, Max: 0x00038000, ABSOLUTE, COMPRESSED[0x00000100])
+    Total ROM Size (Code + RO Data + RW Data)     188580 ( 184.16kB)
+
+

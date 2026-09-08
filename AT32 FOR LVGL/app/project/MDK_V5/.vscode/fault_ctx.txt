@@ -1,0 +1,19 @@
+    ..      LDR      r0,[sp,#4]
+        0x0800e4f8:    eb090b49    ..I.    ADD      r11,r9,r9,LSL #1
+        0x0800e4fc:    0a00        ..      LSRS     r0,r0,#8
+        0x0800e4fe:    f8ae0000    ....    STRH     r0,[lr,#0]
+        0x0800e502:    202c        ,       MOVS     r0,#0x2c
+        0x0800e504:    f8ae6000    ...`    STRH     r6,[lr,#0]
+        0x0800e508:    8010        ..      STRH     r0,[r2,#0]
+        0x0800e50a:    9906        ..      LDR      r1,[sp,#0x18]
+        0x0800e50c:    ea4f0649    O.I.    LSL      r6,r9,#1
+        0x0800e510:    e004        ..      B        0x800e51c ; lcd_show_ascii_string + 484
+        0x0800e512:    bf00        ..      NOP      
+        0x0800e514:    3c04        .<      SUBS     r4,#4
+        0x0800e516:    44a8        .D      ADD      r8,r8,r5
+        0x0800e518:    f0008456    ..V.    BEQ.W    0x800edc8 ; lcd_show_ascii_string + 2704
+        0x0800e51c:    f8980000    ....    LDRB     r0,[r8,#0]
+        0x0800e520:    07c2        ..      LSLS     r2,r0,#31
+        0x0800e522:    461a        .F      MOV      r2,r3
+        0x0800e524:    bf08        ..      IT       EQ
+        0x0800e526:    4662        bF      MOVEQ

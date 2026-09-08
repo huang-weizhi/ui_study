@@ -1,0 +1,15 @@
+﻿166: static gesture_t g_pending_gesture = GESTURE_NONE;
+200: g_pending_gesture = GESTURE_NONE;
+232: g_pending_gesture = GESTURE_DOUBLE_CLICK;
+247: g_pending_gesture = GESTURE_SHORT_PRESS;
+264: g_pending_gesture = GESTURE_SHORT_PRESS;
+311: g_pending_gesture = GESTURE_SWIPE_RIGHT;
+316: g_pending_gesture = GESTURE_SWIPE_LEFT;
+324: g_pending_gesture = GESTURE_SWIPE_DOWN;
+329: g_pending_gesture = GESTURE_SWIPE_UP;
+371: g_pending_gesture = GESTURE_LONG_PRESS;
+391: g_pending_gesture = GESTURE_LONG_PRESS;
+404: gesture_t cst340_get_gesture(void)
+406: gesture_t ret = g_pending_gesture;
+407: g_pending_gesture = GESTURE_NONE;
+417: return cst340_get_gesture();
