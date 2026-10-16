@@ -22,80 +22,18 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 C:\Users\Administrator\Desktop\ui demo\AT32 FOR LVGL\app\project\MDK_V5\AT32F403AVGT7_WorkBench.uvprojx
-Project File Date:  09/08/2026
+Project File Date:  10/16/2026
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.22', folder: 'D:\Work Program\Keil_v5\ARM\ARMCLANG\Bin'
-Rebuild target 'AT32F403AVGT7_WorkBench'
-compiling main.c...
-compiling at32f403a_407_wk_config.c...
-compiling at32f403a_407_int.c...
-compiling wk_system.c...
-compiling freertos_app.c...
-compiling include_port.c...
-compiling wk_crc.c...
-compiling wk_debug.c...
-compiling wk_spi.c...
-compiling wk_tmr.c...
-compiling wk_usart.c...
-compiling wk_wdt.c...
-compiling wk_xmc.c...
-compiling wk_dma.c...
-compiling wk_gpio.c...
-compiling wk_exint.c...
-compiling at32f403a_407_crm.c...
-compiling at32f403a_407_tmr.c...
-compiling at32f403a_407_gpio.c...
-compiling at32f403a_407_usart.c...
-compiling at32f403a_407_pwc.c...
-compiling at32f403a_407_spi.c...
-compiling at32f403a_407_dma.c...
-compiling at32f403a_407_flash.c...
-compiling at32f403a_407_crc.c...
-compiling at32f403a_407_wdt.c...
-compiling at32f403a_407_exint.c...
-compiling at32f403a_407_misc.c...
-compiling at32f403a_407_xmc.c...
-compiling at32f403a_407_debug.c...
-assembling startup_at32f403a_407.s...
-compiling system_at32f403a_407.c...
-compiling pc_handle.c...
-compiling beep_handle.c...
-compiling output_handle.c...
-compiling input_handle.c...
-compiling iap.c...
-compiling soft_i2c.c...
-compiling PA45.c...
-compiling Inf_beep.c...
-compiling Inf_key.c...
-compiling Inf_encoder.c...
-compiling Inf_lcd.c...
-compiling Inf_touch.c...
-compiling Inf_w25qxxx.c...
-compiling croutine.c...
-compiling event_groups.c...
-compiling list.c...
-compiling queue.c...
-compiling tasks.c...
-compiling timers.c...
-compiling heap_4.c...
-compiling stream_buffer.c...
-compiling retarget_io.c...
-compiling stdout_evr.c...
-compiling EventRecorder.c...
-compiling perf_counter.c...
-compiling perfc_port_default.c...
-assembling systick_wrapper_gnu.s...
-linking...
-Program Size: Code=49636 RO-data=1296 RW-data=32 ZI-data=40160  
-FromELF: creating hex file...
+Build target 'AT32F403AVGT7_WorkBench'
 After Build - User command #1: .\keil5_disp_size_bar.exe
 ram:
   RW_IRAM1 :0x20000000
-  224.00 KB :|¡ö¡ö¡ö_________________|   17.52 % (   39.25 KB /   224.00 KB) [189184 B]
+  224.00 KB :|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö_____|   75.71 % (  169.59 KB /   224.00 KB) [55720 B]
 flash:
   ER_IROM1 :0x8004000
-    1.00 MB :|____________________|    4.86 % (    0.05 MB /     1.00 MB) [997644 B]
+    1.00 MB :|¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö¡ö___________|   49.55 % (    0.50 MB /     1.00 MB) [528956 B]
 After Build - User command #2: fromelf.exe --bin --output .\Listings\AT32F403AVGT7_WorkBench.bin .\objects\AT32F403AVGT7_WorkBench.axf
 ".\objects\AT32F403AVGT7_WorkBench.axf" - 0 Error(s), 0 Warning(s).
 
@@ -123,7 +61,7 @@ Package Vendor: ARM
 
 Package Vendor: ArteryTek
                 
-                ArteryTek::AT32F403A_407_DFP@2.2.2
+                ArteryTek::AT32F403A_407_DFP@2.2.4
                 ArteryTek AT32F403A_407 Series Device Support,Drivers
 
 Package Vendor: GorgonMeducer
@@ -132,14 +70,28 @@ Package Vendor: GorgonMeducer
                 This is a dedicated performance counter designed for micro-controllers. For Cortex-M processors, the `perf_counter` uses the SysTick by default. It shares the SysTick with users' original SysTick functions without interfering with them. This library brings new functionalities, such as performance counter, `perfc_delay_us()`, `perfc_delay_ms()` and implements `clock()` defined in `time.h`. It provides a template for porting the `perf_counter` to different architectures or using a different Timer instead of SysTick in Cortex-M processors.
    * Component: Core Variant: Source Version: 2.5.5
 
+Package Vendor: LVGL
+                https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/LVGL.lvgl.8.4.0.pack
+                LVGL::lvgl@8.4.0
+                LVGL (Light and Versatile Graphics Library) is a free and open-source graphics library providing everything you need to create an embedded GUI with easy-to-use graphical elements, beautiful visual effects and a low memory footprint.
+   * Component: Benchmark Version: 8.4.0
+   * Component: Demo:Widgets Version: 8.4.0
+   * Component: Essential Version: 8.4.0
+   * Component: Extra Themes Version: 8.4.0
+   * Component: Porting Version: 8.4.0
+
 <h2>Collection of Component include folders:</h2>
   ./RTE/CMSIS-View
+  ./RTE/LVGL
   ./RTE/_AT32F403AVGT7_WorkBench
   D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include
   D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include
   D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include
-  D:/Work Program/Keil_v5/ARM/Packs/ArteryTek/AT32F403A_407_DFP/2.2.2/Device/Include
+  D:/Work Program/Keil_v5/ARM/Packs/AT32F403A_407_DFP/2.2.4/Device/Include
   D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5
+  D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0
+  D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos/benchmark
+  D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos/widgets
 
 <h2>Collection of Component Files used:</h2>
 
@@ -164,7 +116,183 @@ Package Vendor: GorgonMeducer
       Source file:   perfc_port_default.c
       Include file:  perf_counter.h
       Source file:   systick_wrapper_gnu.s
-Build Time Elapsed:  00:00:07
+
+   * Component: LVGL::LVGL&LVGL:lvgl:Benchmark@8.4.0
+      Source file:   demos/benchmark/assets/img_benchmark_cogwheel_chroma_keyed.c
+      Source file:   demos/benchmark/assets/lv_font_bechmark_montserrat_12_compr_az.c.c
+      Include file:  demos/benchmark/lv_demo_benchmark.h
+      Source file:   demos/benchmark/assets/img_benchmark_cogwheel_rgb565a8.c
+      Source file:   demos/benchmark/assets/lv_font_bechmark_montserrat_16_compr_az.c.c
+      Source file:   demos/benchmark/assets/img_benchmark_cogwheel_alpha16.c
+      Source file:   demos/benchmark/assets/img_benchmark_cogwheel_argb.c
+      Source file:   demos/benchmark/lv_demo_benchmark.c
+      Source file:   demos/benchmark/assets/img_benchmark_cogwheel_indexed16.c
+      Source file:   demos/benchmark/assets/img_benchmark_cogwheel_rgb.c
+      Source file:   demos/benchmark/assets/lv_font_bechmark_montserrat_28_compr_az.c.c
+
+   * Component: LVGL::LVGL&LVGL:lvgl:Demo:Widgets@8.4.0
+      Source file:   demos/widgets/lv_demo_widgets.c
+      Source file:   demos/widgets/assets/img_clothes.c
+      Source file:   demos/widgets/assets/img_lvgl_logo.c
+      Source file:   demos/widgets/assets/img_demo_widgets_avatar.c
+      Include file:  demos/widgets/lv_demo_widgets.h
+
+   * Component: LVGL::LVGL&LVGL:lvgl:Essential@8.4.0
+      Source file:   src/draw/lv_draw_line.c
+      Source file:   src/core/lv_refr.c
+      Source file:   src/core/lv_disp.c
+      Source file:   src/draw/lv_draw_img.c
+      Source file:   src/draw/lv_draw_rect.c
+      Source file:   src/draw/lv_draw.c
+      Source file:   src/draw/lv_draw_triangle.c
+      Source file:   src/draw/lv_img_buf.c
+      Source file:   src/core/lv_obj_class.c
+      Source file:   src/core/lv_obj_draw.c
+      Source file:   src/core/lv_event.c
+      Source file:   src/core/lv_obj_pos.c
+      Source file:   src/core/lv_obj_scroll.c
+      Source file:   src/draw/lv_draw_arc.c
+      Source file:   src/core/lv_indev.c
+      Source file:   src/draw/lv_draw_mask.c
+      Source file:   src/core/lv_indev_scroll.c
+      Source file:   src/core/lv_obj.c
+      Source file:   src/draw/lv_draw_transform.c
+      Source file:   src/core/lv_group.c
+      Source file:   src/core/lv_theme.c
+      Source file:   src/core/lv_obj_style_gen.c
+      Source file:   src/core/lv_obj_style.c
+      Source file:   src/core/lv_obj_tree.c
+      Source file:   src/draw/lv_draw_label.c
+      Source file:   src/draw/lv_draw_layer.c
+      Source file:   src/font/lv_font_montserrat_20.c
+      Source file:   src/font/lv_font_montserrat_22.c
+      Source file:   src/draw/sw/lv_draw_sw_line.c
+      Source file:   src/draw/sw/lv_draw_sw_arc.c
+      Source file:   src/draw/sw/lv_draw_sw_gradient.c
+      Source file:   src/draw/sw/lv_draw_sw_letter.c
+      Source file:   src/font/lv_font_loader.c
+      Source file:   src/font/lv_font_montserrat_10.c
+      Source file:   src/font/lv_font_montserrat_24.c
+      Source file:   src/font/lv_font_fmt_txt.c
+      Source file:   src/font/lv_font_montserrat_26.c
+      Source file:   src/font/lv_font_montserrat_28.c
+      Source file:   src/font/lv_font_montserrat_16.c
+      Source file:   src/font/lv_font_montserrat_28_compressed.c
+      Source file:   src/font/lv_font_montserrat_30.c
+      Source file:   src/font/lv_font_montserrat_12_subpx.c
+      Source file:   src/draw/sw/lv_draw_sw_polygon.c
+      Source file:   src/draw/sw/lv_draw_sw_blend.c
+      Source file:   src/font/lv_font.c
+      Source file:   src/font/lv_font_montserrat_12.c
+      Source file:   src/draw/sw/lv_draw_sw_rect.c
+      Source file:   src/font/lv_font_montserrat_14.c
+      Source file:   src/draw/sw/lv_draw_sw.c
+      Source file:   src/draw/lv_img_cache.c
+      Source file:   src/draw/sw/lv_draw_sw_dither.c
+      Source file:   src/font/lv_font_dejavu_16_persian_hebrew.c
+      Source file:   src/draw/lv_img_decoder.c
+      Source file:   src/draw/sw/lv_draw_sw_layer.c
+      Source file:   src/font/lv_font_montserrat_18.c
+      Source file:   src/draw/sw/lv_draw_sw_transform.c
+      Source file:   src/font/lv_font_montserrat_8.c
+      Source file:   src/draw/sw/lv_draw_sw_img.c
+      Source file:   src/hal/lv_hal_indev.c
+      Source file:   src/misc/lv_anim_timeline.c
+      Source file:   src/misc/lv_async.c
+      Source file:   src/misc/lv_area.c
+      Source file:   src/misc/lv_gc.c
+      Source file:   src/font/lv_font_montserrat_38.c
+      Source file:   src/misc/lv_anim.c
+      Source file:   src/misc/lv_bidi.c
+      Source file:   src/misc/lv_log.c
+      Source file:   src/misc/lv_color.c
+      Source file:   src/misc/lv_math.c
+      Source file:   src/misc/lv_mem.c
+      Source file:   src/font/lv_font_montserrat_46.c
+      Source file:   src/font/lv_font_montserrat_34.c
+      Source file:   src/misc/lv_ll.c
+      Source file:   src/font/lv_font_montserrat_42.c
+      Source file:   src/misc/lv_printf.c
+      Source file:   src/font/lv_font_montserrat_40.c
+      Source file:   src/font/lv_font_montserrat_44.c
+      Source file:   src/font/lv_font_simsun_16_cjk.c
+      Source file:   src/hal/lv_hal_disp.c
+      Source file:   src/hal/lv_hal_tick.c
+      Source file:   src/misc/lv_fs.c
+      Source file:   src/misc/lv_style_gen.c
+      Source file:   src/font/lv_font_montserrat_32.c
+      Source file:   src/misc/lv_lru.c
+      Source file:   src/misc/lv_templ.c
+      Source file:   src/misc/lv_style.c
+      Source file:   src/font/lv_font_montserrat_36.c
+      Source file:   src/font/lv_font_montserrat_48.c
+      Source file:   src/font/lv_font_unscii_8.c
+      Source file:   src/font/lv_font_unscii_16.c
+      Source file:   src/widgets/lv_dropdown.c
+      Source file:   src/widgets/lv_img.c
+      Source file:   lv_cmsis_pack.c
+      Include file:  lvgl.h
+      Source file:   src/widgets/lv_arc.c
+      Source file:   src/widgets/lv_bar.c
+      Source file:   src/widgets/lv_line.c
+      Source file:   src/widgets/lv_slider.c
+      Source file:   src/widgets/lv_switch.c
+      Include file:  examples/porting/lv_port_disp_template.h
+      Source file:   examples/porting/lv_port_indev_template.c
+      Include file:  examples/porting/lv_port_fs_template.h
+      Source file:   src/widgets/lv_btn.c
+      Source file:   src/misc/lv_tlsf.c
+      Source file:   src/misc/lv_txt.c
+      Source file:   src/widgets/lv_textarea.c
+      Source file:   src/misc/lv_txt_ap.c
+      Source file:   src/widgets/lv_label.c
+      Source file:   src/widgets/lv_canvas.c
+      Source file:   src/misc/lv_timer.c
+      Source file:   examples/porting/lv_port_disp_template.c
+      Include file:  examples/porting/lv_port_indev_template.h
+      Source file:   src/widgets/lv_objx_templ.c
+      Source file:   examples/porting/lv_port_fs_template.c
+      Source file:   src/widgets/lv_roller.c
+      Source file:   src/widgets/lv_checkbox.c
+      Source file:   src/widgets/lv_table.c
+      Source file:   src/widgets/lv_btnmatrix.c
+      Source file:   src/misc/lv_utils.c
+
+   * Component: LVGL::LVGL&LVGL:lvgl:Extra Themes@8.4.0
+      Source file:   src/extra/widgets/menu/lv_menu.c
+      Source file:   src/extra/widgets/meter/lv_meter.c
+      Source file:   src/extra/widgets/msgbox/lv_msgbox.c
+      Source file:   src/extra/widgets/span/lv_span.c
+      Source file:   src/extra/widgets/colorwheel/lv_colorwheel.c
+      Source file:   src/extra/themes/basic/lv_theme_basic.c
+      Source file:   src/extra/widgets/calendar/lv_calendar.c
+      Source file:   src/extra/widgets/calendar/lv_calendar_header_dropdown.c
+      Source file:   src/extra/widgets/led/lv_led.c
+      Source file:   src/extra/themes/mono/lv_theme_mono.c
+      Source file:   src/extra/lv_extra.c
+      Source file:   src/extra/widgets/animimg/lv_animimg.c
+      Source file:   src/extra/widgets/calendar/lv_calendar_header_arrow.c
+      Source file:   src/extra/themes/default/lv_theme_default.c
+      Source file:   src/extra/widgets/keyboard/lv_keyboard.c
+      Source file:   src/extra/widgets/chart/lv_chart.c
+      Source file:   src/extra/widgets/list/lv_list.c
+      Source file:   src/extra/widgets/imgbtn/lv_imgbtn.c
+      Source file:   src/extra/layouts/grid/lv_grid.c
+      Source file:   src/extra/layouts/flex/lv_flex.c
+      Source file:   src/extra/widgets/spinbox/lv_spinbox.c
+      Source file:   src/extra/widgets/spinner/lv_spinner.c
+      Source file:   src/extra/widgets/tileview/lv_tileview.c
+      Source file:   src/extra/widgets/win/lv_win.c
+      Source file:   src/extra/widgets/tabview/lv_tabview.c
+
+   * Component: LVGL::LVGL&LVGL:lvgl:Porting@8.4.0
+      Source file:   examples/porting/lv_port_indev_template.c
+      Include file:  examples/porting/lv_port_indev_template.h
+      Include file:  examples/porting/lv_port_fs_template.h
+      Include file:  examples/porting/lv_port_disp_template.h
+      Source file:   examples/porting/lv_port_fs_template.c
+      Source file:   examples/porting/lv_port_disp_template.c
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

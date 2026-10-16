@@ -62,9 +62,8 @@ void wk_gpio_config(void)
 
   /* gpio output config */
   gpio_bits_set(OUT_W25Q128_CS_L_GPIO_PORT, OUT_W25Q128_CS_L_PIN);
-  gpio_bits_reset(GPIOC, OUT_BEEP_H_PIN | OUT_LCD_RST_L_PIN | IN_TOUCH_INT_L_PIN | OUT_TOUCH_SDA_PIN);
+  gpio_bits_reset(GPIOC, OUT_BEEP_H_PIN | OUT_LCD_RST_L_PIN | IN_TOUCH_INT_L_PIN);
   gpio_bits_set(OUT_TOUCH_RST_L_GPIO_PORT, OUT_TOUCH_RST_L_PIN);
-  gpio_bits_reset(OUT_TOUCH_SCL_GPIO_PORT, OUT_TOUCH_SCL_PIN);
   gpio_bits_reset(OUT_LED_H_GPIO_PORT, OUT_LED_H_PIN);
 
   gpio_init_struct.gpio_drive_strength = GPIO_DRIVE_STRENGTH_MODERATE;
@@ -77,16 +76,9 @@ void wk_gpio_config(void)
   gpio_init_struct.gpio_drive_strength = GPIO_DRIVE_STRENGTH_MODERATE;
   gpio_init_struct.gpio_out_type = GPIO_OUTPUT_PUSH_PULL;
   gpio_init_struct.gpio_mode = GPIO_MODE_OUTPUT;
-  gpio_init_struct.gpio_pins = OUT_BEEP_H_PIN | OUT_LCD_RST_L_PIN | IN_TOUCH_INT_L_PIN | OUT_TOUCH_RST_L_PIN | OUT_TOUCH_SDA_PIN;
+  gpio_init_struct.gpio_pins = OUT_BEEP_H_PIN | OUT_LCD_RST_L_PIN | IN_TOUCH_INT_L_PIN | OUT_TOUCH_RST_L_PIN;
   gpio_init_struct.gpio_pull = GPIO_PULL_NONE;
   gpio_init(GPIOC, &gpio_init_struct);
-
-  gpio_init_struct.gpio_drive_strength = GPIO_DRIVE_STRENGTH_STRONGER;
-  gpio_init_struct.gpio_out_type = GPIO_OUTPUT_OPEN_DRAIN;
-  gpio_init_struct.gpio_mode = GPIO_MODE_OUTPUT;
-  gpio_init_struct.gpio_pins = OUT_TOUCH_SCL_PIN;
-  gpio_init_struct.gpio_pull = GPIO_PULL_NONE;
-  gpio_init(OUT_TOUCH_SCL_GPIO_PORT, &gpio_init_struct);
 
   /* gpio analog config */
   gpio_init_struct.gpio_mode = GPIO_MODE_ANALOG;

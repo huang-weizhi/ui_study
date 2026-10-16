@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root>
     <WorkBenchVersion>
-        <Version>V1.2.05</Version>
+        <Version>V1.2.07</Version>
     </WorkBenchVersion>
     <MCUInfo>
         <MCUSerials>AT32F403A</MCUSerials>
@@ -32,6 +32,15 @@
             <ModeSub name="EXINT7" value="TRUE"/>
         </Mode>
     </EXINT>
+    <I2C3>
+        <Mode>
+            <ModeSub name="I2C" value="I2C"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="DualAddressMode" value="DISABLE"/>
+            <ParametersSub name="GeneralCallMode" value="FALSE"/>
+        </Parameters>
+    </I2C3>
     <SPI4>
         <Mode>
             <ModeSub name="Mode" value="Full_Duplex_Master"/>
@@ -116,7 +125,7 @@
             <ParametersGroup>
                 <ParametersSub name="TaskName" value="ui_task"/>
                 <ParametersSub name="TaskPriority" value="0"/>
-                <ParametersSub name="TaskStackSize" value="1024"/>
+                <ParametersSub name="TaskStackSize" value="2048"/>
                 <ParametersSub name="TaskEntryFunction" value="ui_function"/>
                 <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
                 <ParametersSub name="TaskParameters" value="NULL"/>
@@ -127,7 +136,7 @@
             <ParametersGroup>
                 <ParametersSub name="TaskName" value="input_task"/>
                 <ParametersSub name="TaskPriority" value="0"/>
-                <ParametersSub name="TaskStackSize" value="256"/>
+                <ParametersSub name="TaskStackSize" value="512"/>
                 <ParametersSub name="TaskEntryFunction" value="input_function"/>
                 <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
                 <ParametersSub name="TaskParameters" value="NULL"/>
@@ -138,7 +147,7 @@
             <ParametersGroup>
                 <ParametersSub name="TaskName" value="output_task"/>
                 <ParametersSub name="TaskPriority" value="0"/>
-                <ParametersSub name="TaskStackSize" value="256"/>
+                <ParametersSub name="TaskStackSize" value="128"/>
                 <ParametersSub name="TaskEntryFunction" value="output_function"/>
                 <ParametersSub name="TaskCodeGenerationOption" value="Default"/>
                 <ParametersSub name="TaskParameters" value="NULL"/>
@@ -169,27 +178,16 @@
                 <ParametersSub name="TaskBuffer" value="NULL"/>
             </ParametersGroup>
         </Tasks>
-        <Queues>
-            <ParametersGroup>
-                <ParametersSub name="QueueName" value="usart_1_tx"/>
-                <ParametersSub name="QueueSize" value="256"/>
-                <ParametersSub name="QueueItemSize" value="uint8_t"/>
-                <ParametersSub name="QueueAllocation" value="Dynamic"/>
-                <ParametersSub name="QueueBufferName" value="NULL"/>
-                <ParametersSub name="QueueBufferSize" value="n/a"/>
-                <ParametersSub name="QueueBuffer" value="NULL"/>
-            </ParametersGroup>
-            <ParametersGroup>
-                <ParametersSub name="QueueName" value="usart_1_rx"/>
-                <ParametersSub name="QueueSize" value="2048"/>
-                <ParametersSub name="QueueItemSize" value="uint8_t"/>
-                <ParametersSub name="QueueAllocation" value="Dynamic"/>
-                <ParametersSub name="QueueBufferName" value="NULL"/>
-                <ParametersSub name="QueueBufferSize" value="n/a"/>
-                <ParametersSub name="QueueBuffer" value="NULL"/>
-            </ParametersGroup>
-        </Queues>
     </FREERTOS>
+    <I2C_Application>
+        <Mode>
+            <ModeSub name="I2C3_Mode" value="Poll_Mode"/>
+        </Mode>
+        <Parameters>
+            <ParametersSub name="I2C3_Master_Send" value="TRUE"/>
+            <ParametersSub name="I2C3_Master_Receive" value="TRUE"/>
+        </Parameters>
+    </I2C_Application>
     <DMA>
         <MEMTOMEM0>
             <ParametersSub name="Instance" value="DMA1_Channel3"/>
@@ -216,6 +214,8 @@
         <EXINT9_5_IRQHandler>0;5;0;1;0;0</EXINT9_5_IRQHandler>
         <TMR3_GLOBAL_IRQHandler>0;5;0;1;0;0</TMR3_GLOBAL_IRQHandler>
         <USART1_IRQHandler>1;5;0;1;0;1</USART1_IRQHandler>
+        <I2C3_EVT_IRQHandler>0;5;0;1;0;0</I2C3_EVT_IRQHandler>
+        <I2C3_ERR_IRQHandler>0;5;0;1;0;0</I2C3_ERR_IRQHandler>
         <SPI4_IRQHandler>0;5;0;1;0;0</SPI4_IRQHandler>
     </NVIC>
     <GPIO>
@@ -268,14 +268,6 @@
         <Signal SignalName="GPIO_Output" PinName="PC8">
             <Parameters name="GPIO_Outputlevel" value="GPIO_OUTPUTLEVEL_HIGH"/>
             <Parameters name="Label" value="OUT_TOUCH_RST_L"/>
-        </Signal>
-        <Signal SignalName="GPIO_Output" PinName="PC9">
-            <Parameters name="Label" value="OUT_TOUCH_SDA"/>
-        </Signal>
-        <Signal SignalName="GPIO_Output" PinName="PA8">
-            <Parameters name="GPIO_Type" value="GPIO_OUTPUT_OPEN_DRAIN"/>
-            <Parameters name="GPIO_DriverCapability" value="GPIO_DRIVE_STRENGTH_STRONGER"/>
-            <Parameters name="Label" value="OUT_TOUCH_SCL"/>
         </Signal>
         <Signal SignalName="EXINT5" PinName="PB5">
             <Parameters name="Label" value="IN_ENCODER_B_HL"/>
@@ -342,8 +334,8 @@
         <PinSub pinname="PC6" signalname="GPIO_Output" signaltype="3"/>
         <PinSub pinname="PC7" signalname="GPIO_Output" signaltype="3"/>
         <PinSub pinname="PC8" signalname="GPIO_Output" signaltype="3"/>
-        <PinSub pinname="PC9" signalname="GPIO_Output" signaltype="3"/>
-        <PinSub pinname="PA8" signalname="GPIO_Output" signaltype="3"/>
+        <PinSub pinname="PC9" signalname="I2C3_SDA" signaltype="3"/>
+        <PinSub pinname="PA8" signalname="I2C3_SCL" signaltype="3"/>
         <PinSub pinname="PA9" signalname="USART1_TX" signaltype="3"/>
         <PinSub pinname="PA10" signalname="USART1_RX" signaltype="3"/>
         <PinSub pinname="PA13" signalname="DEBUG_JTMS_SWDIO" signaltype="2"/>
@@ -392,5 +384,7 @@
         <RankSub RankNum="58" FixPosFlag="FALSE" FuncName="wk_tmr3_init" InstanceName="TMR3" CodeSection="tmr3 function" MainDoNotCallFlag="FALSE"/>
         <RankSub RankNum="14" FixPosFlag="FALSE" FuncName="wk_dma1_channel1_init" InstanceName="DMA1_Channel1" CodeSection="dma1_channel1_init" MainDoNotCallFlag="FALSE"/>
         <RankSub RankNum="15" FixPosFlag="FALSE" FuncName="wk_dma1_channel2_init" InstanceName="DMA1_Channel2" CodeSection="dma1_channel2_init" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="50" FixPosFlag="FALSE" FuncName="wk_i2c3_init" InstanceName="I2C3" CodeSection="i2c3 function" MainDoNotCallFlag="FALSE"/>
+        <RankSub RankNum="81" FixPosFlag="FALSE" FuncName="wk_i2c_app_init" InstanceName="I2C_Application" CodeSection="i2c_app_init" MainDoNotCallFlag="FALSE"/>
     </FunctionRankInfo>
 </Root>

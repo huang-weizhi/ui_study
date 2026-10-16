@@ -19,22 +19,30 @@ extern "C" {
 #if defined(LV_LVGL_H_INCLUDE_SIMPLE)
 #include "lvgl.h"
 #else
-#include "lvgl.h"
+#include "lvgl/lvgl.h"
 #endif
 
 /*********************
  *      DEFINES
  *********************/
-#define MY_DISP_HOR_RES 480
-#define MY_DISP_VER_RES 320
+
+/**********************
+ *      TYPEDEFS
+ **********************/
 
 /**********************
  * GLOBAL PROTOTYPES
  **********************/
+/* Initialize low level display driver */
 void lv_port_disp_init(void);
 
-/* Global display driver pointer for DMA ISR async flush callback */
-extern volatile lv_disp_drv_t *lvgl_async_disp_drv;
+/* Enable updating the screen (the flushing process) when disp_flush() is called by LVGL
+ */
+void disp_enable_update(void);
+
+/* Disable updating the screen (the flushing process) when disp_flush() is called by LVGL
+ */
+void disp_disable_update(void);
 
 /**********************
  *      MACROS
@@ -46,4 +54,4 @@ extern volatile lv_disp_drv_t *lvgl_async_disp_drv;
 
 #endif /*LV_PORT_DISP_TEMPL_H*/
 
-#endif /*End of "Content enable"*/
+#endif /*Disable/Enable content*/

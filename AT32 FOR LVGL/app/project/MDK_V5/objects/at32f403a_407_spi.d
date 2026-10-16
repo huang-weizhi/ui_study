@@ -1,5 +1,6 @@
 ./objects/at32f403a_407_spi.o: \
   ..\..\libraries\drivers\src\at32f403a_407_spi.c \
+  RTE\LVGL\lv_conf_cmsis.h RTE\_AT32F403AVGT7_WorkBench\RTE_Components.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h \
   RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h \
   ..\inc\at32f403a_407_conf.h \
@@ -14,6 +15,7 @@
   ..\..\libraries\drivers\inc\at32f403a_407_exint.h \
   ..\..\libraries\drivers\inc\at32f403a_407_flash.h \
   ..\..\libraries\drivers\inc\at32f403a_407_gpio.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_i2c.h \
   ..\..\libraries\drivers\inc\at32f403a_407_misc.h \
   ..\..\libraries\drivers\inc\at32f403a_407_pwc.h \
   ..\..\libraries\drivers\inc\at32f403a_407_spi.h \

@@ -93,17 +93,40 @@ extern "C"
      *  480x320 in the current orientation) */
     void lcd_set_block(uint16_t xstart, uint16_t ystart, uint16_t xend, uint16_t yend);
 
-    /** Blocking DMA pixel transfer; length is the byte count (must be even,
-     *  16bit pixels) */
-    void lcd_wr_data_dma(uint16_t *data, uint32_t length);
+    /*============================================================================
+     *                 LVGL ASYNC FLUSH API (DMA1_CH3)
+     *   Non-blocking DMA flush with a completion callback. The hardware has a
+     *   single DMA channel, so a new transfer first waits for the previous one
+     *   to finish (internal state machine, no polling variable exposed).
+     *
+     *   Typical LVGL double-buffer pipeline:
+     *     disp_flush() -> lcd_set_block() + lcd_dma_flush(bufA, ..., done_cb)
+     *       LVGL renders bufB while DMA sends bufA
+     *       DMA ISR -> lcd_dma_isr() -> done_cb -> lv_disp_flush_ready()
+     *       next lcd_dma_flush(bufB, ...) only starts after bufA DMA is done
+     *============================================================================*/
+    /** Completion callback type, invoked in the DMA1_CH3 ISR context. */
+    typedef void (*lcd_flush_done_cb_t)(void *user_data);
 
-    /** Non-blocking DMA transfer, returns immediately; used by LVGL async
-     *  flushing. Must wait for lcd_dma_transfer_complete == 1 before calling
-     *  again */
-    void lcd_wr_data_dma_async(uint16_t *data, uint32_t length);
+    /**
+     * Start an asynchronous DMA flush of `bytes` bytes from `data` to the LCD
+     * (the active window must be set first with lcd_set_block). If a previous
+     * transfer is still running it is waited for. Returns immediately while
+     * the transfer is in progress; `done_cb` (with `user_data`) is called from
+     * the DMA ISR when the transfer finishes. The source buffer must stay
+     * valid until the callback fires.
+     */
+    void lcd_dma_flush(uint16_t *data, uint32_t length, lcd_flush_done_cb_t done_cb, void *user_data);
 
-    /** DMA completion flag, set to 1 by DMA1_Channel3_IRQHandler */
-    extern volatile uint8_t lcd_dma_transfer_complete;
+    /** Block until the running DMA flush finishes (blocking, no callback). */
+    void lcd_dma_flush_wait(void);
+
+    /**
+     * DMA1_CH3 full-transfer ISR entry: clears the flag, stops the channel
+     * and fires the pending completion callback. Call it from the
+     * DMA1_FDT3_FLAG user block of DMA1_Channel3_IRQHandler.
+     */
+    void lcd_dma_isr(void);
 
     /** Clear the full screen (480x320) */
     void lcd_clear(uint16_t color);

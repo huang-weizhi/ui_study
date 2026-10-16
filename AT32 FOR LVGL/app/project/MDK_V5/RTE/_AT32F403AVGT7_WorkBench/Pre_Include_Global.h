@@ -11,6 +11,10 @@
 
 /* GorgonMeducer::Utilities:perf_counter:Core&Source@2.5.5 */
 #define __PERF_COUNTER_CFG_USE_SYSTICK_WRAPPER__ 1
+/* LVGL::LVGL&LVGL:lvgl:Essential@8.4.0 */
+/*! \brief use lv_config_cmsis.h which will be pre-included */
+#define LV_CONF_SKIP
+#define LV_LVGL_H_INCLUDE_SIMPLE    1
 
 
 #endif /* PRE_INCLUDE_GLOBAL_H */

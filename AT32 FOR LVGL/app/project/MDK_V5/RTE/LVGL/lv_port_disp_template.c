@@ -12,10 +12,18 @@
 #include "lv_port_disp_template.h"
 #include <stdbool.h>
 #include "Inf_lcd.h"
-
 /*********************
  *      DEFINES
  *********************/
+#ifndef MY_DISP_HOR_RES
+    #warning Please define or replace the macro MY_DISP_HOR_RES with the actual screen width, default value 480 is used for now.
+    #define MY_DISP_HOR_RES    480
+#endif
+
+#ifndef MY_DISP_VER_RES
+    #warning Please define or replace the macro MY_DISP_HOR_RES with the actual screen height, default value 320 is used for now.
+    #define MY_DISP_VER_RES    320
+#endif
 
 /**********************
  *      TYPEDEFS
@@ -25,13 +33,14 @@
  *  STATIC PROTOTYPES
  **********************/
 static void disp_init(void);
+
 static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t * color_p);
+//static void gpu_fill(lv_disp_drv_t * disp_drv, lv_color_t * dest_buf, lv_coord_t dest_width,
+//        const lv_area_t * fill_area, lv_color_t color);
 
 /**********************
  *  STATIC VARIABLES
  **********************/
-/* Global: saved disp_drv pointer for DMA ISR async callback */
-volatile lv_disp_drv_t *lvgl_async_disp_drv = NULL;
 
 /**********************
  *      MACROS
@@ -43,27 +52,64 @@ volatile lv_disp_drv_t *lvgl_async_disp_drv = NULL;
 
 void lv_port_disp_init(void)
 {
-    /*---------------------------------------------------
-     * Initialize your LCD
-     *--------------------------------------------------*/
+    /*-------------------------
+     * Initialize your display
+     * -----------------------*/
     disp_init();
 
-    /*---------------------------------------------------
-     * Create double draw buffers for async DMA
-     * (LVGL renders to one while DMA transfers the other)
-     *--------------------------------------------------*/
-    static lv_color_t buf_1_1[MY_DISP_HOR_RES * 10];      /* Buffer A: 854 x 10 x 2 = 17 KB */
-    static lv_color_t buf_1_2[MY_DISP_HOR_RES * 10];      /* Buffer B: 854 x 10 x 2 = 17 KB */
-    static lv_disp_draw_buf_t draw_buf_dsc;
-    lv_disp_draw_buf_init(&draw_buf_dsc, buf_1_1, buf_1_2, MY_DISP_HOR_RES * 10);  /* Double buffer */
+    /*-----------------------------
+     * Create a buffer for drawing
+     *----------------------------*/
 
-    /*---------------------------------------------------
+    /**
+     * LVGL requires a buffer where it internally draws the widgets.
+     * Later this buffer will passed to your display driver's `flush_cb` to copy its content to your display.
+     * The buffer has to be greater than 1 display row
+     *
+     * There are 3 buffering configurations:
+     * 1. Create ONE buffer:
+     *      LVGL will draw the display's content here and writes it to your display
+     *
+     * 2. Create TWO buffer:
+     *      LVGL will draw the display's content to a buffer and writes it your display.
+     *      You should use DMA to write the buffer's content to the display.
+     *      It will enable LVGL to draw the next part of the screen to the other buffer while
+     *      the data is being sent form the first buffer. It makes rendering and flushing parallel.
+     *
+     * 3. Double buffering
+     *      Set 2 screens sized buffers and set disp_drv.full_refresh = 1.
+     *      This way LVGL will always provide the whole rendered screen in `flush_cb`
+     *      and you only need to change the frame buffer's address.
+     */
+
+    /* Example for 1) */
+//    static lv_disp_draw_buf_t draw_buf_dsc_1;
+//    static lv_color_t buf_1[MY_DISP_HOR_RES * 10];                          /*A buffer for 10 rows*/
+//    lv_disp_draw_buf_init(&draw_buf_dsc_1, buf_1, NULL, MY_DISP_HOR_RES * 10);   /*Initialize the display buffer*/
+
+    /* Example for 2) */
+    static lv_disp_draw_buf_t draw_buf_dsc_2;
+    static lv_color_t buf_2_1[MY_DISP_HOR_RES * 40];                        /*A buffer for 10 rows*/
+    static lv_color_t buf_2_2[MY_DISP_HOR_RES * 40];                        /*An other buffer for 10 rows*/
+    lv_disp_draw_buf_init(&draw_buf_dsc_2, buf_2_1, buf_2_2, MY_DISP_HOR_RES * 40);   /*Initialize the display buffer*/
+
+    /* Example for 3) also set disp_drv.full_refresh = 1 below*/
+//    static lv_disp_draw_buf_t draw_buf_dsc_3;
+//    static lv_color_t buf_3_1[MY_DISP_HOR_RES * MY_DISP_VER_RES];            /*A screen sized buffer*/
+//    static lv_color_t buf_3_2[MY_DISP_HOR_RES * MY_DISP_VER_RES];            /*Another screen sized buffer*/
+//    lv_disp_draw_buf_init(&draw_buf_dsc_3, buf_3_1, buf_3_2,
+//                          MY_DISP_VER_RES * LV_VER_RES_MAX);   /*Initialize the display buffer*/
+
+    /*-----------------------------------
      * Register the display in LVGL
-     *--------------------------------------------------*/
-    static lv_disp_drv_t disp_drv;                         /*Descriptor of a display driver*/
-    lv_disp_drv_init(&disp_drv);                           /*Basic initialization*/
+     *----------------------------------*/
 
-    /*Set the resolution of the display (landscape: 854x480)*/
+    static lv_disp_drv_t disp_drv;                         /*Descriptor of a display driver*/
+    lv_disp_drv_init(&disp_drv);                    /*Basic initialization*/
+
+    /*Set up the functions to access to your display*/
+
+    /*Set the resolution of the display*/
     disp_drv.hor_res = MY_DISP_HOR_RES;
     disp_drv.ver_res = MY_DISP_VER_RES;
 
@@ -71,7 +117,15 @@ void lv_port_disp_init(void)
     disp_drv.flush_cb = disp_flush;
 
     /*Set a display buffer*/
-    disp_drv.draw_buf = &draw_buf_dsc;
+    disp_drv.draw_buf = &draw_buf_dsc_2;
+
+    /*Required for Example 3)*/
+    //disp_drv.full_refresh = 1;
+
+    /* Fill a memory array with a color if you have GPU.
+     * Note that, in lv_conf.h you can enable GPUs that has built-in support in LVGL.
+     * But if you have a different GPU you can use with this callback.*/
+    //disp_drv.gpu_fill_cb = gpu_fill;
 
     /*Finally register the driver*/
     lv_disp_drv_register(&disp_drv);
@@ -81,36 +135,83 @@ void lv_port_disp_init(void)
  *   STATIC FUNCTIONS
  **********************/
 
-/*Initialize your display*/
+/*Initialize your display and the required peripherals.*/
 static void disp_init(void)
 {
-    /* LCD already initialized by xmc_init() + lcd_init() in main(). */
+    /*You code here*/
+	
 }
 
-/*Flush the content of the internal buffer on the display.
- * LVGL v8 callback: color_p is lv_color_t* (uint16_t for RGB565).
- * Async DMA: starts transfer and returns immediately.
- * DMA ISR (DMA1_Channel3) calls lv_disp_flush_ready() when done.
- * This allows LVGL to render into the OTHER buffer while DMA runs. */
+volatile bool disp_flush_enabled = true;
+
+/* Enable updating the screen (the flushing process) when disp_flush() is called by LVGL
+ */
+void disp_enable_update(void)
+{
+    disp_flush_enabled = true;
+}
+
+/* Disable updating the screen (the flushing process) when disp_flush() is called by LVGL
+ */
+void disp_disable_update(void)
+{
+    disp_flush_enabled = false;
+}
+
+/*Flush the content of the internal buffer the specific area on the display
+ *You can use DMA or any hardware acceleration to do this operation in the background but
+ *'lv_disp_flush_ready()' has to be called when finished.*/
+
+
+
+/* NOTE: lv_disp_flush_ready() is now called from TASK CONTEXT below, after
+ * lcd_dma_flush_wait() returns.  Earlier this driver notified LVGL from the
+ * DMA1_Channel3 ISR via disp_dma_done_cb(); that broke LVGL under -O1/-O2
+ * because LVGL is not re-entrant against its own render pass.  Synchronous
+ * flushes add a few hundred microseconds of CPU wait per LVGL area but the
+ * ui_task otherwise has plenty of headroom (vTaskDelay(5) in freertos_app.c),
+ * and stability under optimisation more than makes up for it. */
 static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t * color_p)
 {
-    /* Save for DMA ISR callback */
-    lvgl_async_disp_drv = disp_drv;
+    if(disp_flush_enabled) {
+        /* window + blocking DMA; the call returns once the pixels are out
+         * the bus, then we tell LVGL the buffer is free. */
+        lcd_set_block((uint16_t)area->x1, (uint16_t)area->y1,
+                      (uint16_t)area->x2, (uint16_t)area->y2);
 
-    /* 1. Set target window on LCD */
-    lcd_set_block(area->x1, area->y1, area->x2, area->y2);
-
-    /* 2. Start async DMA transfer (returns immediately) */
-    uint32_t pixel_count = (uint32_t)(area->x2 - area->x1 + 1) * (uint32_t)(area->y2 - area->y1 + 1);
-    lcd_wr_data_dma_async((uint16_t *)color_p, pixel_count * 2);
-
-    /* 3. DO NOT call lv_disp_flush_ready()!
-     *    DMA ISR will signal completion, so LVGL can render to the
-     *    other buffer in parallel with the DMA transfer. */
+        uint32_t w = (uint32_t)(area->x2 - area->x1 + 1);
+        uint32_t h = (uint32_t)(area->y2 - area->y1 + 1);
+        lcd_dma_flush((uint16_t *)color_p, w * h * sizeof(lv_color_t),
+                      NULL, NULL);
+        lcd_dma_flush_wait();
+        lv_disp_flush_ready(disp_drv);
+    }
+    else {
+        /* flushing disabled: still must release LVGL or it hangs */
+        lv_disp_flush_ready(disp_drv);
+    }
 }
+
+/*OPTIONAL: GPU INTERFACE*/
+
+/*If your MCU has hardware accelerator (GPU) then you can use it to fill a memory with a color*/
+//static void gpu_fill(lv_disp_drv_t * disp_drv, lv_color_t * dest_buf, lv_coord_t dest_width,
+//                    const lv_area_t * fill_area, lv_color_t color)
+//{
+//    /*It's an example code which should be done by your GPU*/
+//    int32_t x, y;
+//    dest_buf += dest_width * fill_area->y1; /*Go to the first line*/
+//
+//    for(y = fill_area->y1; y <= fill_area->y2; y++) {
+//        for(x = fill_area->x1; x <= fill_area->x2; x++) {
+//            dest_buf[x] = color;
+//        }
+//        dest_buf+=dest_width;    /*Go to the next line*/
+//    }
+//}
 
 #else /*Enable this file at the top*/
 
-/*This dummy typedef exists purely to silence -Wpedantic. */
-typedef int make_empty_compilation_unit_warning_quiet;
+/*This dummy typedef exists purely to silence -Wpedantic.*/
+typedef int keep_pedantic_happy;
 #endif

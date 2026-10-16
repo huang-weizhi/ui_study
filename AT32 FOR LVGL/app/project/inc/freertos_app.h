@@ -22,12 +22,15 @@
 /* add user code begin private includes */
 #include "at32f403a_407_wk_config.h"
 #include <EventRecorder.h>
-#include "pc_handle.h"
-
 #include "beep_handle.h"
-
 #include "output_handle.h"
 #include "input_handle.h"
+
+#include "lvgl.h"
+#include "lv_port_disp_template.h"
+#include "lv_port_indev_template.h"
+#include "demos/lv_demos.h"
+
 /* add user code end private includes */
 
 /* exported types -------------------------------------------------------------*/
@@ -58,13 +61,9 @@ void output_function(void *pvParameters);
 void common_function(void *pvParameters);
 void wdt_function(void *pvParameters);
 
-/* queue handler */
-extern QueueHandle_t usart_1_tx_handle;
-extern QueueHandle_t usart_1_rx_handle;
-
 /* add user code begin 0 */
 
-/* LVGL touch globals (freertos_app.c) */
+/* LVGL touch globals (freertos_app.c) - volatile: cross-task shared */
 extern volatile bool     lvgl_touch_state;
 extern volatile uint16_t lvgl_touch_x;
 extern volatile uint16_t lvgl_touch_y;
@@ -72,7 +71,6 @@ extern volatile uint16_t lvgl_touch_y;
 /* add user code end 0 */
 
 void freertos_task_create(void);
-void freertos_queue_create(void);
 void wk_freertos_init(void);
 
 /* add user code begin 1 */

@@ -16,7 +16,7 @@
         <TargetCommonOption>
           <Device>-AT32F403AVGT7</Device>
           <Vendor>ArteryTek</Vendor>
-          <PackID>ArteryTek.AT32F403A_407_DFP.2.2.2</PackID>
+          <PackID>ArteryTek.AT32F403A_407_DFP.2.2.4</PackID>
           <Cpu>IRAM(0x20000000,0x18000) IROM(0x08000000,0x100000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
@@ -313,8 +313,8 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>1</Optim>
-            <oTime>0</oTime>
+            <Optim>8</Optim>
+            <oTime>1</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
             <Strict>0</Strict>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>AT32F403AVGT7, USE_STDPERIPH_DRIVER, AT_START_F403A_V1</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\libraries\drivers\inc;..\..\libraries\cmsis\cm4\core_support;..\..\libraries\cmsis\cm4\device_support;..\inc;..\app;..\ui_base;..\ui_show_page;..\common;..\interface;D:\Work Program\Keil_v5\ARM\Packs\LVGL\lvgl\9.4.0\demos;D:\Work Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\demos;../../middlewares/freertos/source/include;../../middlewares/freertos/source/portable/memmang;../../middlewares/freertos/source/portable/GCC/ARM_CM4F</IncludePath>
+              <IncludePath>..\..\libraries\drivers\inc;..\..\libraries\cmsis\cm4\core_support;..\..\libraries\cmsis\cm4\device_support;..\inc;..\app;..\ui_base;..\ui_show_page;..\common;..\interface;D:\Work Program\Keil_v5\ARM\Packs\LVGL\lvgl\9.4.0\demos;D:\Work Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\demos;../../middlewares/freertos/source/include;../../middlewares/freertos/source/portable/memmang;../../middlewares/freertos/source/portable/GCC/ARM_CM4F;../../middlewares/i2c_application_library</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -463,6 +463,16 @@
               <FileType>1</FileType>
               <FilePath>..\src\wk_exint.c</FilePath>
             </File>
+            <File>
+              <FileName>wk_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\src\wk_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c_app.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../src/i2c_app.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -482,6 +492,11 @@
               <FileName>at32f403a_407_gpio.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\libraries\drivers\src\at32f403a_407_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>at32f403a_407_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\libraries\drivers\src\at32f403a_407_i2c.c</FilePath>
             </File>
             <File>
               <FileName>at32f403a_407_usart.c</FileName>
@@ -559,11 +574,6 @@
           <GroupName>app</GroupName>
           <Files>
             <File>
-              <FileName>pc_handle.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\pc_handle.c</FilePath>
-            </File>
-            <File>
               <FileName>beep_handle.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\app\beep_handle.c</FilePath>
@@ -587,11 +597,6 @@
               <FileName>iap.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\common\iap.c</FilePath>
-            </File>
-            <File>
-              <FileName>soft_i2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\common\soft_i2c.c</FilePath>
             </File>
             <File>
               <FileName>PA45.c</FileName>
@@ -634,6 +639,21 @@
               <FilePath>..\interface\Inf_w25qxxx.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS-Compiler</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS-View</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::LVGL</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::Utilities</GroupName>
         </Group>
         <Group>
           <GroupName>middlewares/freertos</GroupName>
@@ -681,16 +701,14 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>::CMSIS</GroupName>
-        </Group>
-        <Group>
-          <GroupName>::CMSIS-Compiler</GroupName>
-        </Group>
-        <Group>
-          <GroupName>::CMSIS-View</GroupName>
-        </Group>
-        <Group>
-          <GroupName>::Utilities</GroupName>
+          <GroupName>middlewares/i2c_application</GroupName>
+          <Files>
+            <File>
+              <FileName>i2c_application.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../../middlewares/i2c_application_library/i2c_application.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>
@@ -736,6 +754,36 @@
           <targetInfo name="AT32F403AVGT7_WorkBench"/>
         </targetInfos>
       </component>
+      <component Cbundle="LVGL" Cclass="LVGL" Cgroup="lvgl" Csub="Benchmark" Cvendor="LVGL" Cversion="8.4.0" condition="LVGL-Essential">
+        <package name="lvgl" schemaVersion="1.4" url="https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/" vendor="LVGL" version="8.4.0"/>
+        <targetInfos>
+          <targetInfo name="AT32F403AVGT7_WorkBench"/>
+        </targetInfos>
+      </component>
+      <component Cbundle="LVGL" Cclass="LVGL" Cgroup="lvgl" Csub="Demo:Widgets" Cvendor="LVGL" Cversion="8.4.0" condition="LVGL-Essential">
+        <package name="lvgl" schemaVersion="1.4" url="https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/" vendor="LVGL" version="8.4.0"/>
+        <targetInfos>
+          <targetInfo name="AT32F403AVGT7_WorkBench"/>
+        </targetInfos>
+      </component>
+      <component Cbundle="LVGL" Cclass="LVGL" Cgroup="lvgl" Csub="Essential" Cvendor="LVGL" Cversion="8.4.0">
+        <package name="lvgl" schemaVersion="1.4" url="https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/" vendor="LVGL" version="8.4.0"/>
+        <targetInfos>
+          <targetInfo name="AT32F403AVGT7_WorkBench"/>
+        </targetInfos>
+      </component>
+      <component Cbundle="LVGL" Cclass="LVGL" Cgroup="lvgl" Csub="Extra Themes" Cvendor="LVGL" Cversion="8.4.0" condition="LVGL-Essential">
+        <package name="lvgl" schemaVersion="1.4" url="https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/" vendor="LVGL" version="8.4.0"/>
+        <targetInfos>
+          <targetInfo name="AT32F403AVGT7_WorkBench"/>
+        </targetInfos>
+      </component>
+      <component Cbundle="LVGL" Cclass="LVGL" Cgroup="lvgl" Csub="Porting" Cvendor="LVGL" Cversion="8.4.0" condition="LVGL-Essential">
+        <package name="lvgl" schemaVersion="1.4" url="https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/" vendor="LVGL" version="8.4.0"/>
+        <targetInfos>
+          <targetInfo name="AT32F403AVGT7_WorkBench"/>
+        </targetInfos>
+      </component>
     </components>
     <files>
       <file attr="config" category="header" name="EventRecorder\Config\EventRecorderConf.h" version="1.1.0">
@@ -747,52 +795,68 @@
         </targetInfos>
       </file>
       <file attr="config" category="sourceC" name="lv_cmsis_pack.c" version="1.0.0">
-        <instance index="0" removed="1">RTE\LVGL\lv_cmsis_pack.c</instance>
+        <instance index="0">RTE\LVGL\lv_cmsis_pack.c</instance>
         <component Cbundle="LVGL" Cclass="LVGL" Cgroup="lvgl" Csub="Essential" Cvendor="LVGL" Cversion="8.4.0"/>
         <package name="lvgl" schemaVersion="1.4" url="https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/" vendor="LVGL" version="8.4.0"/>
-        <targetInfos/>
+        <targetInfos>
+          <targetInfo name="AT32F403AVGT7_WorkBench"/>
+        </targetInfos>
       </file>
       <file attr="config" category="preIncludeGlobal" name="lv_conf_cmsis.h" version="1.0.5">
-        <instance index="0" removed="1">RTE\LVGL\lv_conf_cmsis.h</instance>
+        <instance index="0">RTE\LVGL\lv_conf_cmsis.h</instance>
         <component Cbundle="LVGL" Cclass="LVGL" Cgroup="lvgl" Csub="Essential" Cvendor="LVGL" Cversion="8.4.0"/>
         <package name="lvgl" schemaVersion="1.4" url="https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/" vendor="LVGL" version="8.4.0"/>
-        <targetInfos/>
+        <targetInfos>
+          <targetInfo name="AT32F403AVGT7_WorkBench"/>
+        </targetInfos>
       </file>
       <file attr="config" category="sourceC" name="examples\porting\lv_port_disp_template.c" version="1.0.1">
-        <instance index="0" removed="1">RTE\LVGL\lv_port_disp_template.c</instance>
+        <instance index="0">RTE\LVGL\lv_port_disp_template.c</instance>
         <component Cbundle="LVGL" Cclass="LVGL" Cgroup="lvgl" Csub="Porting" Cvendor="LVGL" Cversion="8.4.0" condition="LVGL-Essential"/>
         <package name="lvgl" schemaVersion="1.4" url="https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/" vendor="LVGL" version="8.4.0"/>
-        <targetInfos/>
+        <targetInfos>
+          <targetInfo name="AT32F403AVGT7_WorkBench"/>
+        </targetInfos>
       </file>
       <file attr="config" category="header" name="examples\porting\lv_port_disp_template.h" version="1.0.1">
-        <instance index="0" removed="1">RTE\LVGL\lv_port_disp_template.h</instance>
+        <instance index="0">RTE\LVGL\lv_port_disp_template.h</instance>
         <component Cbundle="LVGL" Cclass="LVGL" Cgroup="lvgl" Csub="Porting" Cvendor="LVGL" Cversion="8.4.0" condition="LVGL-Essential"/>
         <package name="lvgl" schemaVersion="1.4" url="https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/" vendor="LVGL" version="8.4.0"/>
-        <targetInfos/>
+        <targetInfos>
+          <targetInfo name="AT32F403AVGT7_WorkBench"/>
+        </targetInfos>
       </file>
       <file attr="config" category="sourceC" name="examples\porting\lv_port_fs_template.c" version="1.0.0">
-        <instance index="0" removed="1">RTE\LVGL\lv_port_fs_template.c</instance>
+        <instance index="0">RTE\LVGL\lv_port_fs_template.c</instance>
         <component Cbundle="LVGL" Cclass="LVGL" Cgroup="lvgl" Csub="Porting" Cvendor="LVGL" Cversion="8.4.0" condition="LVGL-Essential"/>
         <package name="lvgl" schemaVersion="1.4" url="https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/" vendor="LVGL" version="8.4.0"/>
-        <targetInfos/>
+        <targetInfos>
+          <targetInfo name="AT32F403AVGT7_WorkBench"/>
+        </targetInfos>
       </file>
       <file attr="config" category="header" name="examples\porting\lv_port_fs_template.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\LVGL\lv_port_fs_template.h</instance>
+        <instance index="0">RTE\LVGL\lv_port_fs_template.h</instance>
         <component Cbundle="LVGL" Cclass="LVGL" Cgroup="lvgl" Csub="Porting" Cvendor="LVGL" Cversion="8.4.0" condition="LVGL-Essential"/>
         <package name="lvgl" schemaVersion="1.4" url="https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/" vendor="LVGL" version="8.4.0"/>
-        <targetInfos/>
+        <targetInfos>
+          <targetInfo name="AT32F403AVGT7_WorkBench"/>
+        </targetInfos>
       </file>
       <file attr="config" category="sourceC" name="examples\porting\lv_port_indev_template.c" version="1.0.0">
-        <instance index="0" removed="1">RTE\LVGL\lv_port_indev_template.c</instance>
+        <instance index="0">RTE\LVGL\lv_port_indev_template.c</instance>
         <component Cbundle="LVGL" Cclass="LVGL" Cgroup="lvgl" Csub="Porting" Cvendor="LVGL" Cversion="8.4.0" condition="LVGL-Essential"/>
         <package name="lvgl" schemaVersion="1.4" url="https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/" vendor="LVGL" version="8.4.0"/>
-        <targetInfos/>
+        <targetInfos>
+          <targetInfo name="AT32F403AVGT7_WorkBench"/>
+        </targetInfos>
       </file>
       <file attr="config" category="header" name="examples\porting\lv_port_indev_template.h" version="1.0.0">
-        <instance index="0" removed="1">RTE\LVGL\lv_port_indev_template.h</instance>
+        <instance index="0">RTE\LVGL\lv_port_indev_template.h</instance>
         <component Cbundle="LVGL" Cclass="LVGL" Cgroup="lvgl" Csub="Porting" Cvendor="LVGL" Cversion="8.4.0" condition="LVGL-Essential"/>
         <package name="lvgl" schemaVersion="1.4" url="https://raw.githubusercontent.com/lvgl/lvgl/master/env_support/cmsis-pack/" vendor="LVGL" version="8.4.0"/>
-        <targetInfos/>
+        <targetInfos>
+          <targetInfo name="AT32F403AVGT7_WorkBench"/>
+        </targetInfos>
       </file>
     </files>
   </RTE>

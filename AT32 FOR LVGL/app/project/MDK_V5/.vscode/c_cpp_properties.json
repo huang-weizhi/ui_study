@@ -97,6 +97,7 @@
                 "c:\\Users\\Administrator\\Desktop\\ui demo\\AT32 FOR LVGL\\app\\middlewares\\freertos\\source\\include",
                 "c:\\Users\\Administrator\\Desktop\\ui demo\\AT32 FOR LVGL\\app\\middlewares\\freertos\\source\\portable\\memmang",
                 "c:\\Users\\Administrator\\Desktop\\ui demo\\AT32 FOR LVGL\\app\\middlewares\\freertos\\source\\portable\\GCC\\ARM_CM4F",
+                "c:\\Users\\Administrator\\Desktop\\ui demo\\AT32 FOR LVGL\\app\\middlewares\\i2c_application_library",
                 "D:\\Work Program\\Keil_v5\\ARM\\ARMCLANG\\include",
                 "D:\\Work Program\\Keil_v5\\ARM\\ARMCLANG\\include\\arm_linux",
                 "D:\\Work Program\\Keil_v5\\ARM\\ARMCLANG\\include\\arm_linux_compat",

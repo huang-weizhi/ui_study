@@ -13,6 +13,8 @@
 /* add user code begin private includes */
 #include "Inf_key.h"
 #include "Inf_encoder.h"
+#include "Inf_touch.h"
+#include "iap.h"
 
 /* add user code end private includes */
 
@@ -36,6 +38,13 @@
 
 /* private variables ---------------------------------------------------------*/
 /* add user code begin private variables */
+/* LVGL touch: updated by input_task, read by indev callback.
+ * MUST be volatile: written by one task (input_task) and read by another
+ * (ui_task -> LVGL read_cb). Without volatile the compiler may cache them in
+ * a register across calls, which kills touch at any -O level above -O0. */
+volatile bool lvgl_touch_state = false;
+volatile uint16_t lvgl_touch_x = 0;
+volatile uint16_t lvgl_touch_y = 0;
 
 /* add user code end private variables */
 
@@ -48,6 +57,7 @@ volatile uint32_t task_life_signs[5] = {0, 0, 0, 0, 0};
 /* private user code ---------------------------------------------------------*/
 /* add user code begin 0 */
 
+ 
 /* add user code end 0 */
 
 /* task handler */
@@ -56,10 +66,6 @@ TaskHandle_t input_task_handle;
 TaskHandle_t output_task_handle;
 TaskHandle_t common_task_handle;
 TaskHandle_t wdt_task_handle;
-
-/* queue handler */
-QueueHandle_t usart_1_tx_handle;
-QueueHandle_t usart_1_rx_handle;
 
 /* Idle task control block and stack */
 static StackType_t idle_task_stack[configMINIMAL_STACK_SIZE];
@@ -107,7 +113,7 @@ void freertos_task_create(void)
   /* create ui_task task */
   xTaskCreate(ui_function,
               "ui_task",
-              1024,
+              2048,
               NULL,
               0,
               &ui_task_handle);
@@ -115,7 +121,7 @@ void freertos_task_create(void)
   /* create input_task task */
   xTaskCreate(input_function,
               "input_task",
-              256,
+              512,
               NULL,
               0,
               &input_task_handle);
@@ -123,7 +129,7 @@ void freertos_task_create(void)
   /* create output_task task */
   xTaskCreate(output_function,
               "output_task",
-              256,
+              128,
               NULL,
               0,
               &output_task_handle);
@@ -146,20 +152,6 @@ void freertos_task_create(void)
 }
 
 /**
-  * @brief  initializes all queue.
-  * @param  none
-  * @retval none
-  */
-void freertos_queue_create(void)
-{
-  /* Create the usart_1_tx, storing the returned handle in the xQueue variable. */
-  usart_1_tx_handle = xQueueCreate(256, sizeof(uint8_t));
-
-  /* Create the usart_1_rx, storing the returned handle in the xQueue variable. */
-  usart_1_rx_handle = xQueueCreate(2048, sizeof(uint8_t));
-}
-
-/**
   * @brief  freertos init and begin run.
   * @param  none
   * @retval none
@@ -172,7 +164,6 @@ void wk_freertos_init(void)
   /* enter critical */
   taskENTER_CRITICAL();
 
-  freertos_queue_create();
   freertos_task_create();
 	
   /* add user code begin freertos_init 1 */
@@ -193,10 +184,17 @@ void wk_freertos_init(void)
 void ui_function(void *pvParameters)
 {
   /* add user code begin ui_function 0 */
+ 
+  lv_init();
+  lv_port_disp_init();
+  lv_port_indev_init();  
+
   /* add user code end ui_function 0 */
 
   /* add user code begin ui_function 2 */
-
+    //lv_demo_benchmark();
+	lv_demo_widgets();
+ 
   /* add user code end ui_function 2 */
 
   /* Infinite loop */
@@ -205,15 +203,8 @@ void ui_function(void *pvParameters)
   /* add user code begin ui_function 1 */
     task_life_signs[TASK_UI_IDX]++;
 
-    if (spa45.flash_updata)
-    {
-      /* 升级期间暂停 UI 刷新(升级提示后续由 LVGL 页面显示) */
-      vTaskDelay(2);
-      continue;
-    }
-
-    /* LVGL 接入后: 在此周期调用 lv_timer_handler() 驱动界面刷新 */
-    vTaskDelay(2);
+    lv_timer_handler_run_in_period(5);
+    vTaskDelay(5);	
     /* add user code end ui_function 1 */
   }
 }
@@ -233,15 +224,7 @@ void input_function(void *pvParameters)
   ft6336_init();
   key_init();
   encoder_init();
-	
-  int8_t key;
-  int16_t enc;
-  int16_t ab;
-  uint16_t tx, ty;
-  uint8_t down;
-  uint32_t slow_tick = 0;
-	
-  /* LVGL 接入后: 此任务周期轮询 ft6336_read_touch() 并刷新触摸全局变量 */
+ 
   /* add user code end input_function 2 */
 
   /* Infinite loop */
@@ -249,20 +232,48 @@ void input_function(void *pvParameters)
   {
   /* add user code begin input_function 1 */
     task_life_signs[TASK_INPUT_IDX]++;
-
-    /* Encoder quadrature is decoded in the EXINT9_5 ISR (both A/B edges), so
-     * no fast polling is needed here; just read keys/touch/encoder slowly. */
-    slow_tick++;
-    if ((slow_tick % 5u) == 0u)           /* every ~10 ms */
+	  
+	  
+	  /* Sample into locals first: lvgl_touch_x/y are volatile, passing their
+	   * address to a uint16_t* parameter would drop the qualifier. */
+	  uint16_t touch_x = 0, touch_y = 0;
+	  uint8_t touch_rc = ft6336_read_touch(&touch_x, &touch_y);
+      
+      if (touch_rc ) {
+        lvgl_touch_x = touch_x;
+        lvgl_touch_y = touch_y;
+        lvgl_touch_state = true;
+ 
+      } else {
+        lvgl_touch_state = false;
+      }
+	  
+    /* ---- touch diagnostics: exposes every layer of the chain, 1 line/sec ----
+     * bus_err=0 & id=0xA3 -> I2C link is healthy (layer 1 OK)
+     * rc=1 while touching   -> frame parsed, raw values in x/y (layer 2 OK)
+     * if rc stays 0 while the chip answers, the problem is in the frame
+     * parsing / coordinate stage, not in the bus.
+     * fault field points to the exact I2C step that failed.  The value is
+     * the i2c_application middleware error_code: 0=OK, 1..12=ERR_STEP_1..12,
+     * 13=ERR_START, 14=ERR_ADDR10, 15=ERR_ADDR, 16=ERR_STOP,
+     * 17=ERR_ACKFAIL, 18=ERR_TIMEOUT, 19=ERR_INTERRUPT. */
     {
-      key = key_test_read();              /* 0 none / 1..4 KEY1..4 / 5 enc mid */
-      down = ft6336_test_read(&tx, &ty);
-      ab = encoder_test_read_ab();        /* optional: raw phases cycle 0-1-3-2 */
-      enc = encoder_get_diff();           /* +1/-1 per click since last read */
+      static uint32_t dbg_t;
+      if (xTaskGetTickCount() - dbg_t >= pdMS_TO_TICKS(1000))
+      {
+        uint8_t cid = 0xFF, vid = 0xFF, sts = 0xFF;
+        uint8_t bus_err;
+
+        dbg_t = xTaskGetTickCount();
+        bus_err = ft6336_diag(&cid, &vid, &sts);
+
+        printf("[TOUCH] rc=%u x=%u y=%u | bus_err=%u id=%02X vid=%02X sts=%02X | fault=%02X\r\n",
+               touch_rc, lvgl_touch_x, lvgl_touch_y,
+               bus_err, cid, vid, sts, ft6336_get_last_fault());
+      }
     }
-	  
-	  
-    vTaskDelay(2); /* ~2 ms encoder scan, ~10 ms key/touch cadence */
+
+    vTaskDelay(5);
 
     /* add user code end input_function 1 */
   }
@@ -344,9 +355,6 @@ void common_function(void *pvParameters)
   {
   /* add user code begin common_function 1 */
     task_life_signs[TASK_COMMON_IDX]++;
-
-    /* pc function */
-    pc_comm_handle();
     /* iap function */
     iap_command_handle();
     if (spa45.flash_updata)

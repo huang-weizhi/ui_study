@@ -1,3 +1,4 @@
+
 /**
  * @file lv_port_indev_templ.h
  *
@@ -16,11 +17,14 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include "lvgl.h"
 
 /*********************
  *      DEFINES
  *********************/
+
+/**********************
+ *      TYPEDEFS
+ **********************/
 
 /**********************
  * GLOBAL PROTOTYPES
@@ -37,4 +41,4 @@ void lv_port_indev_init(void);
 
 #endif /*LV_PORT_INDEV_TEMPL_H*/
 
-#endif /*End of "Content enable"*/
+#endif /*Disable/Enable content*/

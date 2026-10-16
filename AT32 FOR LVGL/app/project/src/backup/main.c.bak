@@ -29,6 +29,7 @@
 #include "wk_crc.h"
 #include "wk_debug.h"
 #include "wk_exint.h"
+#include "wk_i2c.h"
 #include "wk_spi.h"
 #include "wk_tmr.h"
 #include "wk_usart.h"
@@ -45,7 +46,6 @@
 #include <EventRecorder.h>
 #include <stdio.h>
 #include "PA45.h"
-
 
 /* add user code end private includes */
 
@@ -135,7 +135,7 @@ int main(void)
                         DMA1_CHANNEL3_PERIPHERAL_BASE_ADDR, 
                         DMA1_CHANNEL3_MEMORY_BASE_ADDR, 
                         DMA1_CHANNEL3_BUFFER_SIZE);
-  dma_channel_enable(DMA1_CHANNEL3, TRUE);
+  dma_channel_enable(DMA1_CHANNEL3, FALSE);
 
   /* init spi4 function. */
   wk_spi4_init();
@@ -146,19 +146,40 @@ int main(void)
   /* init tmr3 function. */
   wk_tmr3_init();
 
+  /* init dma1 channel1 */
+  wk_dma1_channel1_init();
+  /* config dma channel transfer parameter */
+  /* user need to modify define values DMAx_CHANNELy_XXX_BASE_ADDR 
+     and DMAx_CHANNELy_BUFFER_SIZE in at32xxx_wk_config.h */
+  wk_dma_channel_config(DMA1_CHANNEL1, 
+                        (uint32_t)&SPI4->dt, 
+                        DMA1_CHANNEL1_MEMORY_BASE_ADDR, 
+                        DMA1_CHANNEL1_BUFFER_SIZE);
+  dma_channel_enable(DMA1_CHANNEL1, FALSE);
+
+  /* init dma1 channel2 */
+  wk_dma1_channel2_init();
+  /* config dma channel transfer parameter */
+  /* user need to modify define values DMAx_CHANNELy_XXX_BASE_ADDR 
+     and DMAx_CHANNELy_BUFFER_SIZE in at32xxx_wk_config.h */
+  wk_dma_channel_config(DMA1_CHANNEL2, 
+                        (uint32_t)&SPI4->dt, 
+                        DMA1_CHANNEL2_MEMORY_BASE_ADDR, 
+                        DMA1_CHANNEL2_BUFFER_SIZE);
+  dma_channel_enable(DMA1_CHANNEL2, FALSE);
+
+  /* init i2c3 function. */
+  wk_i2c3_init();
+
   /* add user code begin 2 */
    init_cycle_counter(true);
    EventRecorderInitialize(0, 1);
+
    lcd_init();
-   lcd_clear(YELLOW);
-   /* show logo */
-   lcd_show_flash_img(198, 200, 0);
-   wk_delay_ms(100);
+
    /* open lcd bl */
    tmr_channel_value_set(TMR3, TMR_SELECT_CHANNEL_1, 7999);
-   
-   /* wait for show logo end  */
-   wk_delay_ms(2500);
+
    printf("system reday \r\n");
    check_flash_updata();
 
@@ -170,11 +191,8 @@ int main(void)
   while(1)
   {
     /* add user code begin 3 */
-	  
-	  
-	  gpio_bits_toggle(OUT_LED_H_GPIO_PORT,OUT_LED_H_PIN);
-      wk_delay_ms(1000);      
-	  /* add user code end 3 */
+
+      /* add user code end 3 */
   }
 }
 
@@ -185,8 +203,7 @@ void check_flash_updata(void)
    if (gpio_input_data_bit_read(IN_W25Q128_RE_H_GPIO_PORT, IN_W25Q128_RE_H_PIN))
    {
       spi_enable(SPI4, FALSE);
-      lcd_clear(BLACK);
-      lcd_show_ascii_string(310, 200, (char *)"updata flash....", RED, BLACK, FONT_16X8);
+      /* 升级提示改由 LVGL 页面显示(此阶段 RTOS 尚未启动, 屏幕保持当前画面) */
    }
    while (gpio_input_data_bit_read(IN_W25Q128_RE_H_GPIO_PORT, IN_W25Q128_RE_H_PIN))
       ;

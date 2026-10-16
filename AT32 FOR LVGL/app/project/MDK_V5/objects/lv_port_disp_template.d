@@ -220,8 +220,6 @@
   ..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h \
   ..\..\libraries\drivers\inc\at32f403a_407_def.h \
   ..\inc\at32f403a_407_conf.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_acc.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_adc.h \
   ..\..\libraries\drivers\inc\at32f403a_407_crc.h \
   ..\..\libraries\drivers\inc\at32f403a_407_crm.h \
   ..\..\libraries\drivers\inc\at32f403a_407_debug.h \
@@ -229,21 +227,11 @@
   ..\..\libraries\drivers\inc\at32f403a_407_exint.h \
   ..\..\libraries\drivers\inc\at32f403a_407_flash.h \
   ..\..\libraries\drivers\inc\at32f403a_407_gpio.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_i2c.h \
   ..\..\libraries\drivers\inc\at32f403a_407_misc.h \
   ..\..\libraries\drivers\inc\at32f403a_407_pwc.h \
   ..\..\libraries\drivers\inc\at32f403a_407_spi.h \
   ..\..\libraries\drivers\inc\at32f403a_407_tmr.h \
   ..\..\libraries\drivers\inc\at32f403a_407_usart.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_usb.h \
   ..\..\libraries\drivers\inc\at32f403a_407_wdt.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_xmc.h ..\inc\wk_system.h \
-  ..\..\middlewares\freertos\source\include\FreeRTOS.h \
-  ..\inc\FreeRTOSConfig.h \
-  ..\..\middlewares\freertos\source\include\projdefs.h \
-  ..\..\middlewares\freertos\source\include\portable.h \
-  ..\..\middlewares\freertos\source\include\deprecated_definitions.h \
-  ..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h \
-  ..\..\middlewares\freertos\source\include\mpu_wrappers.h \
-  ..\..\middlewares\freertos\source\include\queue.h \
-  ..\..\middlewares\freertos\source\include\task.h \
-  ..\..\middlewares\freertos\source\include\list.h
+  ..\..\libraries\drivers\inc\at32f403a_407_xmc.h ..\inc\wk_system.h

@@ -1,0 +1,129 @@
+/* add user code begin Header */
+/**
+  **************************************************************************
+  * @file     wk_i2c_app.c
+  * @brief    i2c device app
+  **************************************************************************
+  *
+  * Copyright (c) 2025, Artery Technology, All rights reserved.
+  * SPDX-License-Identifier: BSD-3-Clause
+  *
+  **************************************************************************
+  */
+/* add user code end Header */
+
+#include "i2c_app.h"
+
+/* private includes ----------------------------------------------------------*/
+/* add user code begin private includes */
+
+/* add user code end private includes */
+
+/* private typedef -----------------------------------------------------------*/
+/* add user code begin private typedef */
+
+/* add user code end private typedef */
+
+/* private define ------------------------------------------------------------*/
+/* add user code begin private define */
+
+/* add user code end private define */
+
+/* private macro -------------------------------------------------------------*/
+/* add user code begin private macro */
+
+/* add user code end private macro */
+
+/* private variables ---------------------------------------------------------*/
+/* add user code begin private variables */
+
+/* add user code end private variables */
+
+/* private function prototypes --------------------------------------------*/
+/* add user code begin function prototypes */
+
+/* add user code end function prototypes */
+
+#define I2C3_MASTER_TRANSMIT_ADDRESS                         0x0
+#define I2C3_MASTER_TRANSMIT_NUM                             1
+#define I2C3_MASTER_TRANSMIT_TIMEOUT                         0xFFFFFFFF
+
+#define I2C3_MASTER_RECEIVE_ADDRESS                          0x0
+#define I2C3_MASTER_RECEIVE_NUM                              1
+#define I2C3_MASTER_RECEIVE_TIMEOUT                          0xFFFFFFFF
+
+uint8_t i2c3_master_transmit_buf[I2C3_MASTER_TRANSMIT_NUM] = {0};
+uint8_t i2c3_master_receive_buf[I2C3_MASTER_RECEIVE_NUM] = {0};
+
+i2c_handle_type hi2c3;
+
+/* private user code ---------------------------------------------------------*/
+/* add user code begin 0 */
+
+/* add user code end 0 */
+
+/**
+  * @brief  i2c application initialization
+  * @param  none
+  * @retval none
+  */
+void wk_i2c_app_init(void)
+{
+  /* add user code begin i2c_app_init 0 */
+
+  /* add user code end i2c_app_init 0 */
+
+  hi2c3.i2cx = I2C3;
+
+  /* add user code begin i2c_app_init 1 */
+
+  /* add user code end i2c_app_init 1 */
+
+  /* add user code begin i2c_app_init 2 */
+
+  /* add user code end i2c_app_init 2 */
+}
+
+/**
+  * @brief  i2c application task
+  * @param  none
+  * @retval none
+  */
+void wk_i2c_app_task(void)
+{
+  /* add user code begin i2c_app_task 0 */
+
+  /* add user code end i2c_app_task 0 */
+
+  /* add user code begin i2c_app_task 1 */
+
+  /* add user code end i2c_app_task 1 */
+
+  /* add user code begin i2c_app_task 2 */
+
+  /* add user code end i2c_app_task 2 */
+
+  /* start i2c3 master transmit process */
+  if(i2c_master_transmit(&hi2c3, I2C3_MASTER_TRANSMIT_ADDRESS, i2c3_master_transmit_buf, I2C3_MASTER_TRANSMIT_NUM, I2C3_MASTER_TRANSMIT_TIMEOUT) != I2C_OK)
+  {
+    /* add user code begin i2c3_master_transmit error process */
+
+    /* add user code end i2c3_master_transmit error process */
+  }
+
+  /* start i2c3 master receive process */
+  if(i2c_master_receive(&hi2c3, I2C3_MASTER_RECEIVE_ADDRESS, i2c3_master_receive_buf, I2C3_MASTER_RECEIVE_NUM, I2C3_MASTER_RECEIVE_TIMEOUT) != I2C_OK)
+  {
+    /* add user code begin i2c3_master_receive error process */
+
+    /* add user code end i2c3_master_receive error process */
+  }
+
+  /* add user code begin i2c_app_task 3 */
+
+  /* add user code end i2c_app_task 3 */
+}
+
+/* add user code begin 1 */
+
+/* add user code end 1 */

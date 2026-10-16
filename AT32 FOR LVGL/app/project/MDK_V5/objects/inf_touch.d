@@ -1,19 +1,20 @@
-./objects/inf_touch.o: ..\interface\Inf_touch.c \
+./objects/inf_touch.o: ..\interface\Inf_touch.c RTE\LVGL\lv_conf_cmsis.h \
+  RTE\_AT32F403AVGT7_WorkBench\RTE_Components.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h \
   RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h \
-  ..\interface\Inf_touch.h ..\common\soft_i2c.h \
+  ..\interface\Inf_touch.h ..\inc\at32f403a_407_conf.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_crc.h \
   ..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h \
   ..\..\libraries\cmsis\cm4\core_support\core_cm4.h \
   ..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h \
   ..\..\libraries\drivers\inc\at32f403a_407_def.h \
-  ..\inc\at32f403a_407_conf.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_crc.h \
   ..\..\libraries\drivers\inc\at32f403a_407_crm.h \
   ..\..\libraries\drivers\inc\at32f403a_407_debug.h \
   ..\..\libraries\drivers\inc\at32f403a_407_dma.h \
   ..\..\libraries\drivers\inc\at32f403a_407_exint.h \
   ..\..\libraries\drivers\inc\at32f403a_407_flash.h \
   ..\..\libraries\drivers\inc\at32f403a_407_gpio.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_i2c.h \
   ..\..\libraries\drivers\inc\at32f403a_407_misc.h \
   ..\..\libraries\drivers\inc\at32f403a_407_pwc.h \
   ..\..\libraries\drivers\inc\at32f403a_407_spi.h \
@@ -23,4 +24,6 @@
   ..\..\libraries\drivers\inc\at32f403a_407_xmc.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perf_counter.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_port_default.h \
-  ..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h
+  ..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h \
+  ..\inc\i2c_app.h \
+  ..\..\middlewares\i2c_application_library\i2c_application.h

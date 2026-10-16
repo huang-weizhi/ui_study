@@ -4,7 +4,7 @@
  *   Simplified version, keeps only:
  *     - lcd_init()              : reset + ILI-style init sequence + 480x320 window
  *     - lcd_set_block()         : active window
- *     - lcd_wr_data_dma(_async) : DMA1_CH3 pixel flush (used by LVGL flush)
+ *     - lcd_dma_flush()         : async DMA1_CH3 flush (LVGL flush backend)
  *     - lcd_clear(_dma)         : full screen fill
  *   Removed all self-drawn rendering (fonts/graphics/text/digits/flash images).
  *   Note: the panel parameters are unified to 480(W)x320(H). If the image is
@@ -116,43 +116,74 @@ void lcd_set_block(uint16_t xstart, uint16_t ystart, uint16_t xend, uint16_t yen
 
 /*============================================================================
  *                         DMA pixel transfer
- *   DMA1_Channel3 is initialized in main; its completion ISR sets
- *   lcd_dma_transfer_complete = 1 (see at32f403a_407_int.c).
+ *   DMA1_Channel3 is configured in wk_dma1_channel3_init(); its completion
+ *   ISR must call lcd_dma_isr() (see at32f403a_407_int.c).
+ *   Internal state machine: only one transfer may be in flight at a time.
  *============================================================================*/
-volatile uint8_t lcd_dma_transfer_complete = 1; /* set by DMA1_CH3 ISR */
+static volatile uint8_t dma_busy;              /* 0 idle / 1 transfer running */
+static volatile lcd_flush_done_cb_t dma_done_cb; /* pending completion callback */
+static volatile void *dma_done_arg;            /* user data for the callback */
 
-/** Blocking DMA transfer, length is the byte count */
-void lcd_wr_data_dma(uint16_t *data, uint32_t length)
+/** Kick off one DMA transfer; the caller must ensure the channel is idle. */
+static void lcd_dma_tx_start(uint16_t *data, uint32_t length)
 {
-    while (lcd_dma_transfer_complete == 0)
-    {
-    }
-    lcd_dma_transfer_complete = 0;
+    dma_busy = 1;
 
     LCD_DMA_CHANNEL->dtcnt = length / 2; /* 16bit pixels, word count */
     LCD_DMA_CHANNEL->paddr = (uint32_t)data;
     LCD_DMA_CHANNEL->maddr = XMC_LCD_DATA;
     dma_channel_enable(LCD_DMA_CHANNEL, TRUE);
+}
 
-    while (lcd_dma_transfer_complete == 0)
+/** Blocking transfer used by the fill/clear helpers below. */
+static void lcd_dma_tx_blocking(uint16_t *data, uint32_t length)
+{
+    while (dma_busy)
+    {
+    }
+    lcd_dma_tx_start(data, length);
+    while (dma_busy)
     {
     }
 }
 
-/** Non-blocking DMA transfer (for LVGL flush), returns immediately;
- *  the completion flag must be waited for before the next call */
-void lcd_wr_data_dma_async(uint16_t *data, uint32_t length)
+/** Asynchronous LVGL flush: wait for any previous transfer, then start this
+ *  one and return; the callback fires from the DMA ISR when it completes. */
+void lcd_dma_flush(uint16_t *data, uint32_t length, lcd_flush_done_cb_t done_cb, void *user_data)
 {
-    while (lcd_dma_transfer_complete == 0)
+    while (dma_busy)
     {
     }
-    lcd_dma_transfer_complete = 0;
+    dma_done_cb = done_cb;
+    dma_done_arg = user_data;
+    lcd_dma_tx_start(data, length);
+}
 
-    LCD_DMA_CHANNEL->dtcnt = length / 2; /* 16bit pixels, word count */
-    LCD_DMA_CHANNEL->paddr = (uint32_t)data;
-    LCD_DMA_CHANNEL->maddr = XMC_LCD_DATA;
-    dma_channel_enable(LCD_DMA_CHANNEL, TRUE);
-    /* the DMA ISR sets lcd_dma_transfer_complete on completion */
+/** Block until the running DMA flush finishes. */
+void lcd_dma_flush_wait(void)
+{
+    while (dma_busy)
+    {
+    }
+}
+
+/** DMA1_CH3 full-transfer ISR entry (clears flag, stops channel, fires cb). */
+void lcd_dma_isr(void)
+{
+    lcd_flush_done_cb_t cb;
+    void *arg;
+
+    dma_flag_clear(DMA1_FDT3_FLAG);
+    dma_channel_enable(LCD_DMA_CHANNEL, FALSE);
+    dma_busy = 0;
+
+    cb = dma_done_cb;
+    dma_done_cb = NULL;
+    arg = (void *)dma_done_arg;
+    if (cb != NULL)
+    {
+        cb(arg);
+    }
 }
 
 /*============================================================================
@@ -176,7 +207,7 @@ void lcd_clear_dma(uint16_t color)
     while (remaining > 0)
     {
         current = (remaining > CLEAR_BATCH_WORDS) ? CLEAR_BATCH_WORDS : remaining;
-        lcd_wr_data_dma(clear_buffer, current * 2); /* convert to byte count */
+        lcd_dma_tx_blocking(clear_buffer, current * 2); /* convert to byte count */
         remaining -= current;
     }
 }
@@ -222,7 +253,7 @@ void lcd_fill_rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t colo
     while (total > 0)
     {
         current = (total > LCD_FILL_BATCH_WORDS) ? LCD_FILL_BATCH_WORDS : total;
-        lcd_wr_data_dma(fill_buffer, current * 2); /* convert to byte count */
+        lcd_dma_tx_blocking(fill_buffer, current * 2); /* convert to byte count */
         total -= current;
     }
 }
@@ -338,5 +369,7 @@ void lcd_init(void)
     wk_delay_ms(120);
     lcd_wr_command(0x29); /* Display on */
 
-    lcd_dma_transfer_complete = 1;
+    dma_busy = 0; /* DMA state machine starts idle */
+    dma_done_cb = NULL;
+    dma_done_arg = NULL;
 }

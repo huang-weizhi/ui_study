@@ -211,6 +211,7 @@ extern void xPortSysTickHandler(void);
 void SysTick_Handler(void)
 {
   /* add user code begin SysTick_IRQ 0 */
+	
   /* add user code end SysTick_IRQ 0 */
 
 #if (INCLUDE_xTaskGetSchedulerState == 1 )
@@ -256,10 +257,8 @@ void DMA1_Channel3_IRQHandler(void)
   if(dma_interrupt_flag_get(DMA1_FDT3_FLAG) != RESET)
   {   
     /* add user code begin DMA1_FDT3_FLAG */
-    /* handle full data transfer and clear flag */
-    dma_flag_clear(DMA1_FDT3_FLAG);
-    dma_channel_enable(LCD_DMA_CHANNEL, FALSE);
-    lcd_dma_transfer_complete = 1;
+    /* delegate to the LCD driver: clear flag, stop DMA, fire flush callback */
+    lcd_dma_isr();
 
     /* add user code end DMA1_FDT3_FLAG */ 
   }

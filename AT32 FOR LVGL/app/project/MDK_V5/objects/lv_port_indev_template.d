@@ -2,7 +2,46 @@
   RTE\LVGL\lv_conf_cmsis.h RTE\_AT32F403AVGT7_WorkBench\RTE_Components.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h \
   RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h \
-  RTE\LVGL\lv_port_indev_template.h \
+  RTE\LVGL\lv_port_indev_template.h ..\inc\freertos_app.h \
+  ..\..\middlewares\freertos\source\include\FreeRTOS.h \
+  ..\inc\FreeRTOSConfig.h \
+  ..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h \
+  ..\..\middlewares\freertos\source\include\projdefs.h \
+  ..\..\middlewares\freertos\source\include\portable.h \
+  ..\..\middlewares\freertos\source\include\deprecated_definitions.h \
+  ..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h \
+  ..\..\middlewares\freertos\source\include\mpu_wrappers.h \
+  ..\..\middlewares\freertos\source\include\task.h \
+  ..\..\middlewares\freertos\source\include\list.h \
+  ..\..\middlewares\freertos\source\include\semphr.h \
+  ..\..\middlewares\freertos\source\include\queue.h \
+  ..\..\middlewares\freertos\source\include\timers.h \
+  ..\..\middlewares\freertos\source\include\event_groups.h \
+  ..\inc\wk_system.h \
+  ..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h \
+  ..\..\libraries\cmsis\cm4\core_support\core_cm4.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_def.h \
+  ..\inc\at32f403a_407_conf.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_crc.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_crm.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_debug.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_dma.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_exint.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_flash.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_gpio.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_i2c.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_misc.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_pwc.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_spi.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_tmr.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_usart.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_wdt.h \
+  ..\..\libraries\drivers\inc\at32f403a_407_xmc.h \
+  ..\inc\at32f403a_407_wk_config.h \
+  D:\Work\ Program\Keil_v5\ARM\Packs\ARM\CMSIS-View\1.2.0\EventRecorder\Include\EventRecorder.h \
+  ..\app\beep_handle.h ..\interface\Inf_beep.h ..\app\output_handle.h \
+  ..\common\PA45.h ..\interface\Inf_lcd.h ..\interface\Inf_touch.h \
+  ..\interface\inf_w25qxxx.h ..\app\input_handle.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\lvgl.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\src\misc\lv_log.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\src\misc\..\lv_conf_internal.h \
@@ -214,51 +253,10 @@
   D:\Work\ Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\src\extra\widgets\imgbtn\..\..\..\lvgl.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\src\extra\widgets\span\lv_span.h \
   D:\Work\ Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\src\extra\widgets\span\..\..\..\lvgl.h \
-  ..\inc\freertos_app.h \
-  ..\..\middlewares\freertos\source\include\FreeRTOS.h \
-  ..\inc\FreeRTOSConfig.h \
-  ..\..\libraries\cmsis\cm4\device_support\system_at32f403a_407.h \
-  ..\..\middlewares\freertos\source\include\projdefs.h \
-  ..\..\middlewares\freertos\source\include\portable.h \
-  ..\..\middlewares\freertos\source\include\deprecated_definitions.h \
-  ..\..\middlewares\freertos\source\portable\GCC\ARM_CM4F\portmacro.h \
-  ..\..\middlewares\freertos\source\include\mpu_wrappers.h \
-  ..\..\middlewares\freertos\source\include\task.h \
-  ..\..\middlewares\freertos\source\include\list.h \
-  ..\..\middlewares\freertos\source\include\semphr.h \
-  ..\..\middlewares\freertos\source\include\queue.h \
-  ..\..\middlewares\freertos\source\include\timers.h \
-  ..\..\middlewares\freertos\source\include\event_groups.h \
-  ..\inc\wk_system.h \
-  ..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h \
-  ..\..\libraries\cmsis\cm4\core_support\core_cm4.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_def.h \
-  ..\inc\at32f403a_407_conf.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_acc.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_adc.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_crc.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_crm.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_debug.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_dma.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_exint.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_flash.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_gpio.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_misc.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_pwc.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_spi.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_tmr.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_usart.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_usb.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_wdt.h \
-  ..\..\libraries\drivers\inc\at32f403a_407_xmc.h \
-  ..\inc\at32f403a_407_wk_config.h \
-  D:\Work\ Program\Keil_v5\ARM\Packs\ARM\CMSIS-View\1.2.0\EventRecorder\Include\EventRecorder.h \
-  ..\app\pc_handle.h ..\common\PA45.h ..\interface\inf_beep.h \
-  ..\interface\Inf_lcd.h ..\interface\Inf_touch.h ..\common\soft_i2c.h \
-  D:\Work\ Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perf_counter.h \
-  D:\Work\ Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_port_default.h \
-  ..\..\libraries\cmsis\cm4\core_support\cmsis_compiler.h \
-  ..\interface\inf_w25qxxx.h ..\interface\inf_ina226.h \
-  ..\interface\inf_dac8551.h ..\common\iap.h ..\app\touch_handle.h \
-  ..\app\ui_handle.h ..\app\beep_handle.h ..\app\flash_handle.h \
-  ..\app\ina226_handle.h ..\app\output_handle.h
+  RTE\LVGL\lv_port_disp_template.h \
+  D:\Work\ Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\demos\lv_demos.h \
+  D:\Work\ Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\demos\..\lvgl.h \
+  D:\Work\ Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\demos\widgets\lv_demo_widgets.h \
+  D:\Work\ Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\demos\widgets\..\lv_demos.h \
+  D:\Work\ Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\demos\benchmark\lv_demo_benchmark.h \
+  D:\Work\ Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\demos\benchmark\..\lv_demos.h

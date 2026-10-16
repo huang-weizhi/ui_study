@@ -5,6 +5,13 @@
  *   ft6336_init()       : reset + wait TP ready (call once at startup)
  *   ft6336_read_touch() : read touch frame (reg 0x01), return whether a
  *                         finger is down and output screen coordinates
+ *
+ * Bus: AT32 hardware I2C3 (SCL = PA8, SDA = PC9).  Peripheral, GPIOs and
+ *      clock are configured by WorkBench (wk_i2c3_init() in src/wk_i2c.c,
+ *      called from main.c before the RTOS starts).  This driver talks to
+ *      the I2C3 peripheral directly through the AT32 register-level driver
+ *      (at32f403a_407_i2c.h) - no middleware library is required.
+ *
  *   Coordinate parse follows the Focaltech FT6336U kernel driver:
  *     read 15 bytes from register 0x01:
  *       buf[0]            = reg 0x01 (header byte, unused)
@@ -22,7 +29,7 @@
 #ifndef __INF_TOUCH_H
 #define __INF_TOUCH_H
 
-#include "soft_i2c.h"
+#include <stdint.h>
 
 /*============================================================================
  *                        USER CONFIGURATION
@@ -70,6 +77,13 @@
 #define FT6336_POINT_BASE 2        /* first point starts at buf[2]          */
 #define FT6336_MAX_POINTS 2        /* FT6336U: 2 touch points               */
 
+/* Bus timing.  i2c_wait_flag() counts loop iterations, so the timeout is only
+ * an upper bound: a full 15 byte frame at 100 kHz takes about 1.4 ms and each
+ * individual flag wait is far below the limit below. */
+#define FT6336_I2C_SPEED_HZ   100000u
+#define FT6336_I2C_TIMEOUT    0x40000u
+#define FT6336_I2C_ERR_RECOVER 3 /* consecutive failures before bus recovery */
+
 /* event type nibble of register 0x02 high 4 bits */
 #define FT6336_EVENT_DEFAULT 0x00
 #define FT6336_EVENT_NUM 0x02
@@ -91,6 +105,19 @@
 void ft6336_init(void);
 
 /**
+ * @brief  Diagnostics helper for touch bring-up debugging.
+ * @note   Polls three registers to tell "bus dead" apart from
+ *         "chip alive but reporting no touch":
+ *           0xA3 = chip ID, 0xA8 = vendor ID, 0x02 = touch status.
+ * @param  chip_id    : output, register 0xA3 value
+ * @param  vendor_id  : output, register 0xA8 value
+ * @param  status     : output, register 0x02 value
+ * @retval 1 = I2C bus error while reading (no ACK, chip not responding),
+ *         0 = bus OK (chip_id/vendor_id/status are valid)
+ */
+uint8_t ft6336_diag(uint8_t *chip_id, uint8_t *vendor_id, uint8_t *status);
+
+/**
  * @brief  Read the primary touch point screen coordinates.
  * @param  x, y : output coordinates (valid while pressed, 0..479 / 0..319)
  * @retval 1 = a finger is currently down, 0 = no touch (or read failed)
@@ -109,5 +136,16 @@ uint8_t ft6336_read_touch(uint16_t *x, uint16_t *y);
  *   if (ft6336_test_read(&tx, &ty))  // finger down -> tx/ty valid
  */
 uint8_t ft6336_test_read(uint16_t *x, uint16_t *y);
+
+/**
+ * @brief  I2C fault code from the last failing read - debug helper.
+ * @note   Value is the i2c_application middleware error_code:
+ *           0  = OK (last transfer succeeded)
+ *           1..12  = ERR_STEP_1 .. ERR_STEP_12  (which stage failed)
+ *           13 = ERR_START      14 = ERR_ADDR10   15 = ERR_ADDR
+ *           16 = ERR_STOP       17 = ERR_ACKFAIL  18 = ERR_TIMEOUT
+ *           19 = ERR_INTERRUPT
+ */
+uint8_t ft6336_get_last_fault(void);
 
 #endif /* __INF_TOUCH_H */

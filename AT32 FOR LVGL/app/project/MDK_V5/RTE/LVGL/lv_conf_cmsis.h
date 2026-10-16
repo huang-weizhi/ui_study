@@ -7,7 +7,7 @@
 #if 1 /*Set it to "1" to enable content*/
 
 #ifndef LV_CONF_H
-#define LV_CONF_H
+//#define LV_CONF_H
 
 #include <stdint.h>
 
@@ -45,7 +45,7 @@
 #define LV_MEM_CUSTOM 0
 #if LV_MEM_CUSTOM == 0
     /*Size of the memory available for `lv_mem_alloc()` in bytes (>= 2kB)*/
-    #define LV_MEM_SIZE (48U * 1024U)          /*[bytes]*/
+    #define LV_MEM_SIZE (64U * 1024U)          /*[bytes]*/
 
     /*Set an address for the memory pool instead of allocating it as a normal array. Can be in external SRAM too.*/
     #define LV_MEM_ADR 0     /*0: unused*/
@@ -74,7 +74,7 @@
  *====================*/
 
 /*Default display refresh period. LVG will redraw changed areas with this period time*/
-#define LV_DISP_DEF_REFR_PERIOD 16      /*[ms] (62.5 FPS max, was 30ms=33FPS)*/
+#define LV_DISP_DEF_REFR_PERIOD 30      /*[ms]*/
 
 /*Input device read period in milliseconds*/
 #define LV_INDEV_DEF_READ_PERIOD 30     /*[ms]*/
@@ -82,11 +82,23 @@
 
 /*Use a custom tick source that tells the elapsed time in milliseconds.
  *It removes the need to manually update the tick with `lv_tick_inc()`)*/
-#define LV_TICK_CUSTOM 1
-#if LV_TICK_CUSTOM
-    #define LV_TICK_CUSTOM_INCLUDE       "lv_tick_freertos.h"
-    #define LV_TICK_CUSTOM_SYS_TIME_EXPR (lv_tick_ms_get())
-#endif   /*LV_TICK_CUSTOM*/
+#ifdef __PERF_COUNTER__
+    #define LV_TICK_CUSTOM 1
+    #if LV_TICK_CUSTOM
+        extern uint32_t SystemCoreClock;
+        #define LV_TICK_CUSTOM_INCLUDE          "perf_counter.h"
+        #define LV_TICK_CUSTOM_SYS_TIME_EXPR    get_system_ms()
+    #endif   /*LV_TICK_CUSTOM*/
+#else
+    #define LV_TICK_CUSTOM 0
+    #if LV_TICK_CUSTOM
+        #define LV_TICK_CUSTOM_INCLUDE "Arduino.h"         /*Header for the system time function*/
+        #define LV_TICK_CUSTOM_SYS_TIME_EXPR (millis())    /*Expression evaluating to current system time in ms*/
+    /*If using lvgl as ESP32 component*/
+    // #define LV_TICK_CUSTOM_INCLUDE "esp_timer.h"
+    // #define LV_TICK_CUSTOM_SYS_TIME_EXPR ((esp_timer_get_time() / 1000LL))
+    #endif   /*LV_TICK_CUSTOM*/
+#endif       /*__PERF_COUNTER__*/
 
 
 /*Default Dot Per Inch. Used to initialize default sizes such as widgets sized, style paddings.
@@ -108,10 +120,8 @@
 
     /*Allow buffering some shadow calculation.
     *LV_SHADOW_CACHE_SIZE is the max. shadow size to buffer, where shadow size is `shadow_width + radius`
-    *Caching has LV_SHADOW_CACHE_SIZE^2 RAM cost
-    *Was 0 (no caching -> shadows recomputed on every full-screen redraw).
-    *Now 64: cache shadows with (width+radius)<=64, cost 64^2 = 4KB from LV_MEM_SIZE.*/
-    #define LV_SHADOW_CACHE_SIZE 64
+    *Caching has LV_SHADOW_CACHE_SIZE^2 RAM cost*/
+    #define LV_SHADOW_CACHE_SIZE 0
 
     /* Set number of maximally cached circle data.
     * The circumference of 1/4 circle are saved for anti-aliasing
@@ -133,7 +143,7 @@
  * "Transformed layers" (where transform_angle/zoom properties are used) use larger buffers
  * and can't be drawn in chunks. So these settings affects only widgets with opacity.
  */
-#define LV_LAYER_SIMPLE_BUF_SIZE          (12 * 1024)  /* reduced from 24KB to save LVGL heap */
+#define LV_LAYER_SIMPLE_BUF_SIZE          (24 * 1024)
 #define LV_LAYER_SIMPLE_FALLBACK_BUF_SIZE (3 * 1024)
 
 /*Default image cache size. Image caching keeps the images opened.
@@ -264,7 +274,7 @@
 
 /*1: Show the used memory and the memory fragmentation
  * Requires LV_MEM_CUSTOM = 0*/
-#define LV_USE_MEM_MONITOR 0
+#define LV_USE_MEM_MONITOR 1
 #if LV_USE_MEM_MONITOR
     #define LV_USE_MEM_MONITOR_POS LV_ALIGN_BOTTOM_LEFT
 #endif

@@ -29,6 +29,7 @@
 #include "wk_crc.h"
 #include "wk_debug.h"
 #include "wk_exint.h"
+#include "wk_i2c.h"
 #include "wk_spi.h"
 #include "wk_tmr.h"
 #include "wk_usart.h"
@@ -38,6 +39,7 @@
 #include "wk_gpio.h"
 #include "wk_system.h"
 #include "freertos_app.h"
+#include "i2c_app.h"
 
 /* private includes ----------------------------------------------------------*/
 /* add user code begin private includes */
@@ -45,7 +47,6 @@
 #include <EventRecorder.h>
 #include <stdio.h>
 #include "PA45.h"
-
 
 /* add user code end private includes */
 
@@ -168,16 +169,21 @@ int main(void)
                         DMA1_CHANNEL2_BUFFER_SIZE);
   dma_channel_enable(DMA1_CHANNEL2, FALSE);
 
+  /* init i2c3 function. */
+  wk_i2c3_init();
+
+  /* init i2c app function. */
+  wk_i2c_app_init();
+
   /* add user code begin 2 */
    init_cycle_counter(true);
    EventRecorderInitialize(0, 1);
-   
+
    lcd_init();
-   lcd_clear(GREEN);
-   __IO uint16_t ID = spiflash_read_id();
+
    /* open lcd bl */
    tmr_channel_value_set(TMR3, TMR_SELECT_CHANNEL_1, 7999);
-   
+
    printf("system reday \r\n");
    check_flash_updata();
 
@@ -189,10 +195,8 @@ int main(void)
   while(1)
   {
     /* add user code begin 3 */
-	  
-	  
-	    
-	  /* add user code end 3 */
+
+      /* add user code end 3 */
   }
 }
 

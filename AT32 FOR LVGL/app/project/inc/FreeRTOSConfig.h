@@ -109,7 +109,7 @@
 /* add user code end private define */
 
 /* add user code begin 0 */
-
+//SystemCoreClock
 /* add user code end 0 */
 
 /*-----------------------------------------------------------
