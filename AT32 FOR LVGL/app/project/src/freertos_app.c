@@ -203,9 +203,13 @@ void ui_function(void *pvParameters)
   /* add user code begin ui_function 1 */
     task_life_signs[TASK_UI_IDX]++;
 
+    /* Run LVGL timers (rendering + refresh at LV_DISP_DEF_REFR_PERIOD).
+     * disp_flush() only starts the DMA; the flush is completed inside
+     * lv_timer_handler itself via disp_drv.wait_cb (LVGL waits for it in
+     * draw_buf_flush's while(flushing) loop). */
     lv_timer_handler_run_in_period(5);
-    vTaskDelay(5);	
-    /* add user code end ui_function 1 */
+    vTaskDelay(5);
+  /* add user code end ui_function 1 */
   }
 }
 
@@ -249,14 +253,15 @@ void input_function(void *pvParameters)
       }
 	  
     /* ---- touch diagnostics: exposes every layer of the chain, 1 line/sec ----
-     * bus_err=0 & id=0xA3 -> I2C link is healthy (layer 1 OK)
-     * rc=1 while touching   -> frame parsed, raw values in x/y (layer 2 OK)
-     * if rc stays 0 while the chip answers, the problem is in the frame
-     * parsing / coordinate stage, not in the bus.
-     * fault field points to the exact I2C step that failed.  The value is
-     * the i2c_application middleware error_code: 0=OK, 1..12=ERR_STEP_1..12,
-     * 13=ERR_START, 14=ERR_ADDR10, 15=ERR_ADDR, 16=ERR_STOP,
-     * 17=ERR_ACKFAIL, 18=ERR_TIMEOUT, 19=ERR_INTERRUPT. */
+     * Disabled: the printf blocks the UART for ~6 ms per line (a visible
+     * once-per-second hitch). Change the 0 to 1 to bring it back when
+     * debugging the touch chain.
+     *   bus_err=0 & id=0xA3 -> I2C link is healthy (layer 1 OK)
+     *   rc=1 while touching   -> frame parsed, raw values in x/y (layer 2 OK)
+     *   fault = middleware error_code: 0=OK, 1..12=ERR_STEP_1..12,
+     *          13=START, 14=ADDR10, 15=ADDR, 16=STOP, 17=ACKFAIL,
+     *          18=TIMEOUT, 19=INTERRUPT. */
+#if 0
     {
       static uint32_t dbg_t;
       if (xTaskGetTickCount() - dbg_t >= pdMS_TO_TICKS(1000))
@@ -272,6 +277,9 @@ void input_function(void *pvParameters)
                bus_err, cid, vid, sts, ft6336_get_last_fault());
       }
     }
+#else
+    (void)touch_rc;   /* keep the variable referenced with diagnostics off */
+#endif
 
     vTaskDelay(5);
 

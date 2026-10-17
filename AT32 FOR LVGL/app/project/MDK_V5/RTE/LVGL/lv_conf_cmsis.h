@@ -74,10 +74,10 @@
  *====================*/
 
 /*Default display refresh period. LVG will redraw changed areas with this period time*/
-#define LV_DISP_DEF_REFR_PERIOD 30      /*[ms]*/
+#define LV_DISP_DEF_REFR_PERIOD 16      /*[ms] 60fps cadence (was 30)*/
 
 /*Input device read period in milliseconds*/
-#define LV_INDEV_DEF_READ_PERIOD 30     /*[ms]*/
+#define LV_INDEV_DEF_READ_PERIOD 20     /*[ms] snappier touch (was 30)*/
 
 
 /*Use a custom tick source that tells the elapsed time in milliseconds.
@@ -115,7 +115,7 @@
 
 /*Enable complex draw engine.
  *Required to draw shadow, gradient, rounded corners, circles, arc, skew lines, image transformations or any masks*/
-#define LV_DRAW_COMPLEX 1
+#define LV_DRAW_COMPLEX 1   /*lv_meter (used by lv_demo_widgets) hard-#errors without it - keep 1; kill effects at runtime via styles instead*/
 #if LV_DRAW_COMPLEX != 0
 
     /*Allow buffering some shadow calculation.
@@ -267,7 +267,7 @@
  *-----------*/
 
 /*1: Show CPU usage and FPS count*/
-#define LV_USE_PERF_MONITOR 1
+#define LV_USE_PERF_MONITOR 0   /*0: off - per-frame FPS/CPU accounting costs CPU on a software renderer*/
 #if LV_USE_PERF_MONITOR
     #define LV_USE_PERF_MONITOR_POS LV_ALIGN_BOTTOM_RIGHT
 #endif
@@ -569,10 +569,10 @@
         #define LV_THEME_DEFAULT_DARK 0
 
         /*1: Enable grow on press*/
-        #define LV_THEME_DEFAULT_GROW 1
+        #define LV_THEME_DEFAULT_GROW 0
 
         /*Default transition time in [ms]*/
-        #define LV_THEME_DEFAULT_TRANSITION_TIME 80
+        #define LV_THEME_DEFAULT_TRANSITION_TIME 20
     #endif /*LV_USE_THEME_DEFAULT*/
 
     /*A very simple theme that is a good starting point for a custom theme*/

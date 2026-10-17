@@ -167,6 +167,12 @@ void lcd_dma_flush_wait(void)
     }
 }
 
+/** Non-blocking completion query (see Inf_lcd.h). */
+bool lcd_dma_flush_done(void)
+{
+    return (dma_busy == 0);
+}
+
 /** DMA1_CH3 full-transfer ISR entry (clears flag, stops channel, fires cb). */
 void lcd_dma_isr(void)
 {

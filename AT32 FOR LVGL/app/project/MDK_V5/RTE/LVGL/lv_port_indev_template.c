@@ -136,7 +136,10 @@ static void touchpad_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
         data->state = LV_INDEV_STATE_REL;
     }
 
-    /* ---- LVGL-side diagnostics: proves what the indev callback receives ---- */
+    /* ---- LVGL-side diagnostics: proves what the indev callback receives ----
+     * Disabled: printf() blocks the UART for ~3 ms per line and stalls the
+     * LVGL input pipeline. Change the 0 to 1 to debug the indev path. */
+#if 0
     {
         static uint32_t dbg_t;
         if (xTaskGetTickCount() - dbg_t >= pdMS_TO_TICKS(1000))
@@ -146,6 +149,7 @@ static void touchpad_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
                    (unsigned)data->state, (int)data->point.x, (int)data->point.y);
         }
     }
+#endif
 }
  
 #else /*Enable this file at the top*/

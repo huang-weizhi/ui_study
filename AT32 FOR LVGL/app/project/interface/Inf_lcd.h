@@ -121,6 +121,11 @@ extern "C"
     /** Block until the running DMA flush finishes (blocking, no callback). */
     void lcd_dma_flush_wait(void);
 
+    /** Non-blocking completion query: returns true once the last started DMA
+     *  flush has finished (or when no transfer was ever started). Lets the
+     *  caller poll from task context instead of busy-waiting. */
+    bool lcd_dma_flush_done(void);
+
     /**
      * DMA1_CH3 full-transfer ISR entry: clears the flag, stops the channel
      * and fires the pending completion callback. Call it from the

@@ -641,21 +641,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>::CMSIS</GroupName>
-        </Group>
-        <Group>
-          <GroupName>::CMSIS-Compiler</GroupName>
-        </Group>
-        <Group>
-          <GroupName>::CMSIS-View</GroupName>
-        </Group>
-        <Group>
-          <GroupName>::LVGL</GroupName>
-        </Group>
-        <Group>
-          <GroupName>::Utilities</GroupName>
-        </Group>
-        <Group>
           <GroupName>middlewares/freertos</GroupName>
           <Files>
             <File>
@@ -709,6 +694,21 @@
               <FilePath>../../middlewares/i2c_application_library/i2c_application.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS-Compiler</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS-View</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::LVGL</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::Utilities</GroupName>
         </Group>
       </Groups>
     </Target>

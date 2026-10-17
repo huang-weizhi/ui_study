@@ -35,6 +35,7 @@
 static void disp_init(void);
 
 static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t * color_p);
+static void disp_wait_cb(lv_disp_drv_t * disp_drv);
 //static void gpu_fill(lv_disp_drv_t * disp_drv, lv_color_t * dest_buf, lv_coord_t dest_width,
 //        const lv_area_t * fill_area, lv_color_t color);
 
@@ -89,9 +90,9 @@ void lv_port_disp_init(void)
 
     /* Example for 2) */
     static lv_disp_draw_buf_t draw_buf_dsc_2;
-    static lv_color_t buf_2_1[MY_DISP_HOR_RES * 40];                        /*A buffer for 10 rows*/
-    static lv_color_t buf_2_2[MY_DISP_HOR_RES * 40];                        /*An other buffer for 10 rows*/
-    lv_disp_draw_buf_init(&draw_buf_dsc_2, buf_2_1, buf_2_2, MY_DISP_HOR_RES * 40);   /*Initialize the display buffer*/
+    static lv_color_t buf_2_1[MY_DISP_HOR_RES * 20];                        /*A buffer for 20 rows*/
+    static lv_color_t buf_2_2[MY_DISP_HOR_RES * 20];                        /*An other buffer for 20 rows*/
+    lv_disp_draw_buf_init(&draw_buf_dsc_2, buf_2_1, buf_2_2, MY_DISP_HOR_RES * 20);   /*Initialize the display buffer*/
 
     /* Example for 3) also set disp_drv.full_refresh = 1 below*/
 //    static lv_disp_draw_buf_t draw_buf_dsc_3;
@@ -115,6 +116,10 @@ void lv_port_disp_init(void)
 
     /*Used to copy the buffer's content to the display*/
     disp_drv.flush_cb = disp_flush;
+
+    /*Called by LVGL while it waits for the previous DMA flush to finish
+     *(draw_buf_flush's `while(flushing)` loop) - completes the flush there*/
+    disp_drv.wait_cb = disp_wait_cb;
 
     /*Set a display buffer*/
     disp_drv.draw_buf = &draw_buf_dsc_2;
@@ -158,24 +163,34 @@ void disp_disable_update(void)
     disp_flush_enabled = false;
 }
 
-/*Flush the content of the internal buffer the specific area on the display
- *You can use DMA or any hardware acceleration to do this operation in the background but
- *'lv_disp_flush_ready()' has to be called when finished.*/
+/* Asynchronous flush pipeline: disp_flush() starts the DMA, disp_wait_cb()
+ * completes it (see the LVGL 8.4 draw_buf_flush() wait loop below). */
 
+/* Asynchronous flush state.
+ *
+ * disp_flush() only *starts* the DMA transfer and returns immediately, so the
+ * CPU is free to render the next LVGL area (double buffer) while the pixels
+ * are on the bus.  lv_disp_flush_ready() is deliberately NOT called from the
+ * DMA ISR - LVGL is not re-entrant against its own render pass and that
+ * crashed under -O1/-O2.
+ *
+ * LVGL 8.4 draws_buf_flush() waits for the previous flush with
+ *     while(draw_buf->flushing) { if(drv->wait_cb) drv->wait_cb(drv); }
+ * inside lv_timer_handler(), so the ONLY correct place to complete a flush
+ * is disp_wait_cb() below - it runs in the same task as lv_timer_handler and
+ * unblocks that while loop.  Completing the flush from anywhere else (e.g. a
+ * poll after lv_timer_handler returns) deadlocks: the while never exits, so
+ * the code after lv_timer_handler never runs. */
 
-
-/* NOTE: lv_disp_flush_ready() is now called from TASK CONTEXT below, after
- * lcd_dma_flush_wait() returns.  Earlier this driver notified LVGL from the
- * DMA1_Channel3 ISR via disp_dma_done_cb(); that broke LVGL under -O1/-O2
- * because LVGL is not re-entrant against its own render pass.  Synchronous
- * flushes add a few hundred microseconds of CPU wait per LVGL area but the
- * ui_task otherwise has plenty of headroom (vTaskDelay(5) in freertos_app.c),
- * and stability under optimisation more than makes up for it. */
+/*Flush the content of the internal buffer the specific area on the display*/
 static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_color_t * color_p)
 {
     if(disp_flush_enabled) {
-        /* window + blocking DMA; the call returns once the pixels are out
-         * the bus, then we tell LVGL the buffer is free. */
+        /* window + async DMA: kick the transfer off and return immediately.
+         * lcd_dma_flush() waits for a previous transfer to finish first, so
+         * at most one DMA is in flight.  The DMA buffer (LVGL's draw buffer)
+         * stays untouched until disp_wait_cb() reports the transfer done and
+         * lv_disp_flush_ready() releases it. */
         lcd_set_block((uint16_t)area->x1, (uint16_t)area->y1,
                       (uint16_t)area->x2, (uint16_t)area->y2);
 
@@ -183,11 +198,20 @@ static void disp_flush(lv_disp_drv_t * disp_drv, const lv_area_t * area, lv_colo
         uint32_t h = (uint32_t)(area->y2 - area->y1 + 1);
         lcd_dma_flush((uint16_t *)color_p, w * h * sizeof(lv_color_t),
                       NULL, NULL);
-        lcd_dma_flush_wait();
-        lv_disp_flush_ready(disp_drv);
     }
     else {
         /* flushing disabled: still must release LVGL or it hangs */
+        lv_disp_flush_ready(disp_drv);
+    }
+}
+
+/* Called by LVGL from inside draw_buf_flush()'s `while(draw_buf->flushing)`
+ * wait loop.  Complete the pending DMA flush here: once the pixels are out
+ * on the bus, tell LVGL the buffer is free (this is the same task context as
+ * lv_timer_handler, which is the only safe context for it). */
+static void disp_wait_cb(lv_disp_drv_t * disp_drv)
+{
+    if(lcd_dma_flush_done()) {
         lv_disp_flush_ready(disp_drv);
     }
 }
