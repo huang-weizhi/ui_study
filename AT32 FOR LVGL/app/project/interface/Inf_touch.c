@@ -27,7 +27,7 @@
  *   point i at buf[2 + 6*i]: [XH][XL][ID/YH][YL][P][AREA]
  *   XH bit7:6 = event flag (0=down / 1=up / 2=contact), X/Y are 12 bit.
  *===========================================================================*/
-
+#include <stdio.h>
 #include "Inf_touch.h"
 #include "at32f403a_407_conf.h"   /* register-level I2C + CRM + GPIO        */
 #include "perf_counter.h"         /* delay_us()                              */
@@ -228,8 +228,24 @@ uint8_t ft6336_read_touch(uint16_t *x, uint16_t *y)
     pos  = (uint32_t)(raw_y - s_raw_y_left) * (FT6336_SCR_WIDTH - 1u);
     mapped_x = (span > 0) ? (uint16_t)(pos / span) : 0u;
 
+    /* Clamp into the panel: before the seed range has been widened by real
+     * edge touches the linear map can produce values beyond the screen, and
+     * LVGL silently drops out-of-range points (that is why only part of a
+     * widget responds until the calibration settles). */
+    if (mapped_x > (FT6336_SCR_WIDTH - 1u))  mapped_x = FT6336_SCR_WIDTH - 1u;
+    if (mapped_y > (FT6336_SCR_HEIGHT - 1u)) mapped_y = FT6336_SCR_HEIGHT - 1u;
+
     if (x) *x = mapped_x;
     if (y) *y = mapped_y;
+
+    /* Raw-value probe for calibrating the FT6336_RAW_* seeds in Inf_touch.h:
+     * touch the four screen edges and note the raw extremes.  Default off -
+     * printf() in this path blocks the UART for ~3 ms. */
+#if 1
+    printf("[TOUCH-RAW] raw_x=%u raw_y=%u -> x=%u y=%u | seeds x[%u..%u] y[%u..%u]\r\n",
+           raw_x, raw_y, mapped_x, mapped_y,
+           s_raw_x_bottom, s_raw_x_top, s_raw_y_left, s_raw_y_right);
+#endif
     return 1;
 }
 

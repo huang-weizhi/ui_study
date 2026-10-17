@@ -52,10 +52,10 @@
  *         saturated before the screen edge; just touch the real edges once
  *         and it self-corrects.
  */
-#define FT6336_RAW_X_TOP 305   /* reg X value at the top edge middle    */
-#define FT6336_RAW_X_BOTTOM 13 /* reg X value at the bottom edge middle */
-#define FT6336_RAW_Y_LEFT 15   /* reg Y value at the left edge middle   */
-#define FT6336_RAW_Y_RIGHT 319 /* reg Y value at the right edge middle  */
+#define FT6336_RAW_X_TOP 295   /* reg X value at the top edge middle    */
+#define FT6336_RAW_X_BOTTOM 15 /* reg X value at the bottom edge middle */
+#define FT6336_RAW_Y_LEFT 25   /* reg Y value at the left edge middle   */
+#define FT6336_RAW_Y_RIGHT 472 /* reg Y value at the right edge middle  */
 
 /*========================= END USER CONFIG ===============================*/
 

@@ -267,7 +267,7 @@
  *-----------*/
 
 /*1: Show CPU usage and FPS count*/
-#define LV_USE_PERF_MONITOR 0   /*0: off - per-frame FPS/CPU accounting costs CPU on a software renderer*/
+#define LV_USE_PERF_MONITOR 1   /*0: off - per-frame FPS/CPU accounting costs CPU on a software renderer*/
 #if LV_USE_PERF_MONITOR
     #define LV_USE_PERF_MONITOR_POS LV_ALIGN_BOTTOM_RIGHT
 #endif

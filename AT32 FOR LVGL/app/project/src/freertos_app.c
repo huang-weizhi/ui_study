@@ -57,7 +57,6 @@ volatile uint32_t task_life_signs[5] = {0, 0, 0, 0, 0};
 /* private user code ---------------------------------------------------------*/
 /* add user code begin 0 */
 
- 
 /* add user code end 0 */
 
 /* task handler */
@@ -75,14 +74,14 @@ static StaticTask_t idle_task_tcb;
 static StaticTask_t timer_task_tcb;
 
 /* External Idle and Timer task static memory allocation functions */
-extern void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer, StackType_t ** ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize );
-extern void vApplicationGetTimerTaskMemory( StaticTask_t ** ppxTimerTaskTCBBuffer, StackType_t ** ppxTimerTaskStackBuffer, uint32_t * pulTimerTaskStackSize );
+extern void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize);
+extern void vApplicationGetTimerTaskMemory(StaticTask_t **ppxTimerTaskTCBBuffer, StackType_t **ppxTimerTaskStackBuffer, uint32_t *pulTimerTaskStackSize);
 
 /*
   vApplicationGetIdleTaskMemory gets called when configSUPPORT_STATIC_ALLOCATION
   equals to 1 and is required for static memory allocation support.
 */
-void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer, StackType_t ** ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize )
+void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize)
 {
   *ppxIdleTaskTCBBuffer = &idle_task_tcb;
   *ppxIdleTaskStackBuffer = &idle_task_stack[0];
@@ -92,7 +91,7 @@ void vApplicationGetIdleTaskMemory( StaticTask_t ** ppxIdleTaskTCBBuffer, StackT
   vApplicationGetTimerTaskMemory gets called when configSUPPORT_STATIC_ALLOCATION
   equals to 1 and is required for static memory allocation support.
 */
-void vApplicationGetTimerTaskMemory( StaticTask_t ** ppxTimerTaskTCBBuffer, StackType_t ** ppxTimerTaskStackBuffer, uint32_t * pulTimerTaskStackSize )
+void vApplicationGetTimerTaskMemory(StaticTask_t **ppxTimerTaskTCBBuffer, StackType_t **ppxTimerTaskStackBuffer, uint32_t *pulTimerTaskStackSize)
 {
   *ppxTimerTaskTCBBuffer = &timer_task_tcb;
   *ppxTimerTaskStackBuffer = &timer_task_stack[0];
@@ -100,14 +99,44 @@ void vApplicationGetTimerTaskMemory( StaticTask_t ** ppxTimerTaskTCBBuffer, Stac
 }
 
 /* add user code begin 1 */
+static void btn_event_cb(lv_event_t *e)
+{
+  lv_event_code_t code = lv_event_get_code(e);
+  lv_obj_t *btn = lv_event_get_target(e);
+  if (code == LV_EVENT_CLICKED)
+  {
+    static uint8_t cnt = 0;
+    cnt++;
 
+    /*Get the first child of the button which is the label and change its text*/
+    lv_obj_t *label = lv_obj_get_child(btn, 0);
+    lv_label_set_text_fmt(label, "Button: %d", cnt);
+  }
+}
+
+/**
+ * Create a button with a label and react on click event.
+ */
+void lv_example_get_started_1(void)
+{
+  lv_obj_t *btn = lv_btn_create(lv_scr_act()); /*Add a button the current screen*/
+  // lv_obj_set_pos(btn, 10, 10);                                /*Set its position*/
+  lv_obj_center(btn);
+  lv_obj_set_size(btn, 120, 50);
+  lv_obj_align(btn, LV_ALIGN_BOTTOM_MID, 0, 0);               /*Set its size*/
+  lv_obj_add_event_cb(btn, btn_event_cb, LV_EVENT_ALL, NULL); /*Assign a callback to the button*/
+
+  lv_obj_t *label = lv_label_create(btn); /*Add a label to the button*/
+  lv_label_set_text(label, "Button");     /*Set the labels text*/
+  lv_obj_center(label);
+}
 /* add user code end 1 */
 
 /**
-  * @brief  initializes all task.
-  * @param  none
-  * @retval none
-  */
+ * @brief  initializes all task.
+ * @param  none
+ * @retval none
+ */
 void freertos_task_create(void)
 {
   /* create ui_task task */
@@ -152,10 +181,10 @@ void freertos_task_create(void)
 }
 
 /**
-  * @brief  freertos init and begin run.
-  * @param  none
-  * @retval none
-  */
+ * @brief  freertos init and begin run.
+ * @param  none
+ * @retval none
+ */
 void wk_freertos_init(void)
 {
   /* add user code begin freertos_init 0 */
@@ -165,7 +194,7 @@ void wk_freertos_init(void)
   taskENTER_CRITICAL();
 
   freertos_task_create();
-	
+
   /* add user code begin freertos_init 1 */
   /* add user code end freertos_init 1 */
 
@@ -177,30 +206,38 @@ void wk_freertos_init(void)
 }
 
 /**
-  * @brief ui_task function.
-  * @param  none
-  * @retval none
-  */
+ * @brief ui_task function.
+ * @param  none
+ * @retval none
+ */
 void ui_function(void *pvParameters)
 {
   /* add user code begin ui_function 0 */
- 
+
   lv_init();
   lv_port_disp_init();
-  lv_port_indev_init();  
-
+  lv_port_indev_init();
+  lv_example_get_started_1();
   /* add user code end ui_function 0 */
 
   /* add user code begin ui_function 2 */
-    //lv_demo_benchmark();
-	lv_demo_widgets();
- 
+  // lv_demo_benchmark();
+  // lv_demo_widgets();
+  /* get current screen */
+  // lv_obj_t *screen = lv_scr_act();
+  // /* create a little screen */
+  // // lv_obj_t *little_screen = lv_obj_create(screen);
+
+  // /* create a  button */
+  // lv_obj_t *btn = lv_btn_create(screen);
+  // lv_obj_set_size(btn, 80, 40);
+  // lv_obj_center(btn);
   /* add user code end ui_function 2 */
 
   /* Infinite loop */
-  while(1)
+  while (1)
   {
-  /* add user code begin ui_function 1 */
+    /* add user code begin ui_function 1 */
     task_life_signs[TASK_UI_IDX]++;
 
     /* Run LVGL timers (rendering + refresh at LV_DISP_DEF_REFR_PERIOD).
@@ -209,16 +246,15 @@ void ui_function(void *pvParameters)
      * draw_buf_flush's while(flushing) loop). */
     lv_timer_handler_run_in_period(5);
     vTaskDelay(5);
-  /* add user code end ui_function 1 */
+    /* add user code end ui_function 1 */
   }
 }
 
-
 /**
-  * @brief input_task function.
-  * @param  none
-  * @retval none
-  */
+ * @brief input_task function.
+ * @param  none
+ * @retval none
+ */
 void input_function(void *pvParameters)
 {
   /* add user code begin input_function 0 */
@@ -228,30 +264,31 @@ void input_function(void *pvParameters)
   ft6336_init();
   key_init();
   encoder_init();
- 
+
   /* add user code end input_function 2 */
 
   /* Infinite loop */
-  while(1)
+  while (1)
   {
-  /* add user code begin input_function 1 */
+    /* add user code begin input_function 1 */
     task_life_signs[TASK_INPUT_IDX]++;
-	  
-	  
-	  /* Sample into locals first: lvgl_touch_x/y are volatile, passing their
-	   * address to a uint16_t* parameter would drop the qualifier. */
-	  uint16_t touch_x = 0, touch_y = 0;
-	  uint8_t touch_rc = ft6336_read_touch(&touch_x, &touch_y);
-      
-      if (touch_rc ) {
-        lvgl_touch_x = touch_x;
-        lvgl_touch_y = touch_y;
-        lvgl_touch_state = true;
- 
-      } else {
-        lvgl_touch_state = false;
-      }
-	  
+
+    /* Sample into locals first: lvgl_touch_x/y are volatile, passing their
+     * address to a uint16_t* parameter would drop the qualifier. */
+    uint16_t touch_x = 0, touch_y = 0;
+    uint8_t touch_rc = ft6336_read_touch(&touch_x, &touch_y);
+
+    if (touch_rc)
+    {
+      lvgl_touch_x = touch_x;
+      lvgl_touch_y = touch_y;
+      lvgl_touch_state = true;
+    }
+    else
+    {
+      lvgl_touch_state = false;
+    }
+
     /* ---- touch diagnostics: exposes every layer of the chain, 1 line/sec ----
      * Disabled: the printf blocks the UART for ~6 ms per line (a visible
      * once-per-second hitch). Change the 0 to 1 to bring it back when
@@ -278,7 +315,7 @@ void input_function(void *pvParameters)
       }
     }
 #else
-    (void)touch_rc;   /* keep the variable referenced with diagnostics off */
+    (void)touch_rc; /* keep the variable referenced with diagnostics off */
 #endif
 
     vTaskDelay(5);
@@ -287,12 +324,11 @@ void input_function(void *pvParameters)
   }
 }
 
-
 /**
-  * @brief output_task function.
-  * @param  none
-  * @retval none
-  */
+ * @brief output_task function.
+ * @param  none
+ * @retval none
+ */
 void output_function(void *pvParameters)
 {
   /* add user code begin output_function 0 */
@@ -303,13 +339,13 @@ void output_function(void *pvParameters)
 
   /* add user code begin output_function 2 */
   vTaskDelay(200);
- 
+
   /* add user code end output_function 2 */
 
   /* Infinite loop */
-  while(1)
+  while (1)
   {
-  /* add user code begin output_function 1 */
+    /* add user code begin output_function 1 */
     task_life_signs[TASK_OUTPUT_IDX]++;
     TickType_t now = xTaskGetTickCount();
 
@@ -338,12 +374,11 @@ void output_function(void *pvParameters)
   }
 }
 
-
 /**
-  * @brief common_task function.
-  * @param  none
-  * @retval none
-  */
+ * @brief common_task function.
+ * @param  none
+ * @retval none
+ */
 void common_function(void *pvParameters)
 {
   /* add user code begin common_function 0 */
@@ -359,9 +394,9 @@ void common_function(void *pvParameters)
   /* add user code end common_function 2 */
 
   /* Infinite loop */
-  while(1)
+  while (1)
   {
-  /* add user code begin common_function 1 */
+    /* add user code begin common_function 1 */
     task_life_signs[TASK_COMMON_IDX]++;
     /* iap function */
     iap_command_handle();
@@ -372,19 +407,18 @@ void common_function(void *pvParameters)
       vTaskDelay(1);
       continue;
     }
-    gpio_bits_toggle(OUT_LED_H_GPIO_PORT,OUT_LED_H_PIN);
-    vTaskDelay(1000);    
-    
+    gpio_bits_toggle(OUT_LED_H_GPIO_PORT, OUT_LED_H_PIN);
+    vTaskDelay(1000);
+
     /* add user code end common_function 1 */
   }
 }
 
-
 /**
-  * @brief wdt_task function.
-  * @param  none
-  * @retval none
-  */
+ * @brief wdt_task function.
+ * @param  none
+ * @retval none
+ */
 void wdt_function(void *pvParameters)
 {
   /* add user code begin wdt_function 0 */
@@ -397,9 +431,9 @@ void wdt_function(void *pvParameters)
   /* add user code end wdt_function 2 */
 
   /* Infinite loop */
-  while(1)
+  while (1)
   {
-  /* add user code begin wdt_function 1 */
+    /* add user code begin wdt_function 1 */
     vTaskDelay(600);
     taskENTER_CRITICAL();
     int all_alive = 1;
@@ -428,8 +462,6 @@ void wdt_function(void *pvParameters)
   }
 }
 
-
 /* add user code begin 2 */
 
 /* add user code end 2 */
-
