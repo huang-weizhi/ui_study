@@ -39,23 +39,40 @@
 #define FT6336_SCR_WIDTH 480
 #define FT6336_SCR_HEIGHT 320
 
-/**
- * @brief  Raw coordinate INITIAL SEEDS for this panel.
- *         Measured on THIS board, the FT6336 registers behave as:
- *           register X grows toward the TOP edge,
- *           register Y grows toward the RIGHT edge.
- *         So screen Y = inverted register X, screen X = register Y.
- *         These four values are only the startup seeds of the mapping: every
- *         touch reaching beyond them automatically widens the used range
- *         (see ft6336_read_touch()). If a seed is too small (e.g. the right
- *         edge was not measured at the true glass edge), the coordinate
- *         saturated before the screen edge; just touch the real edges once
- *         and it self-corrects.
- */
-#define FT6336_RAW_X_TOP 295   /* reg X value at the top edge middle    */
-#define FT6336_RAW_X_BOTTOM 15 /* reg X value at the bottom edge middle */
-#define FT6336_RAW_Y_LEFT 25   /* reg Y value at the left edge middle   */
-#define FT6336_RAW_Y_RIGHT 472 /* reg Y value at the right edge middle  */
+/*============================================================================
+ *                       TOUCH CALIBRATION (USER CONFIG)
+ *============================================================================
+ * The FT6336U reports coordinates in the TOUCH PANEL's coordinate system
+ * (origin/range defined by the module vendor's firmware); LVGL works in the
+ * SCREEN's coordinate system (480x320, origin at the top-left of the frame
+ * buffer).  The four values below are the raw register readings at the four
+ * screen edges, and they fully define the mapping between the two systems:
+ *
+ *   screen X = linear map of raw Y,  [FT6336_RAW_Y_LEFT .. FT6336_RAW_Y_RIGHT] -> [0 .. 479]
+ *   screen Y = inverted linear map of raw X, [FT6336_RAW_X_BOTTOM .. FT6336_RAW_X_TOP] -> [319 .. 0]
+ *
+ * i.e. on this panel the register axes are rotated 90 degrees relative to the
+ * screen: register X grows toward the TOP edge, register Y grows toward the
+ * RIGHT edge.  That is why screen X comes from register Y and vice versa.
+ *
+ * HOW TO MEASURE (one time):
+ *   1. In Inf_touch.c find the "[TOUCH-RAW]" printf and change its #if 0 to
+ *      #if 1, rebuild and download.
+ *   2. Touch the middle of each screen edge in turn and note the raw values
+ *      from the serial log:
+ *        top edge    -> raw_x  goes into FT6336_RAW_X_TOP
+ *        bottom edge -> raw_x  goes into FT6336_RAW_X_BOTTOM
+ *        left edge   -> raw_y  goes into FT6336_RAW_Y_LEFT
+ *        right edge  -> raw_y  goes into FT6336_RAW_Y_RIGHT
+ *   3. Paste the values below, set the printf back to #if 0, rebuild.
+ *
+ * The mapping is a pure constant function after this - no runtime
+ * auto-calibration, no state, identical behaviour on every boot.
+ *============================================================================*/
+#define FT6336_RAW_X_TOP 295    /* raw X at the top edge middle    */
+#define FT6336_RAW_X_BOTTOM 15  /* raw X at the bottom edge middle */
+#define FT6336_RAW_Y_LEFT 25    /* raw Y at the left edge middle   */
+#define FT6336_RAW_Y_RIGHT 472  /* raw Y at the right edge middle  */
 
 /*========================= END USER CONFIG ===============================*/
 

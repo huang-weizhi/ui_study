@@ -58,7 +58,7 @@ I (..\interface\Inf_beep.h)(0x6A9FC105)
 I (..\app\output_handle.h)(0x6A968897)
 I (..\common\PA45.h)(0x6AD2E03C)
 I (..\interface\Inf_lcd.h)(0x6AD1FACC)
-I (..\interface\Inf_touch.h)(0x6AD2E993)
+I (..\interface\Inf_touch.h)(0x6AD2EDC5)
 I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
 I (..\app\input_handle.h)(0x6A9E82A2)
 I (D:\Work Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\lvgl.h)(0x6A799D6B)
@@ -267,7 +267,7 @@ I (..\interface\Inf_beep.h)(0x6A9FC105)
 I (..\app\output_handle.h)(0x6A968897)
 I (..\common\PA45.h)(0x6AD2E03C)
 I (..\interface\Inf_lcd.h)(0x6AD1FACC)
-I (..\interface\Inf_touch.h)(0x6AD2E993)
+I (..\interface\Inf_touch.h)(0x6AD2EDC5)
 I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
 I (..\app\input_handle.h)(0x6A9E82A2)
 I (D:\Work Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\lvgl.h)(0x6A799D6B)
@@ -470,7 +470,7 @@ I (..\interface\Inf_beep.h)(0x6A9FC105)
 I (..\app\output_handle.h)(0x6A968897)
 I (..\common\PA45.h)(0x6AD2E03C)
 I (..\interface\Inf_lcd.h)(0x6AD1FACC)
-I (..\interface\Inf_touch.h)(0x6AD2E993)
+I (..\interface\Inf_touch.h)(0x6AD2EDC5)
 I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
 I (..\app\input_handle.h)(0x6A9E82A2)
 I (D:\Work Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\lvgl.h)(0x6A799D6B)
@@ -1402,7 +1402,7 @@ I (..\inc\at32f403a_407_wk_config.h)(0x6AD1F3F6)
 I (..\interface\inf_beep.h)(0x6A9FC105)
 I (..\interface\Inf_lcd.h)(0x6AD1FACC)
 I (..\inc\wk_system.h)(0x6AD1F3F7)
-I (..\interface\Inf_touch.h)(0x6AD2E993)
+I (..\interface\Inf_touch.h)(0x6AD2EDC5)
 I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
 F (..\app\input_handle.c)(0x6A9E829B)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Omax -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F -I ../../middlewares/i2c_application_library-I./RTE/CMSIS-View-I./RTE/LVGL-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/AT32F403A_407_DFP/2.2.4/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos/benchmark"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos/widgets"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "./RTE/LVGL/lv_conf_cmsis.h" -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/input_handle.o -MMD)
 I (RTE\LVGL\lv_conf_cmsis.h)(0x6AD2D71B)
@@ -1435,7 +1435,7 @@ I (..\inc\at32f403a_407_wk_config.h)(0x6AD1F3F6)
 I (..\interface\inf_beep.h)(0x6A9FC105)
 I (..\interface\Inf_lcd.h)(0x6AD1FACC)
 I (..\inc\wk_system.h)(0x6AD1F3F7)
-I (..\interface\Inf_touch.h)(0x6AD2E993)
+I (..\interface\Inf_touch.h)(0x6AD2EDC5)
 I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
 F (..\common\iap.c)(0x69FD49CB)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Omax -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F -I ../../middlewares/i2c_application_library-I./RTE/CMSIS-View-I./RTE/LVGL-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/AT32F403A_407_DFP/2.2.4/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos/benchmark"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos/widgets"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "./RTE/LVGL/lv_conf_cmsis.h" -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/iap.o -MMD)
 I (RTE\LVGL\lv_conf_cmsis.h)(0x6AD2D71B)
@@ -1493,7 +1493,7 @@ I (..\inc\at32f403a_407_wk_config.h)(0x6AD1F3F6)
 I (..\interface\inf_beep.h)(0x6A9FC105)
 I (..\interface\Inf_lcd.h)(0x6AD1FACC)
 I (..\inc\wk_system.h)(0x6AD1F3F7)
-I (..\interface\Inf_touch.h)(0x6AD2E993)
+I (..\interface\Inf_touch.h)(0x6AD2EDC5)
 I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
 F (..\interface\Inf_beep.c)(0x6A9FC101)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Omax -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F -I ../../middlewares/i2c_application_library-I./RTE/CMSIS-View-I./RTE/LVGL-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/AT32F403A_407_DFP/2.2.4/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos/benchmark"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos/widgets"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "./RTE/LVGL/lv_conf_cmsis.h" -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/inf_beep.o -MMD)
 I (RTE\LVGL\lv_conf_cmsis.h)(0x6AD2D71B)
@@ -1604,12 +1604,12 @@ I (..\..\libraries\drivers\inc\at32f403a_407_wdt.h)(0x697B2421)
 I (..\..\libraries\drivers\inc\at32f403a_407_xmc.h)(0x697B2421)
 I (..\interface\Inf_lcd.h)(0x6AD1FACC)
 I (..\inc\wk_system.h)(0x6AD1F3F7)
-F (..\interface\Inf_touch.c)(0x6AD2E8C7)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Omax -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F -I ../../middlewares/i2c_application_library-I./RTE/CMSIS-View-I./RTE/LVGL-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/AT32F403A_407_DFP/2.2.4/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos/benchmark"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos/widgets"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "./RTE/LVGL/lv_conf_cmsis.h" -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/inf_touch.o -MMD)
+F (..\interface\Inf_touch.c)(0x6AD2EE0A)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -flto -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -Omax -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../libraries/drivers/inc -I ../../libraries/cmsis/cm4/core_support -I ../../libraries/cmsis/cm4/device_support -I ../inc -I ../app -I ../ui_base -I ../ui_show_page -I ../common -I ../interface -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/9.4.0/demos" -I "D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos" -I ../../middlewares/freertos/source/include -I ../../middlewares/freertos/source/portable/memmang -I ../../middlewares/freertos/source/portable/GCC/ARM_CM4F -I ../../middlewares/i2c_application_library-I./RTE/CMSIS-View-I./RTE/LVGL-I./RTE/_AT32F403AVGT7_WorkBench-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-Compiler/2.1.0/include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS-View/1.2.0/EventRecorder/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/AT32F403A_407_DFP/2.2.4/Device/Include"-I"D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos/benchmark"-I"D:/Work Program/Keil_v5/ARM/Packs/LVGL/lvgl/8.4.0/demos/widgets"-D__UVISION_VERSION="540" -DAT32F403AVGT7 -D_RTE_ -DAT32F403AVGT7 -DUSE_STDPERIPH_DRIVER -DAT_START_F403A_V1  -include "./RTE/LVGL/lv_conf_cmsis.h" -include "D:/Work Program/Keil_v5/ARM/Packs/GorgonMeducer/perf_counter/2.5.5/perfc_common.h" -include "Pre_Include_Global.h"-o ./objects/inf_touch.o -MMD)
 I (RTE\LVGL\lv_conf_cmsis.h)(0x6AD2D71B)
 I (RTE\_AT32F403AVGT7_WorkBench\RTE_Components.h)(0x6AA12969)
 I (D:\Work Program\Keil_v5\ARM\Packs\GorgonMeducer\perf_counter\2.5.5\perfc_common.h)(0x6AA50703)
 I (RTE\_AT32F403AVGT7_WorkBench\Pre_Include_Global.h)(0x6AA0C060)
-I (..\interface\Inf_touch.h)(0x6AD2E993)
+I (..\interface\Inf_touch.h)(0x6AD2EDC5)
 I (..\inc\at32f403a_407_conf.h)(0x6AD1F3F6)
 I (..\..\libraries\drivers\inc\at32f403a_407_crc.h)(0x697B2421)
 I (..\..\libraries\cmsis\cm4\device_support\at32f403a_407.h)(0x697B2421)
@@ -13628,7 +13628,7 @@ I (..\interface\Inf_beep.h)(0x6A9FC105)
 I (..\app\output_handle.h)(0x6A968897)
 I (..\common\PA45.h)(0x6AD2E03C)
 I (..\interface\Inf_lcd.h)(0x6AD1FACC)
-I (..\interface\Inf_touch.h)(0x6AD2E993)
+I (..\interface\Inf_touch.h)(0x6AD2EDC5)
 I (..\interface\inf_w25qxxx.h)(0x6A9FA84E)
 I (..\app\input_handle.h)(0x6A9E82A2)
 I (D:\Work Program\Keil_v5\ARM\Packs\LVGL\lvgl\8.4.0\lvgl.h)(0x6A799D6B)
